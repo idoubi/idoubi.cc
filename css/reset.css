@@ -153,6 +153,7 @@ b {
     }
 
     #text-2 {
+        display: none;
         position: absolute;
         top: 10em;
         height: 5em;

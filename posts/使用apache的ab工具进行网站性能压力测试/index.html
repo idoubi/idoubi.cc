@@ -4,9 +4,6 @@
     
 <title>使用Apache的ab工具进行网站性能压力测试 - 艾逗笔博客</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta property="og:title" content="使用Apache的ab工具进行网站性能压力测试 - 艾逗笔博客">
 
 
@@ -26,6 +23,11 @@
 
 
 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="shortcut icon" href="http://blogcdn.idoustudio.com/idoubi.png" type="image/x-icon" />
 
 
 
@@ -61,22 +63,7 @@
             <div id="site-title" class="site-title"><a href="/">艾逗笔</a></div>
             <p class="tagline">有逻辑的脑子万里挑一</p>
         </div>
-        <button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
-            <span class="screen-reader-text">open menu</span>
-            <svg width="36px" height="23px" viewBox="0 0 36 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <desc>mobile menu toggle button</desc>
-                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g transform="translate(-142.000000, -104.000000)" fill="#FFFFFF">
-                        <g transform="translate(142.000000, 104.000000)">
-                            <rect x="0" y="20" width="36" height="3"></rect>
-                            <rect x="0" y="10" width="36" height="3"></rect>
-                            <rect x="0" y="0" width="36" height="3"></rect>
-                        </g>
-                    </g>
-                </g>
-            </svg>
-        </button>
+        
         <div id="menu-primary-container" class="menu-primary-container">
             <div class="icon-container">
             </div>
@@ -349,6 +336,42 @@ $result <span style="color:#f92672">=</span> $test<span style="color:#f92672">-&
     
 
     
+    <section id="categories-3" class="widget widget_categories">
+        <h2 class="widget-title">分类</h2>
+        <form action="/categories/" method="get"><label class="screen-reader-text"
+                for="cat">分类</label><select name="cat" id="cat" class="postform">
+                <option value="-1">选择分类</option>
+                
+                <option class="level-0" value="其他">其他(1)</option>
+                
+                <option class="level-0" value="开发笔记">开发笔记(29)</option>
+                
+                <option class="level-0" value="开源项目">开源项目(6)</option>
+                
+                <option class="level-0" value="系列分享">系列分享(3)</option>
+                
+                <option class="level-0" value="随笔杂感">随笔杂感(4)</option>
+                
+            </select>
+        </form>
+        <script type="text/javascript">
+             
+            (function () {
+                var dropdown = document.getElementById("cat");
+
+                function onCatChange() {
+                    if (dropdown.options[dropdown.selectedIndex].value != "" ) {
+                        window.location.href = "/categories/" + dropdown.options[dropdown.selectedIndex].value
+                    }
+                }
+                dropdown.onchange = onCatChange;
+            })();
+             
+        </script>
+    </section>
+    
+
+    
     <section id="tag_cloud-2" class="widget widget_tag_cloud">
         <h2 class="widget-title">标签</h2>
         <div class="tagcloud">
@@ -602,42 +625,6 @@ $result <span style="color:#f92672">=</span> $test<span style="color:#f92672">-&
                 style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">魔力日志</a>
             
         </div>
-    </section>
-    
-
-    
-    <section id="categories-3" class="widget widget_categories">
-        <h2 class="widget-title">分类</h2>
-        <form action="/categories/" method="get"><label class="screen-reader-text"
-                for="cat">分类</label><select name="cat" id="cat" class="postform">
-                <option value="-1">选择分类</option>
-                
-                <option class="level-0" value="其他">其他(1)</option>
-                
-                <option class="level-0" value="开发笔记">开发笔记(29)</option>
-                
-                <option class="level-0" value="开源项目">开源项目(6)</option>
-                
-                <option class="level-0" value="系列分享">系列分享(3)</option>
-                
-                <option class="level-0" value="随笔杂感">随笔杂感(4)</option>
-                
-            </select>
-        </form>
-        <script type="text/javascript">
-             
-            (function () {
-                var dropdown = document.getElementById("cat");
-
-                function onCatChange() {
-                    if (dropdown.options[dropdown.selectedIndex].value != "" ) {
-                        window.location.href = "/categories/" + dropdown.options[dropdown.selectedIndex].value
-                    }
-                }
-                dropdown.onchange = onCatChange;
-            })();
-             
-        </script>
     </section>
     
 
