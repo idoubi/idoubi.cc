@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on 艾逗笔博客</title>
+    <link>/tags/python/</link>
+    <description>Recent content in python on 艾逗笔博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 29 Oct 2017 10:29:34 +0000</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux下安装python</title>
+      <link>/posts/linux%E4%B8%8B%E5%AE%89%E8%A3%85python/</link>
+      <pubDate>Sun, 29 Oct 2017 10:29:34 +0000</pubDate>
+      
+      <guid>/posts/linux%E4%B8%8B%E5%AE%89%E8%A3%85python/</guid>
+      <description>python源码下载页 https://www.python.org/downloads/source/
+安装python # 下载源码 wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz # 解压缩 tar -zxvf Python-3.6.3.tgz # 进入源码目录 cd Python-3.6.3 # 配置(指定安装到/usr/local/python3目录) ./configure --prefix=/usr/local/python3 # 编译 make # 安装 make install 使用python3作为默认版本 # 进入bin目录 cd /usr/bin # 查看所有的python命令 ls | grep python # 将python3作为默认python mv python python2.20171027 mv python3 python # 查看当前python版本 python -V 安装pip # 下载pip安装文件 wget -c https://bootstrap.pypa.io/get-pip.py # 安装pip python get-pip.py python2 get-pip.py </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,631 @@
+<html lang="en-US">
+
+<head>
+    
+<title>「Sublime」配置Go开发环境 - 艾逗笔博客</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:title" content="「Sublime」配置Go开发环境 - 艾逗笔博客">
+
+
+
+    
+
+
+
+    
+    <meta property="description" content="GoSublime是在Sublimeb编辑器中开发Go语言必备的插件之一，提供Go源码编译、格式化、包自动导入等功能。之前可以通过Sublime的软件仓库直接安装，现在的版本已经搜不到这个插件了，我们需要通过源码进行安装。
+[&amp;hellip;] # 进入sublime插件目录 cd &amp;#39;/Users/mikemin/Library/Application Support/Sublime &amp;hellip;">
+    <meta property="og:description" content="GoSublime是在Sublimeb编辑器中开发Go语言必备的插件之一，提供Go源码编译、格式化、包自动导入等功能。之前可以通过Sublime的软件仓库直接安装，现在的版本已经搜不到这个插件了，我们需要通过源码进行安装。
+[&amp;hellip;] # 进入sublime插件目录 cd &amp;#39;/Users/mikemin/Library/Application Support/Sublime &amp;hellip;">
+    
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/style.css" />
+
+<link rel="stylesheet" href="/css/reset.css" />
+
+
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+<link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/styles/an-old-hope.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body id="period" class="home blog">
+    <a class="skip-content" href="#main">Press "Enter" to skip to content</a>
+    <div id="overflow-container" class="overflow-container">
+        <header class="site-header" id="site-header" role="banner">
+    <div class="max-width">
+        <div id="title-container" class="title-container">
+            <div id="site-title" class="site-title"><a href="/">艾逗笔</a></div>
+            <p class="tagline">有逻辑的脑子万里挑一</p>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
+            <span class="screen-reader-text">open menu</span>
+            <svg width="36px" height="23px" viewBox="0 0 36 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <desc>mobile menu toggle button</desc>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-142.000000, -104.000000)" fill="#FFFFFF">
+                        <g transform="translate(142.000000, 104.000000)">
+                            <rect x="0" y="20" width="36" height="3"></rect>
+                            <rect x="0" y="10" width="36" height="3"></rect>
+                            <rect x="0" y="0" width="36" height="3"></rect>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <div id="menu-primary-container" class="menu-primary-container">
+            <div class="icon-container">
+            </div>
+            <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+                <nav class="menu">
+                    <ul id="menu-primary-items" class="menu-primary-items">
+                        
+                        
+                        <li id="menu-item-0"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/" aria-current="page" tabindex="0">首页</a></li>
+                        
+                        <li id="menu-item-1"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" aria-current="page" tabindex="1">笔记</a></li>
+                        
+                        <li id="menu-item-2"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/categories/%E7%B3%BB%E5%88%97%E5%88%86%E4%BA%AB/" aria-current="page" tabindex="2">教程</a></li>
+                        
+                        <li id="menu-item-3"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE" aria-current="page" tabindex="3">开源</a></li>
+                        
+                        <li id="menu-item-4"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E6%84%9F" aria-current="page" tabindex="4">随笔</a></li>
+                        
+                        <li id="menu-item-5"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/about" aria-current="page" tabindex="5">关于</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+        <div id="primary-container" class="primary-container">
+            <div class="max-width">
+                <section id="main" class="main" role="main">
+                    <div id="loop-container" class="loop-container">
+                        <div
+                            class="post type-post status-publish format-standard hentry entry">
+                            <article>
+                                <div class="post-container">
+                                    <div class="post-header">
+                                        <h2 class="post-title">
+                                            <a href="/posts/sublime-go-dev/">「Sublime」配置Go开发环境</a>
+                                        </h2>
+                                        
+                                        <div class="post-byline">
+                                            发布于
+                                            <a class="date" href="javascript:;">2019/04/27</a>
+                                            
+                                            作者 
+                                            <a class="author" href="javascript:;">艾逗笔</a></div>
+                                            
+                                        
+                                    </div>
+                                    <div class="post-content">
+                                        <h2 id="安装gosublime插件">安装GoSublime插件</h2>
+<p>GoSublime是在Sublimeb编辑器中开发Go语言必备的插件之一，提供Go源码编译、格式化、包自动导入等功能。之前可以通过Sublime的软件仓库直接安装，现在的版本已经搜不到这个插件了，我们需要通过源码进行安装。</p>
+<ul>
+<li>复制插件源码到Sublime包扩展目录</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># 进入sublime插件目录</span>
+cd <span style="color:#e6db74">&#39;/Users/mikemin/Library/Application Support/Sublime Text 3/Packages&#39;</span>
+
+<span style="color:#75715e"># 下载GoSublime</span>
+git clone https://github.com/DisposaBoy/GoSublime.git
+</code></pre></div><ul>
+<li>安装Margo依赖</li>
+</ul>
+<pre><code># 安装margo
+go get github.com/slene/margo
+
+# 配置margo
+cd GoSublime/src
+mkdir margo
+cp margo.sh/extension-example/extension-example.go margo/margo.go
+</code></pre><ul>
+<li>GoSublime插件配置</li>
+</ul>
+<pre><code>{
+    &quot;env&quot;: {
+        &quot;GOPATH&quot;: &quot;/data/go&quot;,
+        &quot;GOROOT&quot;: &quot;/usr/local/opt/go/libexec&quot;
+    },
+    &quot;fmt_enabled&quot;: true,
+    &quot;fmt_cmd&quot;: [
+    	&quot;goimports&quot;
+    ]
+}
+</code></pre><blockquote>
+<p>在GoSublime插件中配置包自动导入前，请先确保安装了<code>goimports</code>工具。</p>
+</blockquote>
+<p><a href="http://idoustudio.com/2017/11/06/goimports%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">goimports工具安装与使用</a></p>
+<ul>
+<li><code>ctrl/command + s</code> 保存文件时，编辑器会自动格式化代码并进行包的导入和删除。</li>
+<li><code>ctrl/command + b</code> 可调出控制台，对go代码进行编译、测试或直接运行。</li>
+</ul>
+
+
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+
+                                    
+                                    
+                                    
+                                    
+
+                                    <div class="post-meta">
+                                        
+                                        <div class="post-categories">
+                                        <span>分类&nbsp;&nbsp;</span>
+                                        
+                                        <a href="/categories/%e7%b3%bb%e5%88%97%e5%88%86%e4%ba%ab" title="View all posts in PHP8">系列分享</a>&nbsp;&nbsp;
+                                        
+                                        </div>
+                                        
+                                        
+                                        <div class="post-tags">
+                                            <ul>
+                                            
+                                            <li>
+                                                <a href="/tags/SublimeText3" title="View all posts tagged match">SublimeText3</a>
+                                            </li>
+                                            
+                                            </ul>
+                                        </div>
+                                        
+                                        
+                                        <nav class="further-reading">
+                                            
+                                            <div class="previous">
+                                                <span>&lt;&lt; 上一篇</span>
+                                                <a href="/posts/hexo-highlight/"
+                                                    rel="prev">「Hexo」设置代码语法高亮</a> </div>
+                                            
+                                            
+                                            <div class="next">
+                                                <span>下一篇 >></span>
+                                                <a href="/posts/mac-use-rzsz-in-iterm2/">「Mac」在iterm2中使用rzsz命令进行文件传输</a> 
+                                            </div>
+                                            
+                                        </nav>
+                                    </div>
+                                    
+                                    
+
+                                    
+                                    <div style="width: 100%;height: 1px;border:1px solid #f8f8f8;margin: 50px 0 30px;"></div>
+                                    <script src="https://utteranc.es/client.js"
+                                            repo="idoubi/idoubi.cc"
+                                            issue-term="title"
+                                            theme="github-light"
+                                            crossorigin="anonymous"
+                                            async>
+                                    </script>
+                                    
+
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <aside class="sidebar sidebar-primary" id="sidebar-primary" role="complementary">
+    <h1 class="screen-reader-text">Sidebar</h1>
+    <section id="text-2" class="widget widget_text">
+        <div class="textwidget">
+            
+            <div id="profile">
+                <div id="profile_picture"><img src="http://blogcdn.idoustudio.com/idoubi.png"></div>
+                <div id="profile_intro">
+                    <p><span class="name">艾逗笔</span></p>
+                    <p class="intro">全栈开发者，爱好造轮子。</p>
+                </div>
+            </div>
+            
+            <p>
+                <script type="text/javascript">
+                    (function ($) {
+                        $(document).ready(function () {
+                            var menuPrimaryContainer = $('#menu-primary-container');
+                            var profile = $('#text-2');
+                            $('#toggle-navigation').click(function () {
+                                if (menuPrimaryContainer.hasClass('open')) {
+                                    profile.removeClass('open');
+                                } else {
+                                    profile.addClass('open');
+                                }
+                            });
+                        });
+                    })(jQuery);
+                </script>
+            </p>
+        </div>
+    </section>
+    
+    
+    <section id="text-5" class="widget widget_text">
+        <h2 class="widget-title">开源项目</h2>
+        <div class="textwidget">
+            <div id="projects" style="line-height: 22px;">
+                
+                <a href="https://douchat.net"
+                    target="_blank">douchat</a>: &nbsp;一款简洁、高效的微信开发框架<br>
+                
+                <a href="https://github.com/idoubi/gonews"
+                    target="_blank">gonews</a>: &nbsp;Golang 每日新闻检索平台<br>
+                
+                <a href="https://github.com/idoubi/sql2struct"
+                    target="_blank">sql2struct</a>: &nbsp;根据 SQL 语句生成 Golang 结构体的工具<br>
+                
+                <a href="https://github.com/idoubi/goz"
+                    target="_blank">goz</a>: &nbsp;在 Go 中发起 HTTP 请求的工具库<br>
+                
+                <a href="https://github.com/idoubi/tellme"
+                    target="_blank">tellme</a>: &nbsp;获取常用信息的命令行工具<br>
+                
+        </div>
+    </section>
+    
+    
+    
+    <section id="qrcode" class="widget widget_media_image">
+        <h2 class="widget-title">公众号</h2><img width="258" height="258"
+            src="http://blogcdn.idoustudio.com/idoubi-mp.jpeg"
+            class="image wp-image-5514  attachment-full size-full" alt=""
+            style="max-width: 100%; height: auto;"
+            srcset="http://blogcdn.idoustudio.com/idoubi-mp.jpeg 258w, http://blogcdn.idoustudio.com/idoubi-mp.jpeg 150w"
+            sizes="(max-width: 258px) 100vw, 258px">
+    </section>
+    
+
+    
+    <section id="tag_cloud-2" class="widget widget_tag_cloud">
+        <h2 class="widget-title">标签</h2>
+        <div class="tagcloud">
+            
+            <a href="/tags/AES%e5%8a%a0%e8%a7%a3%e5%af%86"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">AES加解密</a>
+            
+            <a href="/tags/ajax"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">ajax</a>
+            
+            <a href="/tags/Apache"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">Apache</a>
+            
+            <a href="/tags/asp"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">asp</a>
+            
+            <a href="/tags/brew"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">brew</a>
+            
+            <a href="/tags/composer"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">composer</a>
+            
+            <a href="/tags/curl"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">curl</a>
+            
+            <a href="/tags/douchat"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">douchat</a>
+            
+            <a href="/tags/git"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">git</a>
+            
+            <a href="/tags/go"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">go</a>
+            
+            <a href="/tags/goimports"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">goimports</a>
+            
+            <a href="/tags/golang"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">golang</a>
+            
+            <a href="/tags/goz"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">goz</a>
+            
+            <a href="/tags/hexo"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">hexo</a>
+            
+            <a href="/tags/Hugo"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">Hugo</a>
+            
+            <a href="/tags/iis"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">iis</a>
+            
+            <a href="/tags/javascript"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">javascript</a>
+            
+            <a href="/tags/linux"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">linux</a>
+            
+            <a href="/tags/mysql"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">mysql</a>
+            
+            <a href="/tags/php"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">php</a>
+            
+            <a href="/tags/protobuf"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">protobuf</a>
+            
+            <a href="/tags/python"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">python</a>
+            
+            <a href="/tags/quick%20start"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">quick start</a>
+            
+            <a href="/tags/Qzone"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">Qzone</a>
+            
+            <a href="/tags/RPC"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">RPC</a>
+            
+            <a href="/tags/SeasLog"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">SeasLog</a>
+            
+            <a href="/tags/shtml"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">shtml</a>
+            
+            <a href="/tags/sublime"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">sublime</a>
+            
+            <a href="/tags/SublimeText3"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">SublimeText3</a>
+            
+            <a href="/tags/svn"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">svn</a>
+            
+            <a href="/tags/vscode"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">vscode</a>
+            
+            <a href="/tags/vue"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">vue</a>
+            
+            <a href="/tags/xshell"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">xshell</a>
+            
+            <a href="/tags/%e4%b8%89%e7%ba%a7%e8%81%94%e5%8a%a8"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">三级联动</a>
+            
+            <a href="/tags/%e4%b9%a6%e8%af%84"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">书评</a>
+            
+            <a href="/tags/%e4%bb%bf%e7%ab%99"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">仿站</a>
+            
+            <a href="/tags/%e4%bf%ae%e5%a4%8d%e6%97%a5%e5%bf%97"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">修复日志</a>
+            
+            <a href="/tags/%e5%89%8d%e5%8f%b0"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">前台</a>
+            
+            <a href="/tags/%e5%89%8d%e7%ab%af"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">前端</a>
+            
+            <a href="/tags/%e5%8d%9a%e5%ae%a2%e7%bd%91%e7%ab%99"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">博客网站</a>
+            
+            <a href="/tags/%e5%8e%8b%e5%8a%9b%e6%b5%8b%e8%af%95"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">压力测试</a>
+            
+            <a href="/tags/%e5%8e%9f%e5%88%9b%e6%95%99%e7%a8%8b"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">原创教程</a>
+            
+            <a href="/tags/%e5%8f%8d%e7%bc%96%e8%af%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">反编译</a>
+            
+            <a href="/tags/%e5%9d%9a%e6%8c%81"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">坚持</a>
+            
+            <a href="/tags/%e5%a5%8b%e6%96%97"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">奋斗</a>
+            
+            <a href="/tags/%e5%b0%8f%e7%a8%8b%e5%ba%8f"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">小程序</a>
+            
+            <a href="/tags/%e5%b0%8f%e8%af%be"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">小课</a>
+            
+            <a href="/tags/%e5%bc%80%e6%ba%90%e9%a1%b9%e7%9b%ae"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">开源项目</a>
+            
+            <a href="/tags/%e5%be%ae%e4%bf%a1%e5%bc%80%e5%8f%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">微信开发</a>
+            
+            <a href="/tags/%e6%88%91%e7%9a%84%e5%a4%a7%e5%ad%a6"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">我的大学</a>
+            
+            <a href="/tags/%e6%8a%93%e5%8c%85"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">抓包</a>
+            
+            <a href="/tags/%e6%95%b0%e6%8d%ae%e8%bf%81%e7%a7%bb"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">数据迁移</a>
+            
+            <a href="/tags/%e6%a2%a6%e6%83%b3"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">梦想</a>
+            
+            <a href="/tags/%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">版本控制</a>
+            
+            <a href="/tags/%e7%bd%91%e7%ab%99%e5%bc%80%e5%8f%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">网站开发</a>
+            
+            <a href="/tags/%e7%bd%91%e7%ab%99%e7%bb%b4%e6%8a%a4"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">网站维护</a>
+            
+            <a href="/tags/%e7%bd%91%e9%a1%b5%e9%87%87%e9%9b%86"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">网页采集</a>
+            
+            <a href="/tags/%e8%ae%a2%e5%8d%95%e6%89%93%e5%8d%b0"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">订单打印</a>
+            
+            <a href="/tags/%e8%af%bb%e4%b9%a6"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">读书</a>
+            
+            <a href="/tags/%e9%98%bf%e9%87%8c%e4%ba%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">阿里云</a>
+            
+            <a href="/tags/%e9%9d%a2%e8%af%95%e9%a2%98"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">面试题</a>
+            
+            <a href="/tags/%e9%ad%94%e5%8a%9b%e6%97%a5%e5%bf%97"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">魔力日志</a>
+            
+        </div>
+    </section>
+    
+
+    
+    <section id="categories-3" class="widget widget_categories">
+        <h2 class="widget-title">分类</h2>
+        <form action="/categories/" method="get"><label class="screen-reader-text"
+                for="cat">分类</label><select name="cat" id="cat" class="postform">
+                <option value="-1">选择分类</option>
+                
+                <option class="level-0" value="其他">其他(1)</option>
+                
+                <option class="level-0" value="开发笔记">开发笔记(29)</option>
+                
+                <option class="level-0" value="开源项目">开源项目(6)</option>
+                
+                <option class="level-0" value="系列分享">系列分享(3)</option>
+                
+                <option class="level-0" value="随笔杂感">随笔杂感(4)</option>
+                
+            </select>
+        </form>
+        <script type="text/javascript">
+             
+            (function () {
+                var dropdown = document.getElementById("cat");
+
+                function onCatChange() {
+                    if (dropdown.options[dropdown.selectedIndex].value != "" ) {
+                        window.location.href = "/categories/" + dropdown.options[dropdown.selectedIndex].value
+                    }
+                }
+                dropdown.onchange = onCatChange;
+            })();
+             
+        </script>
+    </section>
+    
+
+    
+    
+</aside>
+            </div>
+        </div>
+
+        <footer id="site-footer" class="site-footer" role="contentinfo">
+    <div class="max-width">
+    </div>
+    <div class="footer">
+        <div id="footercontent">
+            © 艾逗笔 2020 All rights reserved
+        </div>
+    </div>
+</footer>
+    </div>
+    
+</body>
+
+</html>

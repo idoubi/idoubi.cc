@@ -1,0 +1,660 @@
+<html lang="en-US">
+
+<head>
+    
+<title>聊一聊微信开发那些事儿 - 艾逗笔博客</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:title" content="聊一聊微信开发那些事儿 - 艾逗笔博客">
+
+
+
+    
+
+
+
+    
+    <meta property="description" content="Programming make the world a better place, anyone can be anything
+[&amp;hellip;] 微信公众号2012年正式推出，至今已走过5个年头，在这五年的时间内，很多微信第三方企业迅速崛起，典型代表有微盟、微客来这些以公众号托管为主的企业。而今天我想跟大家聊的是微信公众号开发这个领域的一些事情。
+[&amp;hellip;] 我是2013年末接触 &amp;hellip;">
+    <meta property="og:description" content="Programming make the world a better place, anyone can be anything
+[&amp;hellip;] 微信公众号2012年正式推出，至今已走过5个年头，在这五年的时间内，很多微信第三方企业迅速崛起，典型代表有微盟、微客来这些以公众号托管为主的企业。而今天我想跟大家聊的是微信公众号开发这个领域的一些事情。
+[&amp;hellip;] 我是2013年末接触 &amp;hellip;">
+    
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/style.css" />
+
+<link rel="stylesheet" href="/css/reset.css" />
+
+
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+<link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/styles/an-old-hope.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body id="period" class="home blog">
+    <a class="skip-content" href="#main">Press "Enter" to skip to content</a>
+    <div id="overflow-container" class="overflow-container">
+        <header class="site-header" id="site-header" role="banner">
+    <div class="max-width">
+        <div id="title-container" class="title-container">
+            <div id="site-title" class="site-title"><a href="/">艾逗笔</a></div>
+            <p class="tagline">有逻辑的脑子万里挑一</p>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
+            <span class="screen-reader-text">open menu</span>
+            <svg width="36px" height="23px" viewBox="0 0 36 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <desc>mobile menu toggle button</desc>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-142.000000, -104.000000)" fill="#FFFFFF">
+                        <g transform="translate(142.000000, 104.000000)">
+                            <rect x="0" y="20" width="36" height="3"></rect>
+                            <rect x="0" y="10" width="36" height="3"></rect>
+                            <rect x="0" y="0" width="36" height="3"></rect>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <div id="menu-primary-container" class="menu-primary-container">
+            <div class="icon-container">
+            </div>
+            <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+                <nav class="menu">
+                    <ul id="menu-primary-items" class="menu-primary-items">
+                        
+                        
+                        <li id="menu-item-0"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/" aria-current="page" tabindex="0">首页</a></li>
+                        
+                        <li id="menu-item-1"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" aria-current="page" tabindex="1">笔记</a></li>
+                        
+                        <li id="menu-item-2"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/categories/%E7%B3%BB%E5%88%97%E5%88%86%E4%BA%AB/" aria-current="page" tabindex="2">教程</a></li>
+                        
+                        <li id="menu-item-3"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE" aria-current="page" tabindex="3">开源</a></li>
+                        
+                        <li id="menu-item-4"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E6%84%9F" aria-current="page" tabindex="4">随笔</a></li>
+                        
+                        <li id="menu-item-5"
+                            class="menu-item menu-item-type-custom menu-item-object-custom ">
+                            <a href="/about" aria-current="page" tabindex="5">关于</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+        <div id="primary-container" class="primary-container">
+            <div class="max-width">
+                <section id="main" class="main" role="main">
+                    <div id="loop-container" class="loop-container">
+                        <div
+                            class="post type-post status-publish format-standard hentry entry">
+                            <article>
+                                <div class="post-container">
+                                    <div class="post-header">
+                                        <h2 class="post-title">
+                                            <a href="/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/">聊一聊微信开发那些事儿</a>
+                                        </h2>
+                                        
+                                        <div class="post-byline">
+                                            发布于
+                                            <a class="date" href="javascript:;">2016/11/02</a>
+                                            
+                                            作者 
+                                            <a class="author" href="javascript:;">艾逗笔</a></div>
+                                            
+                                        
+                                    </div>
+                                    <div class="post-content">
+                                        <blockquote>
+<p><strong>Programming make the world a better place, anyone can be anything</strong></p>
+</blockquote>
+<h2 id="前言">前言</h2>
+<p>微信公众号2012年正式推出，至今已走过5个年头，在这五年的时间内，很多微信第三方企业迅速崛起，典型代表有微盟、微客来这些以公众号托管为主的企业。而今天我想跟大家聊的是微信公众号开发这个领域的一些事情。</p>
+<h2 id="经历">经历</h2>
+<p>我是2013年末接触微信开发的，那时候还在上学，有朋友说想在学校搞一个微信公众号卖水果，于是我开始接触微信开发。最开始是看<strong>青龙老贼</strong>的教程入门的，后来接触到了github上面一个非常流行的类库<strong>wechat-php-sdk</strong>，再后来接触到了<strong>weiphp</strong>、<strong>微擎</strong>这样的开发框架，再到现在自己写的框架<strong>豆信</strong>，在微信开发这个领域已经走过了3个年头，期间开发过微商城、微餐饮、微投票等多款微信端应用，对于微信官方提供的接口算得上是滚瓜烂熟。</p>
+<h2 id="产品">产品</h2>
+<p>最近这段时间，微信小程序（应用号）被炒的非常火，很多企业和个人都等着在下一个风口起飞，渐渐的就有些人不那么看好微信公众号了。作为一个纯技术爱好者，我不敢对公众号或者是小程序未来几年的市场情况和流行度做一个评价。单从开发的角度，给想接触微信开发的朋友介绍几款产品。</p>
+<ul>
+<li>
+<p>wechat-php-sdk
+<strong>wechat-php-sdk</strong>是一个专门用于微信开发的类库，在github上面开源，有3000+的star，市面上很多与微信公众号相关的产品都有用到这个类库，其对微信官方提供的接口进行了高度封装，集成此类库后，在自己的应用中只需要简单的配置即可调用微信官方开放的诸多功能。对于产品形态不过度依赖微信，只想在自己的产品中简单集成微信端功能的开发者来说，可以选择此类库进行开发，此类库支持composer依赖安装。<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>weiphp
+在搜索引擎上搜索<strong>微信开发框架</strong>，排在前面的几个产品中便有<strong>weiphp</strong>。weiphp是一个专门用于微信公众号开发的CMF系统（内容管理框架），基于onethink开发，支持通过插件来扩展功能，目前最新的版本是3.0。我是2014年夏天接触到weiphp的，花了差不多一年的时间，成为了weiphp社区最活跃的开发者，写了几篇**《分分钟上手weiphp插件开发》**系列教程，还录制过几个weiphp插件开发的视频。后来因为不是很喜欢weiphp框架的一些特性，便退出了weiphp的圈子。总的来说，weiphp的优点是上手容易、扩展方便、商业友好，自己改一改拿来给客户做做微信外包还是很方便的。缺点就是社区不够活跃，官方支持不够，产品迭代速度太慢。</p>
+</li>
+<li>
+<p>微擎
+在我看来，<strong>微擎</strong>可以算得上是目前国内最成熟的微信开发框架，功能非常完善，开发者众多，社区活跃，官方应用商城拥有3000+的扩展功能，诸多的商业用户支持。我最开始接触微擎也是在2014年夏天，那时候在微擎与weiphp之间，我选择了后者，原因是因为微擎的开发文档内容太多，看起来有点摸不着头脑，觉得入门可能比较困难，便放弃了。后来看到微擎逐渐把开发者分成机制完善，很多做微擎的开发者在微擎的平台上获得了不菲的收入，心里多少感觉有点遗憾。对于想要选择微擎进行开发的开发者来说，有几点是需要考虑的。首先是微擎的框架相比于thinkphp、YII这种的主流框架来说，上手不是特别容易。再就是微擎的功能虽多，但是对于喜欢小而美，不需要集成过多微信端功能的产品来说，过多的封装显得不是很灵活。第三点，也是最重要的一点，安装微擎框架后需要连接云服务才能更新框架，并且需要购买商业版才能去除版权，对于喜欢商业友好，不愿意花钱买商业版的开发者来说，微擎可能不是最好的选择。</p>
+</li>
+<li>
+<p>豆信
+<strong>豆信</strong>是一款专注于微信公众号开发的框架，基于thinkphp3.2.3开发而成，自主研发的插件扩展机制、模板视图工具使得豆信可以用来快速的集成微信公众号常用的功能。豆信官网的宣传语是“从未见过哪一款开发框架，如此这般简洁优雅”，虽然说的有点夸张，但是通读豆信源代码，可以在很多地方看到框架设计的优雅之处：核心源代码压缩后仅2.4M，真正的小而美；使用豆信封装的视图工具，20行以内的代码可以实现一个功能后台的增删改查；使用豆信封装的微信接口，三行代码可以搞定微信支付；高度集成wechat-php-sdk，能够灵活的处理微信端的各类消息；代码极其注重工整性，处处体现细节。豆信是一款商业友好的框架，基于apache2.0协议在github开源，官方提供社区支持与扩展服务。</p>
+</li>
+</ul>
+<blockquote>
+<p>顺便提一句，豆信是我一个人独立开发的产品，虽然再说下去有<strong>王婆卖瓜</strong>的嫌疑，但是下面我还是想用几张图来简单介绍一下这一款优雅的微信开发框架。</p>
+<ul>
+<li>
+<p>简洁
+豆信是一个非常简洁的开源框架，对业务逻辑进行了高度封装，自主研发的视图构建工具大大简化了模板布局的工作，豆信核心文件的代码体积压缩后仅2.4M，功能完整性丝毫不亚于市面上已有的体积为几十M的框架。
+<img src="http://box.kancloud.cn/2016-08-18_57b55a8252f83.png" alt=""></p>
+</li>
+<li>
+<p>高效
+豆信引入了github上最为流行的wechat-php-sdk，对微信接口进行了高度封装，系统内核封装的微信交互Api能够对微信端发送的文本、语音、图片、位置、链接、短视频等类型的消息进行高效的处理，同时能够通过后台配置把用户关注、取消关注、点击菜单、上报地理位置、扫描带参数二维码等事件型消息分发到插件进行处理，这让微信交互处理变得非常灵活。
+<img src="http://ac-mhke0kuv.clouddn.com/0ef4de7370bc90fac5fe" alt=""></p>
+</li>
+<li>
+<p>优雅
+豆信是一个非常优雅的开发框架，非常注重代码的工整性、可复用性，和功能的实用性、易扩展性。通读豆信源代码，在很多地方都能看到注重细节的体现。
+<img src="http://box.kancloud.cn/2016-08-18_57b5b2be800bc.png" alt=""></p>
+</li>
+<li>
+<p>易扩展
+豆信自主研发了一套插件扩展机制，可以把微信消息分发到插件进行处理，在插件中可以获取粉丝信息、自定义分享、发起微信支付、调用模板通知等。通过插件来扩展功能变得非常容易。
+<img src="http://box.kancloud.cn/2016-08-18_57b5b2bec072f.png" alt=""></p>
+</li>
+<li>
+<p>社区支持
+为了让框架能够更加快速良好的发展，豆信提供了社区支持：<a href="http://bbs.douchat.cc/">http://bbs.douchat.cc/</a> 在豆信社区可看到豆信框架的更新动态、发布的扩展功能，也可以在这里提交豆信使用过程中发现的BUG、一些功能建议，还能跟所有的社区成员一起讨论、交流、分享你在开发或使用过程中的心得与感悟。
+<img src="http://box.kancloud.cn/2016-08-18_57b5b2beec31e.png" alt=""></p>
+</li>
+<li>
+<p>扩展服务
+豆信云商城提供多款官方/开发者发布的插件，在这里你可以找到你想要的资源。
+<img src="http://ac-mhke0kuv.clouddn.com/724ed6b09d4c923b1e49" alt=""></p>
+</li>
+</ul>
+</blockquote>
+<h2 id="写在最后">写在最后</h2>
+<!-- raw HTML omitted -->
+
+
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+
+                                    
+                                    
+                                    
+                                    
+
+                                    <div class="post-meta">
+                                        
+                                        <div class="post-categories">
+                                        <span>分类&nbsp;&nbsp;</span>
+                                        
+                                        <a href="/categories/%e5%bc%80%e5%8f%91%e7%ac%94%e8%ae%b0" title="View all posts in PHP8">开发笔记</a>&nbsp;&nbsp;
+                                        
+                                        </div>
+                                        
+                                        
+                                        <div class="post-tags">
+                                            <ul>
+                                            
+                                            <li>
+                                                <a href="/tags/%e5%be%ae%e4%bf%a1%e5%bc%80%e5%8f%91" title="View all posts tagged match">微信开发</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="/tags/%e5%bc%80%e6%ba%90%e9%a1%b9%e7%9b%ae" title="View all posts tagged match">开源项目</a>
+                                            </li>
+                                            
+                                            </ul>
+                                        </div>
+                                        
+                                        
+                                        <nav class="further-reading">
+                                            
+                                            <div class="previous">
+                                                <span>&lt;&lt; 上一篇</span>
+                                                <a href="/posts/aes%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%9C%A8php%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/"
+                                                    rel="prev">AES加解密在php接口请求过程中的应用</a> </div>
+                                            
+                                            
+                                            <div class="next">
+                                                <span>下一篇 >></span>
+                                                <a href="/posts/%E5%9C%A8php%E4%B8%AD%E4%BD%BF%E7%94%A8curl%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87/">在php中使用curl多线程下载图片</a> 
+                                            </div>
+                                            
+                                        </nav>
+                                    </div>
+                                    
+                                    
+
+                                    
+                                    <div style="width: 100%;height: 1px;border:1px solid #f8f8f8;margin: 50px 0 30px;"></div>
+                                    <script src="https://utteranc.es/client.js"
+                                            repo="idoubi/idoubi.cc"
+                                            issue-term="title"
+                                            theme="github-light"
+                                            crossorigin="anonymous"
+                                            async>
+                                    </script>
+                                    
+
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <aside class="sidebar sidebar-primary" id="sidebar-primary" role="complementary">
+    <h1 class="screen-reader-text">Sidebar</h1>
+    <section id="text-2" class="widget widget_text">
+        <div class="textwidget">
+            
+            <div id="profile">
+                <div id="profile_picture"><img src="http://blogcdn.idoustudio.com/idoubi.png"></div>
+                <div id="profile_intro">
+                    <p><span class="name">艾逗笔</span></p>
+                    <p class="intro">全栈开发者，爱好造轮子。</p>
+                </div>
+            </div>
+            
+            <p>
+                <script type="text/javascript">
+                    (function ($) {
+                        $(document).ready(function () {
+                            var menuPrimaryContainer = $('#menu-primary-container');
+                            var profile = $('#text-2');
+                            $('#toggle-navigation').click(function () {
+                                if (menuPrimaryContainer.hasClass('open')) {
+                                    profile.removeClass('open');
+                                } else {
+                                    profile.addClass('open');
+                                }
+                            });
+                        });
+                    })(jQuery);
+                </script>
+            </p>
+        </div>
+    </section>
+    
+    
+    <section id="text-5" class="widget widget_text">
+        <h2 class="widget-title">开源项目</h2>
+        <div class="textwidget">
+            <div id="projects" style="line-height: 22px;">
+                
+                <a href="https://douchat.net"
+                    target="_blank">douchat</a>: &nbsp;一款简洁、高效的微信开发框架<br>
+                
+                <a href="https://github.com/idoubi/gonews"
+                    target="_blank">gonews</a>: &nbsp;Golang 每日新闻检索平台<br>
+                
+                <a href="https://github.com/idoubi/sql2struct"
+                    target="_blank">sql2struct</a>: &nbsp;根据 SQL 语句生成 Golang 结构体的工具<br>
+                
+                <a href="https://github.com/idoubi/goz"
+                    target="_blank">goz</a>: &nbsp;在 Go 中发起 HTTP 请求的工具库<br>
+                
+                <a href="https://github.com/idoubi/tellme"
+                    target="_blank">tellme</a>: &nbsp;获取常用信息的命令行工具<br>
+                
+        </div>
+    </section>
+    
+    
+    
+    <section id="qrcode" class="widget widget_media_image">
+        <h2 class="widget-title">公众号</h2><img width="258" height="258"
+            src="http://blogcdn.idoustudio.com/idoubi-mp.jpeg"
+            class="image wp-image-5514  attachment-full size-full" alt=""
+            style="max-width: 100%; height: auto;"
+            srcset="http://blogcdn.idoustudio.com/idoubi-mp.jpeg 258w, http://blogcdn.idoustudio.com/idoubi-mp.jpeg 150w"
+            sizes="(max-width: 258px) 100vw, 258px">
+    </section>
+    
+
+    
+    <section id="tag_cloud-2" class="widget widget_tag_cloud">
+        <h2 class="widget-title">标签</h2>
+        <div class="tagcloud">
+            
+            <a href="/tags/AES%e5%8a%a0%e8%a7%a3%e5%af%86"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">AES加解密</a>
+            
+            <a href="/tags/ajax"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">ajax</a>
+            
+            <a href="/tags/Apache"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">Apache</a>
+            
+            <a href="/tags/asp"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">asp</a>
+            
+            <a href="/tags/brew"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">brew</a>
+            
+            <a href="/tags/composer"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">composer</a>
+            
+            <a href="/tags/curl"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">curl</a>
+            
+            <a href="/tags/douchat"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">douchat</a>
+            
+            <a href="/tags/git"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">git</a>
+            
+            <a href="/tags/go"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">go</a>
+            
+            <a href="/tags/goimports"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">goimports</a>
+            
+            <a href="/tags/golang"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">golang</a>
+            
+            <a href="/tags/goz"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">goz</a>
+            
+            <a href="/tags/hexo"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">hexo</a>
+            
+            <a href="/tags/Hugo"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">Hugo</a>
+            
+            <a href="/tags/iis"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">iis</a>
+            
+            <a href="/tags/javascript"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">javascript</a>
+            
+            <a href="/tags/linux"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">linux</a>
+            
+            <a href="/tags/mysql"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">mysql</a>
+            
+            <a href="/tags/php"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">php</a>
+            
+            <a href="/tags/protobuf"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">protobuf</a>
+            
+            <a href="/tags/python"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">python</a>
+            
+            <a href="/tags/quick%20start"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">quick start</a>
+            
+            <a href="/tags/Qzone"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">Qzone</a>
+            
+            <a href="/tags/RPC"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">RPC</a>
+            
+            <a href="/tags/SeasLog"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">SeasLog</a>
+            
+            <a href="/tags/shtml"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">shtml</a>
+            
+            <a href="/tags/sublime"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">sublime</a>
+            
+            <a href="/tags/SublimeText3"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">SublimeText3</a>
+            
+            <a href="/tags/svn"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">svn</a>
+            
+            <a href="/tags/vscode"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">vscode</a>
+            
+            <a href="/tags/vue"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">vue</a>
+            
+            <a href="/tags/xshell"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">xshell</a>
+            
+            <a href="/tags/%e4%b8%89%e7%ba%a7%e8%81%94%e5%8a%a8"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">三级联动</a>
+            
+            <a href="/tags/%e4%b9%a6%e8%af%84"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">书评</a>
+            
+            <a href="/tags/%e4%bb%bf%e7%ab%99"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">仿站</a>
+            
+            <a href="/tags/%e4%bf%ae%e5%a4%8d%e6%97%a5%e5%bf%97"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">修复日志</a>
+            
+            <a href="/tags/%e5%89%8d%e5%8f%b0"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">前台</a>
+            
+            <a href="/tags/%e5%89%8d%e7%ab%af"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">前端</a>
+            
+            <a href="/tags/%e5%8d%9a%e5%ae%a2%e7%bd%91%e7%ab%99"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">博客网站</a>
+            
+            <a href="/tags/%e5%8e%8b%e5%8a%9b%e6%b5%8b%e8%af%95"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">压力测试</a>
+            
+            <a href="/tags/%e5%8e%9f%e5%88%9b%e6%95%99%e7%a8%8b"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">原创教程</a>
+            
+            <a href="/tags/%e5%8f%8d%e7%bc%96%e8%af%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">反编译</a>
+            
+            <a href="/tags/%e5%9d%9a%e6%8c%81"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">坚持</a>
+            
+            <a href="/tags/%e5%a5%8b%e6%96%97"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">奋斗</a>
+            
+            <a href="/tags/%e5%b0%8f%e7%a8%8b%e5%ba%8f"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">小程序</a>
+            
+            <a href="/tags/%e5%b0%8f%e8%af%be"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">小课</a>
+            
+            <a href="/tags/%e5%bc%80%e6%ba%90%e9%a1%b9%e7%9b%ae"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">开源项目</a>
+            
+            <a href="/tags/%e5%be%ae%e4%bf%a1%e5%bc%80%e5%8f%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">微信开发</a>
+            
+            <a href="/tags/%e6%88%91%e7%9a%84%e5%a4%a7%e5%ad%a6"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">我的大学</a>
+            
+            <a href="/tags/%e6%8a%93%e5%8c%85"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">抓包</a>
+            
+            <a href="/tags/%e6%95%b0%e6%8d%ae%e8%bf%81%e7%a7%bb"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">数据迁移</a>
+            
+            <a href="/tags/%e6%a2%a6%e6%83%b3"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">梦想</a>
+            
+            <a href="/tags/%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">版本控制</a>
+            
+            <a href="/tags/%e7%bd%91%e7%ab%99%e5%bc%80%e5%8f%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">网站开发</a>
+            
+            <a href="/tags/%e7%bd%91%e7%ab%99%e7%bb%b4%e6%8a%a4"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">网站维护</a>
+            
+            <a href="/tags/%e7%bd%91%e9%a1%b5%e9%87%87%e9%9b%86"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">网页采集</a>
+            
+            <a href="/tags/%e8%ae%a2%e5%8d%95%e6%89%93%e5%8d%b0"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">订单打印</a>
+            
+            <a href="/tags/%e8%af%bb%e4%b9%a6"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">读书</a>
+            
+            <a href="/tags/%e9%98%bf%e9%87%8c%e4%ba%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">阿里云</a>
+            
+            <a href="/tags/%e9%9d%a2%e8%af%95%e9%a2%98"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">面试题</a>
+            
+            <a href="/tags/%e9%ad%94%e5%8a%9b%e6%97%a5%e5%bf%97"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">魔力日志</a>
+            
+        </div>
+    </section>
+    
+
+    
+    <section id="categories-3" class="widget widget_categories">
+        <h2 class="widget-title">分类</h2>
+        <form action="/categories/" method="get"><label class="screen-reader-text"
+                for="cat">分类</label><select name="cat" id="cat" class="postform">
+                <option value="-1">选择分类</option>
+                
+                <option class="level-0" value="其他">其他(1)</option>
+                
+                <option class="level-0" value="开发笔记">开发笔记(29)</option>
+                
+                <option class="level-0" value="开源项目">开源项目(6)</option>
+                
+                <option class="level-0" value="系列分享">系列分享(3)</option>
+                
+                <option class="level-0" value="随笔杂感">随笔杂感(4)</option>
+                
+            </select>
+        </form>
+        <script type="text/javascript">
+             
+            (function () {
+                var dropdown = document.getElementById("cat");
+
+                function onCatChange() {
+                    if (dropdown.options[dropdown.selectedIndex].value != "" ) {
+                        window.location.href = "/categories/" + dropdown.options[dropdown.selectedIndex].value
+                    }
+                }
+                dropdown.onchange = onCatChange;
+            })();
+             
+        </script>
+    </section>
+    
+
+    
+    
+</aside>
+            </div>
+        </div>
+
+        <footer id="site-footer" class="site-footer" role="contentinfo">
+    <div class="max-width">
+    </div>
+    <div class="footer">
+        <div id="footercontent">
+            © 艾逗笔 2020 All rights reserved
+        </div>
+    </div>
+</footer>
+    </div>
+    
+</body>
+
+</html>
