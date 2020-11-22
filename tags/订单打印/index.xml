@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>订单打印 on 艾逗笔博客</title>
-    <link>/tags/%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0/</link>
-    <description>Recent content in 订单打印 on 艾逗笔博客</description>
+    <title>订单打印 on 艾逗笔</title>
+    <link>https://idoubi.cc/tags/%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0/</link>
+    <description>Recent content in 订单打印 on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 15 Oct 2014 15:04:17 +0000</lastBuildDate><atom:link href="/tags/%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 艾逗笔 2020 All rights reserved</copyright>
+    <lastBuildDate>Wed, 15 Oct 2014 15:04:17 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一个程序员关于订单打印的思考</title>
-      <link>/posts/%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0%E7%9A%84%E6%80%9D%E8%80%83/</link>
+      <link>https://idoubi.cc/posts/%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0%E7%9A%84%E6%80%9D%E8%80%83/</link>
       <pubDate>Wed, 15 Oct 2014 15:04:17 +0000</pubDate>
       
-      <guid>/posts/%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0%E7%9A%84%E6%80%9D%E8%80%83/</guid>
+      <guid>https://idoubi.cc/posts/%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0%E7%9A%84%E6%80%9D%E8%80%83/</guid>
       <description>乐佳肴台式茶餐屋 10 月 10 号开业以来，生意一直很好。我们在开业前几天就入驻了淘点点、美团外卖、乐外卖等系统。做外卖订餐的，我们肯定需要把用户下的订单打印出来然后再根据订单安排配送员给用户配送，前几天我对乐佳肴入驻的三个平台进行了调试，在淘宝上买了一个 58mm 无线蓝牙打印机，但是调试后发现只有美团外卖的订单能够打印出来，淘点点的订单打印不出来。淘点点指定的打印机好像是一款叫做“佳博”的无线打印机。乐外卖则在系统后台就指明了只能使用乐外卖提供的打印机才能打印在乐外卖平台上产生的订单，还给出了乐外卖打印机在淘宝上的购买链接，价格最便宜的 550 元，最新的 650 元。看到那个价格的时候我也是醉了。
 作为一个自尊心很强的程序员，作为武汉凌波微购网络科技有限公司的首席技术官，我岂能眼睁睁的看着我们的乐佳肴花几百块钱去买三个不同的打印机分别适应我们入驻的三个平台？于是我想到了写一套统一的程序把三个平台的订单整合起来，用一个统一的打印机打印。
 我最开始的想法是用模拟登陆技术，分别登陆淘点点、美团外卖、乐外卖三个系统的商家管理后台，然后用网页抓取技术把订单抓取下来存到本地的数据库，最后再调用打印机程序统一打印。不过后来发现淘点点跟美团外卖好像只有移动端的商家管理后台，没有 pc 端的，而乐外卖的管理后台登陆进去之后是一堆乱码，于是模拟抓取订单的这个想法行不通了。

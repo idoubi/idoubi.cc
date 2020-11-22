@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>反编译 on 艾逗笔博客</title>
-    <link>/tags/%E5%8F%8D%E7%BC%96%E8%AF%91/</link>
-    <description>Recent content in 反编译 on 艾逗笔博客</description>
+    <title>反编译 on 艾逗笔</title>
+    <link>https://idoubi.cc/tags/%E5%8F%8D%E7%BC%96%E8%AF%91/</link>
+    <description>Recent content in 反编译 on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 31 May 2018 16:50:37 +0000</lastBuildDate><atom:link href="/tags/%E5%8F%8D%E7%BC%96%E8%AF%91/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 艾逗笔 2020 All rights reserved</copyright>
+    <lastBuildDate>Thu, 31 May 2018 16:50:37 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/%E5%8F%8D%E7%BC%96%E8%AF%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>小程序源码反编译实战笔记</title>
-      <link>/posts/get-wxapkg/</link>
+      <link>https://idoubi.cc/posts/get-wxapkg/</link>
       <pubDate>Thu, 31 May 2018 16:50:37 +0000</pubDate>
       
-      <guid>/posts/get-wxapkg/</guid>
+      <guid>https://idoubi.cc/posts/get-wxapkg/</guid>
       <description>最近在做微信小程序开发，看到一些做的比较有意思的小程序，想看一看他们的源码，于是研究了一下小程序源码反编译相关的技术。结合本次经历，总结如下。
 手机root 要拿到小程序在手机上的源码包，需要有一台越狱的iphone或者一台拥有root权限的android机，正好我手里有一台闲置的小米4，就拿来用了，试过很多种方式给小米4root，差点搞成板砖机，一直在recorvy模式启动不了，最后尝试了小米官网的刷机方法，把系统刷成了开发版，完美root。
 小米4刷机教程：https://www.miui.com/shuaji-305.html

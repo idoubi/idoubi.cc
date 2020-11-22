@@ -2,9 +2,9 @@
 
 <head>
     
-<title>压力测试 - 艾逗笔博客</title>
+<title>压力测试 - 艾逗笔</title>
 
-<meta property="og:title" content="压力测试 - 艾逗笔博客">
+<meta property="og:title" content="压力测试 - 艾逗笔">
 
 
 
@@ -25,12 +25,12 @@
 <link rel="shortcut icon" href="https://blogcdn.idoustudio.com/idoubi.png" type="image/x-icon" />
 
 
-<link href="/tags/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/index.xml" rel="alternate" type="application/rss+xml" title="艾逗笔博客" />
+<link href="/tags/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/index.xml" rel="alternate" type="application/rss+xml" title="艾逗笔" />
 
 
-<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/style.min.css" />
 
-<link rel="stylesheet" href="/css/reset.css" />
+<link rel="stylesheet" href="/css/reset.min.css" />
 
 
 
@@ -115,18 +115,24 @@
                         <h2 class="post-title">
                             <a href="/posts/%E4%BD%BF%E7%94%A8apache%E7%9A%84ab%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/">使用Apache的ab工具进行网站性能压力测试</a>
                         </h2>
-                        <div class="post-byline">发布于
+                        <div class="post-byline">Published on
                             <a class="date" href="javascript:;">2016/02/15</a>
                             
-                                作者 <a class="author" href="">艾逗笔</a></div>
+                            
+                            
+                            
                             
                     </div>
                     <div class="post-content">
+                        
+                        
+                        
+                        
                         <p>年前给中百仓促超市做了微信摇一摇抽奖的功能开发，顾客凭借在中百购物的发票联可以在微信中参与抽奖。由于中百仓储超市微信公众号的关注量较大，客户担心太多用户同时参与 …</p>
                         
                         <div class="post-categories">
                             
-                            <span>标签 </span>
+                            <span>Tags </span>
                             
                             <a href="/tags/%e5%8e%8b%e5%8a%9b%e6%b5%8b%e8%af%95" title="压力测试">压力测试</a>
                             
@@ -135,7 +141,7 @@
                             
 
                             
-                            <span>分类 </span>
+                            <span>Categories </span>
                             
                             <a href="/categories/%e5%bc%80%e5%8f%91%e7%ac%94%e8%ae%b0" title="开发笔记">开发笔记</a>
                             
@@ -169,13 +175,17 @@
                 
                 <aside class="sidebar sidebar-primary" id="sidebar-primary" role="complementary">
     <h1 class="screen-reader-text">Sidebar</h1>
+    
+
+    
+    
     <section id="text-2" class="widget widget_text">
         <div class="textwidget">
             
             <div id="profile">
                 <div id="profile_picture"><img src="https://blogcdn.idoustudio.com/idoubi.png"></div>
                 <div id="profile_intro">
-                    <p><span class="name">艾逗笔</span></p>
+                    <p><span class="name"></span></p>
                     <p class="intro">全栈开发者，爱好造轮子。</p>
                 </div>
             </div>
@@ -199,6 +209,9 @@
             </p>
         </div>
     </section>
+    
+    
+    
     
     
     <section id="text-5" class="widget widget_text">
@@ -226,20 +239,329 @@
     
     
     
+    
+    
     <section id="qrcode" class="widget widget_media_image">
-        <h2 class="widget-title">公众号</h2><img width="258" height="258"
+        <h2 class="widget-title">微信公众号</h2>
+        <img width="258" height="258"
             src="https://blogcdn.idoustudio.com/idoubi-mp.jpeg"
             class="image wp-image-5514  attachment-full size-full" alt=""
             style="max-width: 100%; height: auto;"
-            srcset="https://blogcdn.idoustudio.com/idoubi-mp.jpeg 258w, https://blogcdn.idoustudio.com/idoubi-mp.jpeg 150w"
             sizes="(max-width: 258px) 100vw, 258px">
     </section>
     
-
     
 
     
+    
+    <section id="categories-3" class="widget widget_categories">
+        <h2 class="widget-title">分类</h2>
+        <form action="/categories/" method="get"><label class="screen-reader-text"
+                for="cat">Categories</label><select name="cat" id="cat" class="postform">
+                <option value="-1">Select Category</option>
+                
+                <option class="level-0" value="其他">其他(1)</option>
+                
+                <option class="level-0" value="开发笔记">开发笔记(29)</option>
+                
+                <option class="level-0" value="开源项目">开源项目(6)</option>
+                
+                <option class="level-0" value="系列分享">系列分享(3)</option>
+                
+                <option class="level-0" value="随笔杂感">随笔杂感(4)</option>
+                
+            </select>
+        </form>
+        <script type="text/javascript">
+             
+            (function () {
+                var dropdown = document.getElementById("cat");
 
+                function onCatChange() {
+                    if (dropdown.options[dropdown.selectedIndex].value != "" ) {
+                        window.location.href = "/categories/" + dropdown.options[dropdown.selectedIndex].value
+                    }
+                }
+                dropdown.onchange = onCatChange;
+            })();
+             
+        </script>
+    </section>
+    
+    
+
+    
+    
+    <section id="tag_cloud-2" class="widget widget_tag_cloud">
+        <h2 class="widget-title">标签</h2>
+        <div class="tagcloud">
+            
+            <a href="/tags/AES%e5%8a%a0%e8%a7%a3%e5%af%86"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">AES加解密</a>
+            
+            <a href="/tags/ajax"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">ajax</a>
+            
+            <a href="/tags/Apache"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">Apache</a>
+            
+            <a href="/tags/asp"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">asp</a>
+            
+            <a href="/tags/brew"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">brew</a>
+            
+            <a href="/tags/composer"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">composer</a>
+            
+            <a href="/tags/curl"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">curl</a>
+            
+            <a href="/tags/douchat"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">douchat</a>
+            
+            <a href="/tags/git"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">git</a>
+            
+            <a href="/tags/go"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">go</a>
+            
+            <a href="/tags/goimports"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">goimports</a>
+            
+            <a href="/tags/golang"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">golang</a>
+            
+            <a href="/tags/goz"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">goz</a>
+            
+            <a href="/tags/hexo"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">hexo</a>
+            
+            <a href="/tags/Hugo"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">Hugo</a>
+            
+            <a href="/tags/iis"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">iis</a>
+            
+            <a href="/tags/javascript"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">javascript</a>
+            
+            <a href="/tags/linux"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">linux</a>
+            
+            <a href="/tags/mysql"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">mysql</a>
+            
+            <a href="/tags/php"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">php</a>
+            
+            <a href="/tags/protobuf"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">protobuf</a>
+            
+            <a href="/tags/python"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">python</a>
+            
+            <a href="/tags/quick%20start"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">quick start</a>
+            
+            <a href="/tags/Qzone"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">Qzone</a>
+            
+            <a href="/tags/RPC"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">RPC</a>
+            
+            <a href="/tags/SeasLog"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">SeasLog</a>
+            
+            <a href="/tags/shtml"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">shtml</a>
+            
+            <a href="/tags/sublime"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">sublime</a>
+            
+            <a href="/tags/SublimeText3"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">SublimeText3</a>
+            
+            <a href="/tags/svn"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">svn</a>
+            
+            <a href="/tags/vscode"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">vscode</a>
+            
+            <a href="/tags/vue"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">vue</a>
+            
+            <a href="/tags/xshell"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">xshell</a>
+            
+            <a href="/tags/%e4%b8%89%e7%ba%a7%e8%81%94%e5%8a%a8"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">三级联动</a>
+            
+            <a href="/tags/%e4%b9%a6%e8%af%84"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">书评</a>
+            
+            <a href="/tags/%e4%bb%bf%e7%ab%99"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">仿站</a>
+            
+            <a href="/tags/%e4%bf%ae%e5%a4%8d%e6%97%a5%e5%bf%97"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">修复日志</a>
+            
+            <a href="/tags/%e5%89%8d%e5%8f%b0"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">前台</a>
+            
+            <a href="/tags/%e5%89%8d%e7%ab%af"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">前端</a>
+            
+            <a href="/tags/%e5%8d%9a%e5%ae%a2%e7%bd%91%e7%ab%99"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">博客网站</a>
+            
+            <a href="/tags/%e5%8e%8b%e5%8a%9b%e6%b5%8b%e8%af%95"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">压力测试</a>
+            
+            <a href="/tags/%e5%8e%9f%e5%88%9b%e6%95%99%e7%a8%8b"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">原创教程</a>
+            
+            <a href="/tags/%e5%8f%8d%e7%bc%96%e8%af%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">反编译</a>
+            
+            <a href="/tags/%e5%9d%9a%e6%8c%81"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">坚持</a>
+            
+            <a href="/tags/%e5%a5%8b%e6%96%97"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">奋斗</a>
+            
+            <a href="/tags/%e5%b0%8f%e7%a8%8b%e5%ba%8f"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">小程序</a>
+            
+            <a href="/tags/%e5%b0%8f%e8%af%be"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">小课</a>
+            
+            <a href="/tags/%e5%bc%80%e6%ba%90%e9%a1%b9%e7%9b%ae"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">开源项目</a>
+            
+            <a href="/tags/%e5%be%ae%e4%bf%a1%e5%bc%80%e5%8f%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">微信开发</a>
+            
+            <a href="/tags/%e6%88%91%e7%9a%84%e5%a4%a7%e5%ad%a6"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">我的大学</a>
+            
+            <a href="/tags/%e6%8a%93%e5%8c%85"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">抓包</a>
+            
+            <a href="/tags/%e6%95%b0%e6%8d%ae%e8%bf%81%e7%a7%bb"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">数据迁移</a>
+            
+            <a href="/tags/%e6%a2%a6%e6%83%b3"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">梦想</a>
+            
+            <a href="/tags/%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">版本控制</a>
+            
+            <a href="/tags/%e7%bd%91%e7%ab%99%e5%bc%80%e5%8f%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">网站开发</a>
+            
+            <a href="/tags/%e7%bd%91%e7%ab%99%e7%bb%b4%e6%8a%a4"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">网站维护</a>
+            
+            <a href="/tags/%e7%bd%91%e9%a1%b5%e9%87%87%e9%9b%86"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">网页采集</a>
+            
+            <a href="/tags/%e8%ae%a2%e5%8d%95%e6%89%93%e5%8d%b0"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">订单打印</a>
+            
+            <a href="/tags/%e8%af%bb%e4%b9%a6"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">读书</a>
+            
+            <a href="/tags/%e9%98%bf%e9%87%8c%e4%ba%91"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">阿里云</a>
+            
+            <a href="/tags/%e9%9d%a2%e8%af%95%e9%a2%98"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">面试题</a>
+            
+            <a href="/tags/%e9%ad%94%e5%8a%9b%e6%97%a5%e5%bf%97"
+                class="tag-cloud-link tag-link-58 tag-link-position-1"
+                style="font-size: 11.083333333333pt;" aria-label="Apache (6 items)">魔力日志</a>
+            
+        </div>
+    </section>
+    
+    
+
+    
+    
+    <section id="text-6" class="widget widget_text">
+        <h2 class="widget-title">友情链接</h2>
+        <div class="textwidget">
+            <ul>
+                
+                <li><a href="http://douchat.net" target="_blank">豆信-简洁高效的微信开发框架</a></li>
+                
+            </ul>
+        </div>
+    </section>
+    
     
     
 </aside>

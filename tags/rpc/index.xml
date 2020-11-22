@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RPC on 艾逗笔博客</title>
-    <link>/tags/rpc/</link>
-    <description>Recent content in RPC on 艾逗笔博客</description>
+    <title>RPC on 艾逗笔</title>
+    <link>https://idoubi.cc/tags/rpc/</link>
+    <description>Recent content in RPC on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 03 Dec 2017 11:45:26 +0000</lastBuildDate><atom:link href="/tags/rpc/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 艾逗笔 2020 All rights reserved</copyright>
+    <lastBuildDate>Sun, 03 Dec 2017 11:45:26 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/rpc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>golang实现RPC的几种方式</title>
-      <link>/posts/golang%E5%AE%9E%E7%8E%B0rpc%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <link>https://idoubi.cc/posts/golang%E5%AE%9E%E7%8E%B0rpc%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
       <pubDate>Sun, 03 Dec 2017 11:45:26 +0000</pubDate>
       
-      <guid>/posts/golang%E5%AE%9E%E7%8E%B0rpc%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <guid>https://idoubi.cc/posts/golang%E5%AE%9E%E7%8E%B0rpc%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
       <description>什么是RPC 远程过程调用（Remote Procedure Call，缩写为 RPC）是一个计算机通信协议。 该协议允许运行于一台计算机的程序调用另一台计算机的子程序，而程序员无需额外地为这个交互作用编程。 如果涉及的软件采用面向对象编程，那么远程过程调用亦可称作远程调用或远程方法调用。维基百科：远程过程调用
 用通俗易懂的语言描述就是：RPC允许跨机器、跨语言调用计算机程序方法。打个比方，我用go语言写了个获取用户信息的方法getUserInfo，并把go程序部署在阿里云服务器上面，现在我有一个部署在腾讯云上面的php项目，需要调用golang的getUserInfo方法获取用户信息，php跨机器调用go方法的过程就是RPC调用。
 golang中如何实现RPC 在golang中实现RPC非常简单，有封装好的官方库和一些第三方库提供支持。Go RPC可以利用tcp或http来传递数据，可以对要传递的数据使用多种类型的编解码方式。golang官方的net/rpc库使用encoding/gob进行编解码，支持tcp或http数据传输方式，由于其他语言不支持gob编解码方式，所以使用net/rpc库实现的RPC方法没办法进行跨语言调用。
