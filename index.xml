@@ -6,7 +6,20 @@
     <description>Recent content on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 艾逗笔 2020 All rights reserved</copyright>
-    <lastBuildDate>Sun, 22 Nov 2020 12:23:45 +0800</lastBuildDate><atom:link href="https://idoubi.cc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Dec 2020 10:51:34 +0800</lastBuildDate><atom:link href="https://idoubi.cc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我写了一款企业微信机器人SDK</title>
+      <link>https://idoubi.cc/posts/go-sdk-for-wework-robot/</link>
+      <pubDate>Wed, 02 Dec 2020 10:51:34 +0800</pubDate>
+      
+      <guid>https://idoubi.cc/posts/go-sdk-for-wework-robot/</guid>
+      <description>创建机器人 在企业微信选择一个群聊，右键点击添加机器人，即可创建一个具备基本消息推送能力的机器人。
+下载SDK go get -u github.com/cutesdk/webot 机器人推送消息 使用机器人推送消息非常简单，只需要在创建完机器人之后，拿到机器人的 Webhook地址，使用 SDK 创建一个 Bot 对象，通过链式调用完成消息推送。
+基本使用 package main import ( &amp;#34;github.com/cutesdk/webot&amp;#34; ) func main() { bot := &amp;amp;webot.Bot{ WebhookURL: &amp;#34;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b8f1e424-d48d-46cc-a2c7-d360c8e98b3d&amp;#34;, } bot.Text(&amp;#34;你好，我是机器人&amp;#34;).Send() } 运行上面的代码，添加了机器人的群就会收到消息：
+发送 markdown 类型消息 mdmsg := `*这是一条Markdown消息* &amp;gt; 这是引用文本 - 这是列表1 - 这是列表2	` bot.Markdown(mdmsg).Send() 运行上面的代码，机器人会发送 markdown 消息：
+发送带操作按钮的 markdown 消息 mdmsg := `这是一条带操作按钮的 Markdown 消息 &amp;gt; 请确认你要提交吗？` callbackID := &amp;#34;testwebot&amp;#34; actions := []webot.MsgAction{} actions = append(actions, webot.MsgAction{ Text: &amp;#34;确认&amp;#34;, Name: &amp;#34;acts&amp;#34;, Value: &amp;#34;confirm&amp;#34;, ReplaceText: &amp;#34;已确认&amp;#34;, Type: &amp;#34;button&amp;#34;, TextColor: &amp;#34;2EAB49&amp;#34;, BorderColor: &amp;#34;2EAB49&amp;#34;, }) actions = append(actions, webot.</description>
+    </item>
+    
     <item>
       <title>我写了一款跟PHP鸟哥一样的博客皮肤</title>
       <link>https://idoubi.cc/posts/my-new-hugo-theme-like-laruence/</link>
