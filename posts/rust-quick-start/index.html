@@ -2,23 +2,27 @@
 
 <head>
     
-<title>我写了一款企业微信机器人SDK - 艾逗笔</title>
+<title>Rust入门第一课：写个Hello World - 艾逗笔</title>
 
-<meta property="og:title" content="我写了一款企业微信机器人SDK - 艾逗笔">
-
-
-
-    
+<meta property="og:title" content="Rust入门第一课：写个Hello World - 艾逗笔">
 
 
 
     
-    <meta property="description" content="在企业微信选择一个群聊，右键点击添加机器人，即可创建一个具备基本消息推送能力的机器人。
-[&amp;hellip;] go get -u github.com/cutesdk/webot 机器人推送消息 使用机器人推送消息非常简单，只需要在创建完机器人之后，拿到机器人的 Webhook地址，使用 SDK 创建一个 Bot 对象，通过链式调用完成消息推送。
-[&amp;hellip;] package main &amp;hellip;">
-    <meta property="og:description" content="在企业微信选择一个群聊，右键点击添加机器人，即可创建一个具备基本消息推送能力的机器人。
-[&amp;hellip;] go get -u github.com/cutesdk/webot 机器人推送消息 使用机器人推送消息非常简单，只需要在创建完机器人之后，拿到机器人的 Webhook地址，使用 SDK 创建一个 Bot 对象，通过链式调用完成消息推送。
-[&amp;hellip;] package main &amp;hellip;">
+
+
+
+    
+    <meta property="description" content="2021 年了，学一下 Rust 吧。
+参考官方文档，按照国际惯例，先来写一个 Hello World 程序。
+[&amp;hellip;] 对比其他编程语言的安装方式，rust 除了支持源码编译外，还提供了一个安装器( rustup )来快速安装。
+通过命令行安装 rustup 。
+[&amp;hellip;] curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf &amp;hellip;">
+    <meta property="og:description" content="2021 年了，学一下 Rust 吧。
+参考官方文档，按照国际惯例，先来写一个 Hello World 程序。
+[&amp;hellip;] 对比其他编程语言的安装方式，rust 除了支持源码编译外，还提供了一个安装器( rustup )来快速安装。
+通过命令行安装 rustup 。
+[&amp;hellip;] curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf &amp;hellip;">
     
 
 
@@ -114,11 +118,11 @@
                                 <div class="post-container">
                                     <div class="post-header">
                                         <h2 class="post-title">
-                                            <a href="/posts/go-sdk-for-wework-robot/">我写了一款企业微信机器人SDK</a>
+                                            <a href="/posts/rust-quick-start/">Rust入门第一课：写个Hello World</a>
                                         </h2>
                                         
                                         <div class="post-byline">Published on
-                                            <a class="date" href="javascript:;">2020/12/02</a>
+                                            <a class="date" href="javascript:;">2021/01/31</a>
                                             
                                             
                                             
@@ -127,80 +131,142 @@
                                         
                                     </div>
                                     <div class="post-content">
-                                        <h2 id="创建机器人">创建机器人</h2>
-<p>在企业微信选择一个群聊，右键点击添加机器人，即可创建一个具备基本消息推送能力的机器人。</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot1.png" alt=""></p>
-<h2 id="下载sdk">下载SDK</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go get -u github.com/cutesdk/webot
-</code></pre></div><h2 id="机器人推送消息">机器人推送消息</h2>
-<p>使用机器人推送消息非常简单，只需要在创建完机器人之后，拿到机器人的 Webhook地址，使用 SDK 创建一个 Bot 对象，通过链式调用完成消息推送。</p>
-<h3 id="基本使用">基本使用</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+                                        <p>2021 年了，学一下 Rust 吧。</p>
+<p>参考官方文档，按照国际惯例，先来写一个 Hello World 程序。</p>
+<h2 id="安装">安装</h2>
+<p>对比其他编程语言的安装方式，rust 除了支持源码编译外，还提供了一个安装器( rustup )来快速安装。</p>
+<p>通过命令行安装 <code>rustup</code> 。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl --proto <span style="color:#e6db74">&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</code></pre></div><p>修改环境变量：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export PATH<span style="color:#f92672">=</span>PATH:$HOME/.cargo/bin
+</code></pre></div><p>查看版本</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ rustup --version
+rustup 1.23.1 <span style="color:#f92672">(</span>3df2264a9 2020-11-30<span style="color:#f92672">)</span>
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;github.com/cutesdk/webot&#34;</span>
-)
+$ rustc --version
+rustc 1.49.0 <span style="color:#f92672">(</span>e1884a8e3 2020-12-29<span style="color:#f92672">)</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">bot</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">webot</span>.<span style="color:#a6e22e">Bot</span>{
-		<span style="color:#a6e22e">WebhookURL</span>: <span style="color:#e6db74">&#34;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b8f1e424-d48d-46cc-a2c7-d360c8e98b3d&#34;</span>,
-	}
-
-	<span style="color:#a6e22e">bot</span>.<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;你好，我是机器人&#34;</span>).<span style="color:#a6e22e">Send</span>()
+$ cargo --version
+cargo 1.49.0 <span style="color:#f92672">(</span>d00d64df9 2020-12-05<span style="color:#f92672">)</span>
+</code></pre></div><p><code>rustup</code> 是 rust 版本管理器</p>
+<p><code>rustc</code> 是 rust 编译器</p>
+<p><code>cargo</code> 是 rust 包管理工具。</p>
+<h2 id="编写-rust-代码">编写 rust 代码</h2>
+<p>创建一个 rust 文件，开始编写 Hello World 代码</p>
+<p><code>vim hello.rs</code> 创建代码文件，编写代码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello World!&#34;</span>);
 }
-</code></pre></div><p>运行上面的代码，添加了机器人的群就会收到消息：</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot2.png" alt=""></p>
-<h3 id="发送-markdown-类型消息">发送 markdown 类型消息</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">	<span style="color:#a6e22e">mdmsg</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`*这是一条Markdown消息*
-</span><span style="color:#e6db74">&gt; 这是引用文本
-</span><span style="color:#e6db74">- 这是列表1
-</span><span style="color:#e6db74">- 这是列表2	
-</span><span style="color:#e6db74">`</span>
-	<span style="color:#a6e22e">bot</span>.<span style="color:#a6e22e">Markdown</span>(<span style="color:#a6e22e">mdmsg</span>).<span style="color:#a6e22e">Send</span>()
-</code></pre></div><p>运行上面的代码，机器人会发送 markdown 消息：</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot3.png" alt=""></p>
-<h3 id="发送带操作按钮的-markdown-消息">发送带操作按钮的 markdown 消息</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">mdmsg</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`这是一条带操作按钮的 Markdown 消息
-</span><span style="color:#e6db74">	&gt; 请确认你要提交吗？`</span>
+</code></pre></div><p>跟一般的编译型语言一样，rust 的执行过程也分为编译和运行两部分。</p>
+<p>先编译 rust 代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ rustc hello.rs 
 
-<span style="color:#a6e22e">callbackID</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;testwebot&#34;</span>
-<span style="color:#a6e22e">actions</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">webot</span>.<span style="color:#a6e22e">MsgAction</span>{}
-<span style="color:#a6e22e">actions</span> = append(<span style="color:#a6e22e">actions</span>, <span style="color:#a6e22e">webot</span>.<span style="color:#a6e22e">MsgAction</span>{
-	<span style="color:#a6e22e">Text</span>:        <span style="color:#e6db74">&#34;确认&#34;</span>,
-	<span style="color:#a6e22e">Name</span>:        <span style="color:#e6db74">&#34;acts&#34;</span>,
-	<span style="color:#a6e22e">Value</span>:       <span style="color:#e6db74">&#34;confirm&#34;</span>,
-	<span style="color:#a6e22e">ReplaceText</span>: <span style="color:#e6db74">&#34;已确认&#34;</span>,
-	<span style="color:#a6e22e">Type</span>:        <span style="color:#e6db74">&#34;button&#34;</span>,
-	<span style="color:#a6e22e">TextColor</span>:   <span style="color:#e6db74">&#34;2EAB49&#34;</span>,
-	<span style="color:#a6e22e">BorderColor</span>: <span style="color:#e6db74">&#34;2EAB49&#34;</span>,
-})
-<span style="color:#a6e22e">actions</span> = append(<span style="color:#a6e22e">actions</span>, <span style="color:#a6e22e">webot</span>.<span style="color:#a6e22e">MsgAction</span>{
-	<span style="color:#a6e22e">Text</span>:        <span style="color:#e6db74">&#34;取消&#34;</span>,
-	<span style="color:#a6e22e">Name</span>:        <span style="color:#e6db74">&#34;acts&#34;</span>,
-	<span style="color:#a6e22e">Value</span>:       <span style="color:#e6db74">&#34;cancel&#34;</span>,
-	<span style="color:#a6e22e">ReplaceText</span>: <span style="color:#e6db74">&#34;已取消&#34;</span>,
-	<span style="color:#a6e22e">Type</span>:        <span style="color:#e6db74">&#34;button&#34;</span>,
-})
+</code></pre></div><p>编译完成在同目录下生成了同名的可执行二进制文件</p>
+<p>运行可执行文件，可以看到控制台输出了 <code>Hello World!</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ./hello 
+Hello World!
+</code></pre></div><h2 id="包管理配置">包管理配置</h2>
+<p>就像 nodejs 使用 <code>npm</code>，php 使用 <code>composer</code>、python 使用 <code>pypi</code> 一样</p>
+<p>rust 使用 <code>cargo</code> 作为包管理工具</p>
+<p>一般的包管理平台都是用的境外服务器，在国内下载依赖包通常需要配置镜像来加速。</p>
+<p>使用中科大的 rust 镜像，修改 <code>cargo</code> 配置文件：<code>vim ~/.cargo/config</code></p>
+<p>写入镜像配置</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">source</span>.<span style="color:#a6e22e">crates</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">io</span>]
+<span style="color:#a6e22e">replace</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">with</span>=<span style="color:#e6db74">&#39;ustc&#39;</span>
 
-<span style="color:#a6e22e">bot</span>.<span style="color:#a6e22e">Actions</span>(<span style="color:#a6e22e">callbackID</span>, <span style="color:#a6e22e">actions</span>).<span style="color:#a6e22e">Markdown</span>(<span style="color:#a6e22e">mdmsg</span>).<span style="color:#a6e22e">Send</span>()
-</code></pre></div><p>运行上面的代码，机器人发送带有操作按钮的 markdown 消息：</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot4.png" alt=""></p>
-<p>点击操作按钮，机器人会给回调地址推送事件消息，开发者可以在回调事件里面进行相应的处理，实现复杂的机器人交互逻辑。</p>
-<h3 id="提醒谁看">提醒谁看</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">msg</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;这是一条要提示用户&lt;@adam&gt;的文本消息&#34;</span>
-<span style="color:#a6e22e">bot</span>.<span style="color:#a6e22e">Mention</span>([]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;@all&#34;</span>}).<span style="color:#a6e22e">Text</span>(<span style="color:#a6e22e">msg</span>).<span style="color:#a6e22e">Send</span>()
-</code></pre></div><p>运行上面代码，机器人会发送消息，并艾特指定的用户：</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot5.png" alt=""></p>
-<p>在文本中艾特人用 <code>&lt;@userid&gt;</code>，艾特全体成员用 <code>@all</code></p>
-<h3 id="指定用户可见">指定用户可见</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">msg</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;这是一条仅指定用户可见的文本消息&#34;</span>
-<span style="color:#a6e22e">bot</span>.<span style="color:#a6e22e">Target</span>([]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;wrkSFfCgAAIfjQ7pSijsAAx_KpflhDBw&#34;</span>}).<span style="color:#a6e22e">Visible</span>([]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;adam&#34;</span>}).<span style="color:#a6e22e">Text</span>(<span style="color:#a6e22e">msg</span>).<span style="color:#a6e22e">Send</span>()
-</code></pre></div><p>运行上面的代码，机器人会发送消息到群聊，只有指定的群聊中的指定用户可以看到消息：</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot6.png" alt=""></p>
-<p><code>Target</code> 用于指定一个或多个群聊的 <code>chatid</code> ，每个群有唯一的 <code>chatid</code> ，在配置了机器人接收消息后，才能获取到群聊的 <code>chatid</code>。</p>
-<h2 id="机器人接收消息">机器人接收消息</h2>
-<p>目前公网版本的企业微信机器人并不支持接收消息配置，暂不能使用机器人完成复杂的交互功能。请关注企业微信官网查看更新动态。</p>
+[<span style="color:#a6e22e">source</span>.<span style="color:#a6e22e">ustc</span>]
+<span style="color:#a6e22e">registry</span>=<span style="color:#e6db74">&#34;https://mirrors.ustc.edu.cn/crates.io-index&#34;</span>
+</code></pre></div><p>后续安装 rust 依赖包的时候，就会使用配置的镜像进行拉取。</p>
+<h2 id="vs-code-开发配置">VS Code 开发配置</h2>
+<p>我们一般使用 VS Code 作为日常的开发编辑器，如果用来开发 rust 程序，需要安装几个插件</p>
+<ol>
+<li>Rust 官方插件，提供 rust 代码检查、格式化、自动完成等功能。</li>
+</ol>
+<p><img src="http://blogcdn.idoustudio.com/20210131173006.png" alt=""></p>
+<ol start="2">
+<li>Code Runner，通用代码运行插件，可编译单个 rust 文件。</li>
+</ol>
+<p><img src="http://blogcdn.idoustudio.com/20210131173232.png" alt=""></p>
+<p>在代码编写窗口，调用 Code Runner 将会使用 <code>rustc</code> 工具对代码进行编译，需要提前配置 <code>rustc</code> 编译工具的位置</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;code-runner.executorMap&#34;</span>: {
+    <span style="color:#f92672">&#34;rust&#34;</span>: <span style="color:#e6db74">&#34;/root/.cargo/bin/rustc&#34;</span>
+  }
+}
+</code></pre></div><p>可以为 Code Runner 插件绑定一个运行快捷键：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+  {
+    <span style="color:#f92672">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;cmd+r&#34;</span>,
+    <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;code-runner.run&#34;</span>
+  },
+  {
+    <span style="color:#f92672">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;ctrl+alt+n&#34;</span>,
+    <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;-code-runner.run&#34;</span>
+  }
+]
+</code></pre></div><p>在编写 rust 代码过程中，按下快捷键 <code>cmd+r</code> 就可以实时编译了。</p>
+<h2 id="rust-项目开发">rust 项目开发</h2>
+<p>在完成了前面的试水之后，我们可以开始用 rust 开发项目了。</p>
+<p>使用 <code>cargo</code> 创建一个新项目</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cargo new rust-demo
+     Created binary <span style="color:#f92672">(</span>application<span style="color:#f92672">)</span> <span style="color:#e6db74">`</span>rust-demo<span style="color:#e6db74">`</span> package
+</code></pre></div><p>生成的 rust-demo 项目的目录结构为</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ tree
+.
+|-- Cargo.toml
+<span style="color:#e6db74">`</span>-- src
+    <span style="color:#e6db74">`</span>-- main.rs
+</code></pre></div><p>Cargo.toml 为项目的配置文件，定义了项目的基本信息，依赖的包信息等。</p>
+<p>文件内容类似：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">package</span>]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;rust-demo&#34;</span>
+<span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;0.1.0&#34;</span>
+<span style="color:#a6e22e">authors</span> = [<span style="color:#e6db74">&#34;艾逗笔 &lt;me@idoubi.cc&gt;&#34;</span>]
+<span style="color:#a6e22e">edition</span> = <span style="color:#e6db74">&#34;2018&#34;</span>
 
+<span style="color:#75715e"># See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html</span>
+
+[<span style="color:#a6e22e">dependencies</span>]
+</code></pre></div><p>src 目录下是项目的源代码。</p>
+<p>编写完项目代码后，在项目根目录运行 <code>cargo run</code> 完成项目的编译与运行。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cargo run  
+   Compiling rust-demo v0.1.0 <span style="color:#f92672">(</span>/data/code/rust-demo<span style="color:#f92672">)</span>
+    Finished dev <span style="color:#f92672">[</span>unoptimized + debuginfo<span style="color:#f92672">]</span> target<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> in 0.66s
+     Running <span style="color:#e6db74">`</span>target/debug/rust-demo<span style="color:#e6db74">`</span>
+Hello, world!
+</code></pre></div><p>如果运行 <code>cargo build</code> ，则只会完成编译过程。编译生成的内容在 target 目录下。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ tree target 
+target
+|-- CACHEDIR.TAG
+<span style="color:#e6db74">`</span>-- debug
+    |-- build
+    |-- deps
+    |   |-- rust_demo-974597d25eb24ddf
+    |   <span style="color:#e6db74">`</span>-- rust_demo-974597d25eb24ddf.d
+    |-- examples
+    |-- incremental
+    |   <span style="color:#e6db74">`</span>-- rust_demo-chnzk7pgkxdz
+    |       |-- s-fvfqrhmisp-1vg0edz-jzrwf6vs8k72
+    |       |   |-- 1c13zz2y1hzbcwk8.o
+    |       |   |-- 1d3qur61nopxku2b.o
+    |       |   |-- 1nfhfokemfsf2727.o
+    |       |   |-- 31xgledb84l6sbed.o
+    |       |   |-- 49i6i3y832wqo40p.o
+    |       |   |-- 4my21cnst159etff.o
+    |       |   |-- 4siqxfrw9lh3axbk.o
+    |       |   |-- 5cdc43ijbx4jimih.o
+    |       |   |-- dep-graph.bin
+    |       |   |-- query-cache.bin
+    |       |   <span style="color:#e6db74">`</span>-- work-products.bin
+    |       <span style="color:#e6db74">`</span>-- s-fvfqrhmisp-1vg0edz.lock
+    |-- rust-demo
+    <span style="color:#e6db74">`</span>-- rust-demo.d
+
+<span style="color:#ae81ff">7</span> directories, <span style="color:#ae81ff">17</span> files
+</code></pre></div><p>可以直接运行编译后的二进制文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ./target/debug/rust-demo 
+Hello, world!
+</code></pre></div>
 
                                         
                                         
@@ -221,14 +287,9 @@
                                             
                                             <div class="previous">
                                                 <span>&lt;&lt; Prev</span>
-                                                <a href="/posts/my-new-hugo-theme-like-laruence/"
-                                                    rel="prev">我写了一款跟PHP鸟哥一样的博客皮肤</a> </div>
+                                                <a href="/posts/go-sdk-for-wework-robot/"
+                                                    rel="prev">我写了一款企业微信机器人SDK</a> </div>
                                             
-                                            
-                                            <div class="next">
-                                                <span>Next >></span>
-                                                <a href="/posts/rust-quick-start/">Rust入门第一课：写个Hello World</a> 
-                                            </div>
                                             
                                         </nav>
                                     </div>

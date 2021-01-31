@@ -6,7 +6,25 @@
     <description>Recent content in Posts on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
-    <lastBuildDate>Wed, 02 Dec 2020 10:51:34 +0800</lastBuildDate><atom:link href="https://idoubi.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jan 2021 15:47:24 +0800</lastBuildDate><atom:link href="https://idoubi.cc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust入门第一课：写个Hello World</title>
+      <link>https://idoubi.cc/posts/rust-quick-start/</link>
+      <pubDate>Sun, 31 Jan 2021 15:47:24 +0800</pubDate>
+      
+      <guid>https://idoubi.cc/posts/rust-quick-start/</guid>
+      <description>2021 年了，学一下 Rust 吧。
+参考官方文档，按照国际惯例，先来写一个 Hello World 程序。
+安装 对比其他编程语言的安装方式，rust 除了支持源码编译外，还提供了一个安装器( rustup )来快速安装。
+通过命令行安装 rustup 。
+curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh 修改环境变量：
+export PATH=PATH:$HOME/.cargo/bin 查看版本
+$ rustup --version rustup 1.23.1 (3df2264a9 2020-11-30) $ rustc --version rustc 1.49.0 (e1884a8e3 2020-12-29) $ cargo --version cargo 1.49.0 (d00d64df9 2020-12-05) rustup 是 rust 版本管理器
+rustc 是 rust 编译器
+cargo 是 rust 包管理工具。
+编写 rust 代码 创建一个 rust 文件，开始编写 Hello World 代码</description>
+    </item>
+    
     <item>
       <title>我写了一款企业微信机器人SDK</title>
       <link>https://idoubi.cc/posts/go-sdk-for-wework-robot/</link>
