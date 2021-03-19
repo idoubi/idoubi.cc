@@ -6,23 +6,25 @@
     <description>Recent content on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
-    <lastBuildDate>Sun, 31 Jan 2021 15:47:24 +0800</lastBuildDate><atom:link href="https://idoubi.cc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Mar 2021 16:23:08 +0800</lastBuildDate><atom:link href="https://idoubi.cc/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Rust入门第一课：写个Hello World</title>
-      <link>https://idoubi.cc/posts/rust-quick-start/</link>
-      <pubDate>Sun, 31 Jan 2021 15:47:24 +0800</pubDate>
+      <title>开发一款转换sql查询结果的vscode插件</title>
+      <link>https://idoubi.cc/posts/vscode-extension-sqlresult/</link>
+      <pubDate>Fri, 19 Mar 2021 16:23:08 +0800</pubDate>
       
-      <guid>https://idoubi.cc/posts/rust-quick-start/</guid>
-      <description>2021 年了，学一下 Rust 吧。
-参考官方文档，按照国际惯例，先来写一个 Hello World 程序。
-安装 对比其他编程语言的安装方式，rust 除了支持源码编译外，还提供了一个安装器( rustup )来快速安装。
-通过命令行安装 rustup 。
-curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh 修改环境变量：
-export PATH=PATH:$HOME/.cargo/bin 查看版本
-$ rustup --version rustup 1.23.1 (3df2264a9 2020-11-30) $ rustc --version rustc 1.49.0 (e1884a8e3 2020-12-29) $ cargo --version cargo 1.49.0 (d00d64df9 2020-12-05) rustup 是 rust 版本管理器
-rustc 是 rust 编译器
-cargo 是 rust 包管理工具。
-编写 rust 代码 创建一个 rust 文件，开始编写 Hello World 代码</description>
+      <guid>https://idoubi.cc/posts/vscode-extension-sqlresult/</guid>
+      <description>背景 做开发的同事应该很多人有过类似的经历：运营同事找过来，让我们帮忙导一份用户下单的数据。
+我们一般的操作流程是：登录跳板机，连上数据库，输入查询 sql，复制 sql 查询结果，发给运营同事。
+sql 查询结果一般长这样： 我们把查询结果保存到一个 txt 文件，发给运营同事，以为万事大吉了。
+结果运营同事回这么一句： 运营同事用 windows 系统的记事本打开这个 txt 文件，看到的格式是乱的，他们希望我们给到的是一个 csv 或者 excel 表格文件。
+作为一个开发，我们可能会想，这种小事情，写个插件来搞定吧。
+所以进入到了今天的主题：
+开发一个 vscode 插件，将 sql 查询结果转换成表格形式，并保存为 csv 文件。
+vscode 插件开发 vscode 插件开发的详细步骤我就不写了，贴一篇我看过的教程，有兴趣的同学可以移步 这里 去看。
+ 安装命令行  npm i -g yo generator-code
+ 创建插件  在终端执行 yo code，根据提示一步一步输入插件信息之后，我创建了一个目录名为 sqlresult 的插件。
+vscode 打开插件目录，可以看到自动生成的插件文件结构长这样： 其中 package.json 是插件信息文件，src/extension.ts 是插件的主逻辑。
+ 定义插件子命令  修改 package.json ，定义一个保存文件内容到 csv 的命令： 在 src/extension.ts 文件里面注册命令，编写命令的运行逻辑：  插件调试  在编辑器按 F5，打开一个新的编辑器窗口调试插件功能。</description>
     </item>
     
     <item>

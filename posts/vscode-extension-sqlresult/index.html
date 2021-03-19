@@ -2,23 +2,25 @@
 
 <head>
     
-<title>我写了一款企业微信机器人SDK - 艾逗笔</title>
+<title>开发一款转换sql查询结果的vscode插件 - 艾逗笔</title>
 
-<meta property="og:title" content="我写了一款企业微信机器人SDK - 艾逗笔">
-
-
-
-    
+<meta property="og:title" content="开发一款转换sql查询结果的vscode插件 - 艾逗笔">
 
 
 
     
-    <meta property="description" content="在企业微信选择一个群聊，右键点击添加机器人，即可创建一个具备基本消息推送能力的机器人。
-[&amp;hellip;] go get -u github.com/cutesdk/webot 机器人推送消息 使用机器人推送消息非常简单，只需要在创建完机器人之后，拿到机器人的 Webhook地址，使用 SDK 创建一个 Bot 对象，通过链式调用完成消息推送。
-[&amp;hellip;] package main &amp;hellip;">
-    <meta property="og:description" content="在企业微信选择一个群聊，右键点击添加机器人，即可创建一个具备基本消息推送能力的机器人。
-[&amp;hellip;] go get -u github.com/cutesdk/webot 机器人推送消息 使用机器人推送消息非常简单，只需要在创建完机器人之后，拿到机器人的 Webhook地址，使用 SDK 创建一个 Bot 对象，通过链式调用完成消息推送。
-[&amp;hellip;] package main &amp;hellip;">
+
+
+
+    
+    <meta property="description" content="做开发的同事应该很多人有过类似的经历：运营同事找过来，让我们帮忙导一份用户下单的数据。
+我们一般的操作流程是：登录跳板机，连上数据库，输入查询 sql，复制 sql 查询结果，发给运营同事。
+sql 查询结果一般长这样： 我们把查询结果保存到一个 txt 文件，发给运营同事，以为万事大吉了。
+结果运营同事回这么一句： 运营同事用 windows 系统的记事本打开这个 txt 文件，看到的格式是乱 &amp;hellip;">
+    <meta property="og:description" content="做开发的同事应该很多人有过类似的经历：运营同事找过来，让我们帮忙导一份用户下单的数据。
+我们一般的操作流程是：登录跳板机，连上数据库，输入查询 sql，复制 sql 查询结果，发给运营同事。
+sql 查询结果一般长这样： 我们把查询结果保存到一个 txt 文件，发给运营同事，以为万事大吉了。
+结果运营同事回这么一句： 运营同事用 windows 系统的记事本打开这个 txt 文件，看到的格式是乱 &amp;hellip;">
     
 
 
@@ -114,11 +116,11 @@
                                 <div class="post-container">
                                     <div class="post-header">
                                         <h2 class="post-title">
-                                            <a href="/posts/go-sdk-for-wework-robot/">我写了一款企业微信机器人SDK</a>
+                                            <a href="/posts/vscode-extension-sqlresult/">开发一款转换sql查询结果的vscode插件</a>
                                         </h2>
                                         
                                         <div class="post-byline">Published on
-                                            <a class="date" href="javascript:;">2020/12/02</a>
+                                            <a class="date" href="javascript:;">2021/03/19</a>
                                             
                                             
                                             
@@ -127,79 +129,193 @@
                                         
                                     </div>
                                     <div class="post-content">
-                                        <h2 id="创建机器人">创建机器人</h2>
-<p>在企业微信选择一个群聊，右键点击添加机器人，即可创建一个具备基本消息推送能力的机器人。</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot1.png" alt=""></p>
-<h2 id="下载sdk">下载SDK</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go get -u github.com/cutesdk/webot
-</code></pre></div><h2 id="机器人推送消息">机器人推送消息</h2>
-<p>使用机器人推送消息非常简单，只需要在创建完机器人之后，拿到机器人的 Webhook地址，使用 SDK 创建一个 Bot 对象，通过链式调用完成消息推送。</p>
-<h3 id="基本使用">基本使用</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+                                        <h2 id="背景">背景</h2>
+<p>做开发的同事应该很多人有过类似的经历：运营同事找过来，让我们帮忙导一份用户下单的数据。</p>
+<p>我们一般的操作流程是：登录跳板机，连上数据库，输入查询 sql，复制 sql 查询结果，发给运营同事。</p>
+<p>sql 查询结果一般长这样：
+<img src="http://blogcdn.idoustudio.com/pic/sqlresult_1.png" alt="enter image description here"></p>
+<p>我们把查询结果保存到一个 txt 文件，发给运营同事，以为万事大吉了。</p>
+<p>结果运营同事回这么一句：
+<img src="http://blogcdn.idoustudio.com/pic/sqlresult_2.png" alt="enter image description here"></p>
+<p>运营同事用 windows 系统的记事本打开这个 txt 文件，看到的格式是乱的，他们希望我们给到的是一个 csv 或者 excel 表格文件。</p>
+<p>作为一个开发，我们可能会想，这种小事情，写个插件来搞定吧。</p>
+<p>所以进入到了今天的主题：</p>
+<p>开发一个 vscode 插件，将 sql 查询结果转换成表格形式，并保存为 csv 文件。</p>
+<h2 id="vscode-插件开发">vscode 插件开发</h2>
+<p>vscode 插件开发的详细步骤我就不写了，贴一篇我看过的教程，有兴趣的同学可以移步 <a href="https://liiked.github.io/VS-Code-Extension-Doc-ZH/#/get-started/your-first-extension">这里</a> 去看。</p>
+<ul>
+<li>安装命令行</li>
+</ul>
+<p><code>npm i -g yo generator-code</code></p>
+<ul>
+<li>创建插件</li>
+</ul>
+<p>在终端执行 <code>yo code</code>，根据提示一步一步输入插件信息之后，我创建了一个目录名为 <code>sqlresult</code> 的插件。</p>
+<p>vscode 打开插件目录，可以看到自动生成的插件文件结构长这样：
+<img src="http://blogcdn.idoustudio.com/pic/sqlresult_3.png" alt="enter image description here"></p>
+<p>其中 <code>package.json</code> 是插件信息文件，<code>src/extension.ts</code> 是插件的主逻辑。</p>
+<ul>
+<li>定义插件子命令</li>
+</ul>
+<p>修改 <code>package.json</code> ，定义一个保存文件内容到 csv 的命令：
+<img src="http://blogcdn.idoustudio.com/pic/sqlresult_4.png" alt="enter image description here"></p>
+<p>在 <code>src/extension.ts</code> 文件里面注册命令，编写命令的运行逻辑：
+<img src="http://blogcdn.idoustudio.com/pic/sqlresult_5.png" alt="enter image description here"></p>
+<ul>
+<li>插件调试</li>
+</ul>
+<p>在编辑器按 F5，打开一个新的编辑器窗口调试插件功能。</p>
+<p><img src="http://blogcdn.idoustudio.com/pic/sqlresult_6.png" alt="enter image description here"></p>
+<p>按 <code>command+shift+p</code> 弹出命令输入框，运行我们的自定义命令。</p>
+<p><img src="http://blogcdn.idoustudio.com/pic/sqlresult_7.png" alt="enter image description here"></p>
+<p>命令执行后，通过 <code>vscode.window.showInformationMessage</code> 输出的调试信息在编辑器右下角弹出显示。</p>
+<p><img src="http://blogcdn.idoustudio.com/pic/sqlresult_8.png" alt="enter image description here"></p>
+<p>通过 <code>console.log</code> 输出的调试信息在编辑器下方的调试控制台输出。</p>
+<p><img src="http://blogcdn.idoustudio.com/pic/sqlresult_9.png" alt="enter image description here"></p>
+<p>调试搞定了，接下来就专注开发插件主逻辑了。</p>
+<h2 id="编写插件主逻辑">编写插件主逻辑</h2>
+<ul>
+<li>获取编辑器内容</li>
+</ul>
+<p>我们需要获取到用户在编辑器里选择的文本内容，才能完成后续的转换</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">activeTextEditor</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">selection</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">selection</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span><span style="color:#f92672">?</span>.document.<span style="color:#a6e22e">getText</span>(<span style="color:#a6e22e">selection</span>);
+</code></pre></div><ul>
+<li>内容替换</li>
+</ul>
+<p>插件的核心功能是把编辑器选择的 sql 查询结果转换成能保存到 csv 文件的内容。
+我们分析后发现，sql 查询结果通过大量的“|”来做内容的分割，而一个 csv 文件，用文本框打开后是用“,”分割单元格的。</p>
+<p>所以我们要做的是把“|”替换成“，”，并且要去掉表头和表尾的分割线。</p>
+<p><code>sql result</code></p>
+<p><img src="http://blogcdn.idoustudio.com/pic/sqlresult_10.png" alt="enter image description here"></p>
+<p><code>csv content</code></p>
+<p><img src="http://blogcdn.idoustudio.com/pic/sqlresult_11.png" alt="enter image description here"></p>
+<p>要做内容替换，比较简单的方式就是用正则表达式。</p>
+<p>打开 <a href="https://regex101.com/">https://regex101.com/</a>，粘贴我们要替换的内容，通过调试找到一个正确的正则表达式：<code>/\|((.*)\|){1,}/g</code> 可以用来做多行匹配。</p>
+<p><img src="http://blogcdn.idoustudio.com/pic/sqlresult_12.png" alt="enter image description here"></p>
+<p>匹配后获得的每一行数据都是这种格式</p>
+<p><code>| 6f9fa41be49979251202a5cf23d500da | 1 | 2021-03-19 12:01:52 |</code></p>
+<p>我们只需要把“|”替换成“,”，再去除首尾的“,”就行了。</p>
+<p>最后写出来的转换逻辑是这样：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">activeTextEditor</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">selection</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">selection</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span><span style="color:#f92672">?</span>.document.<span style="color:#a6e22e">getText</span>(<span style="color:#a6e22e">selection</span>);
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;github.com/cutesdk/webot&#34;</span>
-)
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\|((.*)\|){1,}/g</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">newArr</span>: <span style="color:#66d9ef">string</span>[] <span style="color:#f92672">=</span> [];
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">bot</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">webot</span>.<span style="color:#a6e22e">Bot</span>{
-		<span style="color:#a6e22e">WebhookURL</span>: <span style="color:#e6db74">&#34;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b8f1e424-d48d-46cc-a2c7-d360c8e98b3d&#34;</span>,
-	}
+<span style="color:#a6e22e">arr</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">i</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/\s*\|\s*/g</span>, <span style="color:#e6db74">&#34;,&#34;</span>);
+  <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/^\,/</span>, <span style="color:#e6db74">&#34;&#34;</span>).<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/\,$/</span>, <span style="color:#e6db74">&#34;&#34;</span>);
+  <span style="color:#a6e22e">newArr</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">str</span>);
+});
 
-	<span style="color:#a6e22e">bot</span>.<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;你好，我是机器人&#34;</span>).<span style="color:#a6e22e">Send</span>()
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newArr</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
+</code></pre></div><ul>
+<li>保存文件</li>
+</ul>
+<p>完成内容转换后，下一步我们就可以写保存文件的逻辑了。vscode 已经封装了相关的 api，我们只需要通过几行代码即可完成调用。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">// 打开文件保存对话框
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">uri</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showSaveDialog</span>({
+  <span style="color:#a6e22e">filters</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">csv</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;csv&#34;</span>],
+  },
+});
+
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">uri</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">undefined</span>) {
+  <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showErrorMessage</span>(<span style="color:#e6db74">&#34;invalid save path&#34;</span>);
+  <span style="color:#66d9ef">return</span>;
 }
-</code></pre></div><p>运行上面的代码，添加了机器人的群就会收到消息：</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot2.png" alt=""></p>
-<h3 id="发送-markdown-类型消息">发送 markdown 类型消息</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">	<span style="color:#a6e22e">mdmsg</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`*这是一条Markdown消息*
-</span><span style="color:#e6db74">&gt; 这是引用文本
-</span><span style="color:#e6db74">- 这是列表1
-</span><span style="color:#e6db74">- 这是列表2	
-</span><span style="color:#e6db74">`</span>
-	<span style="color:#a6e22e">bot</span>.<span style="color:#a6e22e">Markdown</span>(<span style="color:#a6e22e">mdmsg</span>).<span style="color:#a6e22e">Send</span>()
-</code></pre></div><p>运行上面的代码，机器人会发送 markdown 消息：</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot3.png" alt=""></p>
-<h3 id="发送带操作按钮的-markdown-消息">发送带操作按钮的 markdown 消息</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">mdmsg</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`这是一条带操作按钮的 Markdown 消息
-</span><span style="color:#e6db74">	&gt; 请确认你要提交吗？`</span>
 
-<span style="color:#a6e22e">callbackID</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;testwebot&#34;</span>
-<span style="color:#a6e22e">actions</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">webot</span>.<span style="color:#a6e22e">MsgAction</span>{}
-<span style="color:#a6e22e">actions</span> = append(<span style="color:#a6e22e">actions</span>, <span style="color:#a6e22e">webot</span>.<span style="color:#a6e22e">MsgAction</span>{
-	<span style="color:#a6e22e">Text</span>:        <span style="color:#e6db74">&#34;确认&#34;</span>,
-	<span style="color:#a6e22e">Name</span>:        <span style="color:#e6db74">&#34;acts&#34;</span>,
-	<span style="color:#a6e22e">Value</span>:       <span style="color:#e6db74">&#34;confirm&#34;</span>,
-	<span style="color:#a6e22e">ReplaceText</span>: <span style="color:#e6db74">&#34;已确认&#34;</span>,
-	<span style="color:#a6e22e">Type</span>:        <span style="color:#e6db74">&#34;button&#34;</span>,
-	<span style="color:#a6e22e">TextColor</span>:   <span style="color:#e6db74">&#34;2EAB49&#34;</span>,
-	<span style="color:#a6e22e">BorderColor</span>: <span style="color:#e6db74">&#34;2EAB49&#34;</span>,
-})
-<span style="color:#a6e22e">actions</span> = append(<span style="color:#a6e22e">actions</span>, <span style="color:#a6e22e">webot</span>.<span style="color:#a6e22e">MsgAction</span>{
-	<span style="color:#a6e22e">Text</span>:        <span style="color:#e6db74">&#34;取消&#34;</span>,
-	<span style="color:#a6e22e">Name</span>:        <span style="color:#e6db74">&#34;acts&#34;</span>,
-	<span style="color:#a6e22e">Value</span>:       <span style="color:#e6db74">&#34;cancel&#34;</span>,
-	<span style="color:#a6e22e">ReplaceText</span>: <span style="color:#e6db74">&#34;已取消&#34;</span>,
-	<span style="color:#a6e22e">Type</span>:        <span style="color:#e6db74">&#34;button&#34;</span>,
-})
+<span style="color:#75715e">// 保存文件
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">writeData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Buffer</span>.<span style="color:#66d9ef">from</span>(<span style="color:#a6e22e">content</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>);
+<span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">workspace</span>.<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">uri</span>, <span style="color:#a6e22e">writeData</span>);
+</code></pre></div><ul>
+<li>完整逻辑</li>
+</ul>
+<p>最后再加上必要的错误提示，和保存后打开文件的操作，这个插件的核心逻辑就写完了。</p>
+<p><code>src/extension.ts</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">// The module &#39;vscode&#39; contains the VS Code extensibility API
+</span><span style="color:#75715e">// Import the module and reference it with the alias vscode in your code below
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">vscode</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;vscode&#34;</span>;
 
-<span style="color:#a6e22e">bot</span>.<span style="color:#a6e22e">Actions</span>(<span style="color:#a6e22e">callbackID</span>, <span style="color:#a6e22e">actions</span>).<span style="color:#a6e22e">Markdown</span>(<span style="color:#a6e22e">mdmsg</span>).<span style="color:#a6e22e">Send</span>()
-</code></pre></div><p>运行上面的代码，机器人发送带有操作按钮的 markdown 消息：</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot4.png" alt=""></p>
-<p>点击操作按钮，机器人会给回调地址推送事件消息，开发者可以在回调事件里面进行相应的处理，实现复杂的机器人交互逻辑。</p>
-<h3 id="提醒谁看">提醒谁看</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">msg</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;这是一条要提示用户&lt;@adam&gt;的文本消息&#34;</span>
-<span style="color:#a6e22e">bot</span>.<span style="color:#a6e22e">Mention</span>([]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;@all&#34;</span>}).<span style="color:#a6e22e">Text</span>(<span style="color:#a6e22e">msg</span>).<span style="color:#a6e22e">Send</span>()
-</code></pre></div><p>运行上面代码，机器人会发送消息，并艾特指定的用户：</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot5.png" alt=""></p>
-<p>在文本中艾特人用 <code>&lt;@userid&gt;</code>，艾特全体成员用 <code>@all</code></p>
-<h3 id="指定用户可见">指定用户可见</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">msg</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;这是一条仅指定用户可见的文本消息&#34;</span>
-<span style="color:#a6e22e">bot</span>.<span style="color:#a6e22e">Target</span>([]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;wrkSFfCgAAIfjQ7pSijsAAx_KpflhDBw&#34;</span>}).<span style="color:#a6e22e">Visible</span>([]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;adam&#34;</span>}).<span style="color:#a6e22e">Text</span>(<span style="color:#a6e22e">msg</span>).<span style="color:#a6e22e">Send</span>()
-</code></pre></div><p>运行上面的代码，机器人会发送消息到群聊，只有指定的群聊中的指定用户可以看到消息：</p>
-<p><img src="http://blogcdn.idoustudio.com/pic/webot6.png" alt=""></p>
-<p><code>Target</code> 用于指定一个或多个群聊的 <code>chatid</code> ，每个群有唯一的 <code>chatid</code> ，在配置了机器人接收消息后，才能获取到群聊的 <code>chatid</code>。</p>
-<h2 id="机器人接收消息">机器人接收消息</h2>
-<p>目前公网版本的企业微信机器人并不支持接收消息配置，暂不能使用机器人完成复杂的交互功能。请关注企业微信官网查看更新动态。</p>
+<span style="color:#75715e">// this method is called when your extension is activated
+</span><span style="color:#75715e">// your extension is activated the very first time the command is executed
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">activate</span>(<span style="color:#a6e22e">context</span>: <span style="color:#66d9ef">vscode.ExtensionContext</span>) {
+  <span style="color:#75715e">// Use the console to output diagnostic information (console.log) and errors (console.error)
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// This line of code will only be executed once when your extension is activated
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Congratulations, your extension &#34;sqlresult&#34; is now active!&#39;</span>);
+
+  <span style="color:#75715e">// The command has been defined in the package.json file
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Now provide the implementation of the command with registerCommand
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// The commandId parameter must match the command field in package.json
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">disposable</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">commands</span>.<span style="color:#a6e22e">registerCommand</span>(
+    <span style="color:#e6db74">&#34;sqlresult.tocsv&#34;</span>,
+    <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">activeTextEditor</span>;
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">selection</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">selection</span>;
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span><span style="color:#f92672">?</span>.document.<span style="color:#a6e22e">getText</span>(<span style="color:#a6e22e">selection</span>);
+
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\|((.*)\|){1,}/g</span>);
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">newArr</span>: <span style="color:#66d9ef">string</span>[] <span style="color:#f92672">=</span> [];
+
+      <span style="color:#a6e22e">arr</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">i</span>) {
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/\s*\|\s*/g</span>, <span style="color:#e6db74">&#34;,&#34;</span>);
+        <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/^\,/</span>, <span style="color:#e6db74">&#34;&#34;</span>).<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/\,$/</span>, <span style="color:#e6db74">&#34;&#34;</span>);
+        <span style="color:#a6e22e">newArr</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">str</span>);
+      });
+
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newArr</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
+
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">content</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showErrorMessage</span>(<span style="color:#e6db74">&#34;invalid content&#34;</span>);
+        <span style="color:#66d9ef">return</span>;
+      }
+
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">uri</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showSaveDialog</span>({
+        <span style="color:#a6e22e">filters</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">csv</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;csv&#34;</span>],
+        },
+      });
+
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">uri</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">undefined</span>) {
+        <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showErrorMessage</span>(<span style="color:#e6db74">&#34;invalid save path&#34;</span>);
+        <span style="color:#66d9ef">return</span>;
+      }
+
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">writeData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Buffer</span>.<span style="color:#66d9ef">from</span>(<span style="color:#a6e22e">content</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>);
+      <span style="color:#a6e22e">vscode</span>.<span style="color:#a6e22e">workspace</span>.<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">uri</span>, <span style="color:#a6e22e">writeData</span>);
+
+      <span style="color:#75715e">// Display a message box to the user
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">openFile</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Open File&#34;</span>;
+      <span style="color:#a6e22e">vscode</span>.window
+        .<span style="color:#a6e22e">showInformationMessage</span>(<span style="color:#e6db74">&#34;file saved&#34;</span>, <span style="color:#a6e22e">openFile</span>)
+        .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">value</span>) <span style="color:#f92672">=&gt;</span> {
+          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">value</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">openFile</span>) {
+            <span style="color:#a6e22e">vscode</span>.window.<span style="color:#a6e22e">showTextDocument</span>(<span style="color:#a6e22e">uri</span><span style="color:#f92672">!</span>, {});
+          }
+        });
+    }
+  );
+
+  <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">subscriptions</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">disposable</span>);
+}
+
+<span style="color:#75715e">// this method is called when your extension is deactivated
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">deactivate() {</span>}
+</code></pre></div><h2 id="插件使用">插件使用</h2>
+<p>在 vscode 扩展中心搜索<code>sqlresult</code>并安装插件</p>
+<p><img src="http://blogcdn.idoustudio.com/pic/sqlresult_13_1.png" alt="enter image description here"></p>
+<p>安装完插件，复制 sql 查询结果到编辑器，全选内容，执行插件保存 csv 文件的命令：</p>
+<p><img src="http://km.oa.com/files/photos/pictures/202103/1616136013_58_w1612_h1158.png" alt="enter image description here"></p>
+<p><img src="http://km.oa.com/files/photos/pictures/202103/1616136061_15_w848_h360.png" alt="enter image description here"></p>
+<p>打开保存后的 csv 文件，内容看起来非常工整。</p>
+<p><img src="http://km.oa.com/files/photos/pictures/202103/1616136111_27_w960_h1286.png" alt="enter image description here"></p>
+<p>最后把 csv 文件发给运营同事，就可以收工了。</p>
+<h2 id="总结">总结</h2>
+<p>本文从实际需求出发，写了一个能帮助开发者日志导数据的小插件。vscode 是一个“真香”神器，丰富的插件给了开发者很多想象的空间，强烈安利一波。</p>
+<p>插件源码奉上，欢迎赐教：<a href="https://github.com/idoubi/sqlresult">https://github.com/idoubi/sqlresult</a></p>
 
 
                                         
@@ -221,14 +337,9 @@
                                             
                                             <div class="previous">
                                                 <span>&lt;&lt; Prev</span>
-                                                <a href="/posts/my-new-hugo-theme-like-laruence/"
-                                                    rel="prev">我写了一款跟PHP鸟哥一样的博客皮肤</a> </div>
+                                                <a href="/posts/go-sdk-for-wework-robot/"
+                                                    rel="prev">我写了一款企业微信机器人SDK</a> </div>
                                             
-                                            
-                                            <div class="next">
-                                                <span>Next >></span>
-                                                <a href="/posts/vscode-extension-sqlresult/">开发一款转换sql查询结果的vscode插件</a> 
-                                            </div>
                                             
                                         </nav>
                                     </div>
