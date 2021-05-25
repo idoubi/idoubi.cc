@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>开源项目 on 艾逗笔</title>
-    <link>https://idoubi.cc/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
+    <link>/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
     <description>Recent content in 开源项目 on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
-    <lastBuildDate>Wed, 02 Nov 2016 13:12:18 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
+    <language>cn-zh</language>
+    <lastBuildDate>Wed, 02 Nov 2016 13:12:18 +0000</lastBuildDate><atom:link href="/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>聊一聊微信开发那些事儿</title>
-      <link>https://idoubi.cc/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</link>
+      <link>/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</link>
       <pubDate>Wed, 02 Nov 2016 13:12:18 +0000</pubDate>
       
-      <guid>https://idoubi.cc/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</guid>
+      <guid>/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</guid>
       <description> Programming make the world a better place, anyone can be anything
  前言 微信公众号2012年正式推出，至今已走过5个年头，在这五年的时间内，很多微信第三方企业迅速崛起，典型代表有微盟、微客来这些以公众号托管为主的企业。而今天我想跟大家聊的是微信公众号开发这个领域的一些事情。
 经历 我是2013年末接触微信开发的，那时候还在上学，有朋友说想在学校搞一个微信公众号卖水果，于是我开始接触微信开发。最开始是看青龙老贼的教程入门的，后来接触到了github上面一个非常流行的类库wechat-php-sdk，再后来接触到了weiphp、微擎这样的开发框架，再到现在自己写的框架豆信，在微信开发这个领域已经走过了3个年头，期间开发过微商城、微餐饮、微投票等多款微信端应用，对于微信官方提供的接口算得上是滚瓜烂熟。

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>开源项目 on 艾逗笔</title>
-    <link>https://idoubi.cc/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
+    <link>/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
     <description>Recent content in 开源项目 on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
-    <lastBuildDate>Sat, 15 Feb 2020 16:50:37 +0000</lastBuildDate><atom:link href="https://idoubi.cc/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
+    <language>cn-zh</language>
+    <lastBuildDate>Sat, 15 Feb 2020 16:50:37 +0000</lastBuildDate><atom:link href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>「goz」开源库，在Go中快速发起HTTP请求</title>
-      <link>https://idoubi.cc/posts/goz/</link>
+      <link>/posts/goz/</link>
       <pubDate>Sat, 15 Feb 2020 16:50:37 +0000</pubDate>
       
-      <guid>https://idoubi.cc/posts/goz/</guid>
+      <guid>/posts/goz/</guid>
       <description>goz 是一个用于在 Go 代码中快速发起 HTTP 请求的开源库， 部分实现参考了 PHP 流行请求库： guzzle
  安装 go get -u github.com/idoubi/goz 文档 API 文档地址: https://godoc.org/github.com/idoubi/goz
 基本使用 package main import ( &amp;#34;github.com/idoubi/goz&amp;#34; ) func main() { cli := goz.NewClient() resp, err := cli.Get(&amp;#34;http://127.0.0.1:8091/get&amp;#34;) if err != nil { log.Fatalln(err) } fmt.Printf(&amp;#34;%T&amp;#34;, resp) // Output: *goz.Response } 查询参数  map 形式  cli := goz.NewClient() resp, err := cli.Get(&amp;#34;http://127.0.0.1:8091/get-with-query&amp;#34;, goz.Options{ Query: map[string]interface{}{ &amp;#34;key1&amp;#34;: &amp;#34;value1&amp;#34;, &amp;#34;key2&amp;#34;: []string{&amp;#34;value21&amp;#34;, &amp;#34;value22&amp;#34;}, &amp;#34;key3&amp;#34;: &amp;#34;333&amp;#34;, }, }) if err !</description>
@@ -20,10 +20,10 @@
     
     <item>
       <title>开源一款hexo工作室主题</title>
-      <link>https://idoubi.cc/posts/hexo-theme-studio/</link>
+      <link>/posts/hexo-theme-studio/</link>
       <pubDate>Tue, 15 May 2018 10:47:44 +0000</pubDate>
       
-      <guid>https://idoubi.cc/posts/hexo-theme-studio/</guid>
+      <guid>/posts/hexo-theme-studio/</guid>
       <description>项目地址 Github: https://github.com/mikemintang/hexo-theme-studio
 项目截图 使用教程  安装 hexo  官网教程：https://hexo.io/zh-cn/docs/
 安装 hexo-theme-studio 主题  git clone https://github.com/mikemintang/hexo-theme-studio.git themes/studio
@@ -34,10 +34,10 @@
     
     <item>
       <title>douchat 4.0 新版发布，助力小程序后台开发</title>
-      <link>https://idoubi.cc/posts/douchat4-release/</link>
+      <link>/posts/douchat4-release/</link>
       <pubDate>Tue, 08 May 2018 16:50:37 +0000</pubDate>
       
-      <guid>https://idoubi.cc/posts/douchat4-release/</guid>
+      <guid>/posts/douchat4-release/</guid>
       <description>douchat是什么 douchat（中文名：豆信）是一款专为微信开发而创造的php开源框架，具有简洁、高效、优雅等特点。
 新版本功能 douchat V4.0.0版本主要新增了小程序开发支持，具体包括：
  插件新增Api控制器，可快速实现供小程序调用的接口 封装了小程序登录态管理逻辑，可以更快捷的实现小程序端用户登录逻辑 框架后台新增了小程序账号管理、小程序用户管理等功能 新增Wxapps目录，并添加了一个自带的Demo小程序模板  主要功能介绍 多账户管理 豆信后台支持创建多个用户，每个登录用户可以创建多个公众号和小程序账号。 多应用管理 豆信支持通过插件的形式来扩展系统的功能，每一个插件可以用于公众号h5页面访问，也可以为小程序应用提供接口。 开发友好 豆信封装了诸多对开发者友好的业务逻辑，让开发者能够更快速的实现自己的应用功能。
@@ -47,20 +47,20 @@
     
     <item>
       <title>基于go&#43;vue实现的golang每日新闻数据浏览与检索平台</title>
-      <link>https://idoubi.cc/posts/%E5%9F%BA%E4%BA%8Ego-vue%E5%AE%9E%E7%8E%B0%E7%9A%84golang%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB%E6%95%B0%E6%8D%AE%E6%B5%8F%E8%A7%88%E4%B8%8E%E6%A3%80%E7%B4%A2%E5%B9%B3%E5%8F%B0/</link>
+      <link>/posts/%E5%9F%BA%E4%BA%8Ego-vue%E5%AE%9E%E7%8E%B0%E7%9A%84golang%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB%E6%95%B0%E6%8D%AE%E6%B5%8F%E8%A7%88%E4%B8%8E%E6%A3%80%E7%B4%A2%E5%B9%B3%E5%8F%B0/</link>
       <pubDate>Tue, 09 Jan 2018 16:50:37 +0000</pubDate>
       
-      <guid>https://idoubi.cc/posts/%E5%9F%BA%E4%BA%8Ego-vue%E5%AE%9E%E7%8E%B0%E7%9A%84golang%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB%E6%95%B0%E6%8D%AE%E6%B5%8F%E8%A7%88%E4%B8%8E%E6%A3%80%E7%B4%A2%E5%B9%B3%E5%8F%B0/</guid>
+      <guid>/posts/%E5%9F%BA%E4%BA%8Ego-vue%E5%AE%9E%E7%8E%B0%E7%9A%84golang%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB%E6%95%B0%E6%8D%AE%E6%B5%8F%E8%A7%88%E4%B8%8E%E6%A3%80%E7%B4%A2%E5%B9%B3%E5%8F%B0/</guid>
       <description>介绍 gonews是基于go+vue实现的golang每日新闻浏览与检索平台
  项目地址： Github 线上Demo：GoNews 数据来源：GoCN每日新闻  项目截图 部署  获取新闻数据  git clone https://github.com/gocn/news /data/news  获取源码  go get -u github.com/mikemintang/gonews  解析数据  nohup gonews -d /data/news &amp;gt; /data/log/gonews.log 2&amp;gt;&amp;amp;1  启动Api  nohup gonews -a api -p 8017 &amp;gt; /data/log/gonews.log 2&amp;gt;&amp;amp;1 &amp;amp;  前端部署  cd $GOPATH/src/github.com/mikemintang/gonews/web npm install npm run build  Nginx配置  server { listen 80; server_name gonews.idoubi.cc; index index.html index.htm index.php; root /data/go/src/mikemintang/gonews/web; location /api { rewrite ^.</description>
     </item>
     
     <item>
       <title>SQL2Struct：一款根据sql语句自动生成golang结构体的chrome插件</title>
-      <link>https://idoubi.cc/posts/sql2struct%E4%B8%80%E6%AC%BE%E6%A0%B9%E6%8D%AEsql%E8%AF%AD%E5%8F%A5%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90golang%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84chrome%E6%8F%92%E4%BB%B6/</link>
+      <link>/posts/sql2struct%E4%B8%80%E6%AC%BE%E6%A0%B9%E6%8D%AEsql%E8%AF%AD%E5%8F%A5%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90golang%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84chrome%E6%8F%92%E4%BB%B6/</link>
       <pubDate>Mon, 06 Nov 2017 10:47:44 +0000</pubDate>
       
-      <guid>https://idoubi.cc/posts/sql2struct%E4%B8%80%E6%AC%BE%E6%A0%B9%E6%8D%AEsql%E8%AF%AD%E5%8F%A5%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90golang%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84chrome%E6%8F%92%E4%BB%B6/</guid>
+      <guid>/posts/sql2struct%E4%B8%80%E6%AC%BE%E6%A0%B9%E6%8D%AEsql%E8%AF%AD%E5%8F%A5%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90golang%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84chrome%E6%8F%92%E4%BB%B6/</guid>
       <description>前言 最近在用 golang 写 api，用到 gorm 包进行数据库操作，gorm是 golang 中非常流行的一个 orm 包，使用 gorm 进行数据库操作前，一般需要先用一个 golang 结构体对数据表字段进行映射，于是我们经常需要根据数据表中的字段名和类型来手动在 go 代码中写 struct，有时候数据表字段很多的情况下，这种方式很耗费精力。于是便想到了写一个 chrome 插件，根据数据表的 DDL 语句来自动生成 golang 结构体，可以配置 go 结构体字段类型与 mysql 数据表字段类型的一个映射关系。
 SQL2Struct  SQL2Struct 是一款对 golang 开发者友好的 chrome 插件，根据在 mysql 中创建数据表的 sql 语句，自动生成 golang 中的 struct，在 golang 开发者使用诸如 gorm 之类的框架时，可以很好的把 mysql 中的数据表与 orm 的结构体关联起来。
  github 地址：https://github.com/mikemintang/sql2struct
@@ -70,10 +70,10 @@ SQL2Struct  SQL2Struct 是一款对 golang 开发者友好的 chrome 插件，�
     
     <item>
       <title>golang版本的curl请求库</title>
-      <link>https://idoubi.cc/posts/golang%E7%89%88%E6%9C%AC%E7%9A%84curl%E8%AF%B7%E6%B1%82%E5%BA%93/</link>
+      <link>/posts/golang%E7%89%88%E6%9C%AC%E7%9A%84curl%E8%AF%B7%E6%B1%82%E5%BA%93/</link>
       <pubDate>Thu, 14 Sep 2017 21:31:55 +0000</pubDate>
       
-      <guid>https://idoubi.cc/posts/golang%E7%89%88%E6%9C%AC%E7%9A%84curl%E8%AF%B7%E6%B1%82%E5%BA%93/</guid>
+      <guid>/posts/golang%E7%89%88%E6%9C%AC%E7%9A%84curl%E8%AF%B7%E6%B1%82%E5%BA%93/</guid>
       <description>Github地址 https://github.com/mikemintang/go-curl
 安装 go get github.com/mikemintang/go-curl 使用 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;github.com/mikemintang/go-curl&amp;#34; ) func main() { url := &amp;#34;http://php.dev/api.php&amp;#34; headers := map[string]string{ &amp;#34;User-Agent&amp;#34;: &amp;#34;Sublime&amp;#34;, &amp;#34;Authorization&amp;#34;: &amp;#34;Bearer access_token&amp;#34;, &amp;#34;Content-Type&amp;#34;: &amp;#34;application/json&amp;#34;, } cookies := map[string]string{ &amp;#34;userId&amp;#34;: &amp;#34;12&amp;#34;, &amp;#34;loginTime&amp;#34;: &amp;#34;15045682199&amp;#34;, } queries := map[string]string{ &amp;#34;page&amp;#34;: &amp;#34;2&amp;#34;, &amp;#34;act&amp;#34;: &amp;#34;update&amp;#34;, } postData := map[string]interface{}{ &amp;#34;name&amp;#34;: &amp;#34;mike&amp;#34;, &amp;#34;age&amp;#34;: 24, &amp;#34;interests&amp;#34;: []string{&amp;#34;basketball&amp;#34;, &amp;#34;reading&amp;#34;, &amp;#34;coding&amp;#34;}, &amp;#34;isAdmin&amp;#34;: true, } // 链式操作  req := curl.NewRequest() resp, err := req.</description>
     </item>

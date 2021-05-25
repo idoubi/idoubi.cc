@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>网站维护 on 艾逗笔</title>
-    <link>https://idoubi.cc/tags/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/</link>
+    <link>/tags/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/</link>
     <description>Recent content in 网站维护 on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
-    <lastBuildDate>Wed, 04 Dec 2013 00:05:00 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/index.xml" rel="self" type="application/rss+xml" />
+    <language>cn-zh</language>
+    <lastBuildDate>Wed, 04 Dec 2013 00:05:00 +0000</lastBuildDate><atom:link href="/tags/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>院网修复日志</title>
-      <link>https://idoubi.cc/posts/%E9%99%A2%E7%BD%91%E4%BF%AE%E5%A4%8D%E6%97%A5%E5%BF%97/</link>
+      <link>/posts/%E9%99%A2%E7%BD%91%E4%BF%AE%E5%A4%8D%E6%97%A5%E5%BF%97/</link>
       <pubDate>Wed, 04 Dec 2013 00:05:00 +0000</pubDate>
       
-      <guid>https://idoubi.cc/posts/%E9%99%A2%E7%BD%91%E4%BF%AE%E5%A4%8D%E6%97%A5%E5%BF%97/</guid>
+      <guid>/posts/%E9%99%A2%E7%BD%91%E4%BF%AE%E5%A4%8D%E6%97%A5%E5%BF%97/</guid>
       <description>2013 年 12 月 2 日
 正在上量子力学课，接到黄老师的电话说院网后台登陆不了，让我马上过去修。于是翘课去了院办，检测了很久，发现原来是 session 变量失效的问题，导致登陆参数传递不了，所以后台登不上去，试过很多次方法，修复不了这一问题，却偶然间发现了木马文件，原来是被黑了，院网代码中被植入了百家乐网站的垃圾信息。 删除了几个垃圾文件，还有三个木马始终删不掉，于是去了网络中心找蔡老师帮忙，蔡老师检测了一下 CPU，发现达到了 90%以上，有个叫 w3wp.exe 的文件占用了系统的大部分 CPU，而且手动停止之后又能自动运行。由于 CPU 占用过高，这时候的 IIS 已经跑不起来了，院网自然也访问不了。蔡老师也没找到解决的方法，叫我回院办给服务器装个杀毒软件杀杀毒，于是我就回院办了。当天下午尝试了很多办法解决 IIS 运行的问题，无果。傍晚的时候黄老师叫了樊学长去帮忙修复，樊学长说 w3wp.exe 是 IIS 运行时候的应用程序，不是病毒，但是同时很多个 w3wp.exe 一起运行占用 CPU 达 90%以上很明显不正常。每次重启之后 CPU 会降低到 20%左右，经过十几分钟之后又会自动上升到 90%以上。我们便是趁着 CPU 较低院网能正常访问的时候去修复 session 失效的问题。既然 session 不能正确传递参数，樊学长想到了用 URL 传递 id 参数的办法，来替代 session 保存登陆信息，但是这样做的不便之处是改动量比较大，每一个后台操作页面都需要写一个参数读取的代码，工作量很大。我们两一直改到晚上 10 点才回宿舍。解决的问题只是暂时性的能登陆进后台，但是不能进行文章添加修改删除的操作。IIS 占用 CPU 过高的问题还是没解决。回宿舍后头痛的要死，躺床上就睡了。2 号，翘课一天。说好的学习呵呵了。。。
 2013 年 12 月 3 日
