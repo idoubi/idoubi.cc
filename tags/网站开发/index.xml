@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>网站开发 on 艾逗笔</title>
-    <link>/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/</link>
+    <link>https://idoubi.cc/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 网站开发 on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn-zh</language>
-    <lastBuildDate>Sat, 07 Dec 2013 02:28:13 +0000</lastBuildDate><atom:link href="/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
+    <lastBuildDate>Sat, 07 Dec 2013 02:28:13 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>手把手教你做网站</title>
-      <link>/posts/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%81%9A%E7%BD%91%E7%AB%99/</link>
+      <link>https://idoubi.cc/posts/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%81%9A%E7%BD%91%E7%AB%99/</link>
       <pubDate>Sat, 07 Dec 2013 02:28:13 +0000</pubDate>
       
-      <guid>/posts/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%81%9A%E7%BD%91%E7%AB%99/</guid>
+      <guid>https://idoubi.cc/posts/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%81%9A%E7%BD%91%E7%AB%99/</guid>
       <description>网页设计是一个大家听得比较多的概念，大家平时上网接触的网站也比较多。网上关于网页设计的教学书籍也有一大堆。要真正学会做网站，要学的知识其实还挺多。一个正规点的网站一般包括两部分，前台和后台。所谓前台就是用户打开网页最先看到的内容，包括网站的布局、颜色搭配等一目了然的视觉元素。而后台则是网站管理员用来控制网站内容的平台，包括对网站内容的增删改以及与网站用户的交互等功能。因此从事网站开发的人可以分为两种，一种叫做前端工程师，另一种叫做后台开发人员。前端工程师要求掌握的技能有photoshop平面设计、html、css、javascript（jquery）、Ajax等，要具备一定的审美能力，能够配合网页美工将做好的网页设计效果图用代码做成一个可以点击的html网页。而后台开发员要做的则是实现网站的必要功能，包括网站数据的显示，网站的后台管理功能以及一些必要的交互功能等，后台开发人员要求具备较强的逻辑思维能力和代码编写能力，会基本的网站后台开发语言，php、asp、jsp等，能够配合前端工程师完成网站的业务处理，最终做出一个成品网站。
 咱们要做一个网站，首先要对网站的功能和样式等方面有一个基本的策划，然后在ps中做出网站的效果图（可以省略），再用代码把前台和后台写好，最后将网站上传到服务器，绑定域名，这样就完成了一个完整网站的设计。要做一个满足自己需求的网站，最好还是要掌握基本的div+css布局和一种后台开发语言，这里推荐php。服务器的话可以选择自己花钱买一个，或者用国内的云计算平台，BAE，SAE都挺不错。这里推荐SAE。
 更多的关于网页设计的知识大家可以自行百度，或者找一些相关的书籍了解一下。现在开始进入正文，教大家在新浪SAE上搭建一个自己的wordpress网站。

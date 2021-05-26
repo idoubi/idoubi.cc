@@ -2,17 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>艾逗笔</title>
-    <link>/</link>
+    <link>https://idoubi.cc/</link>
     <description>Recent content on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn-zh</language>
-    <lastBuildDate>Tue, 25 May 2021 11:19:43 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
+    <lastBuildDate>Wed, 26 May 2021 10:53:12 +0800</lastBuildDate><atom:link href="https://idoubi.cc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 C&#43;&#43; 中使用第三方库</title>
+      <link>https://idoubi.cc/posts/use-3rd-lib-in-cpp/</link>
+      <pubDate>Wed, 26 May 2021 10:53:12 +0800</pubDate>
+      
+      <guid>https://idoubi.cc/posts/use-3rd-lib-in-cpp/</guid>
+      <description>创建项目  mkdir demo cd demo 创建 cmake 工程  vi CMakeLists.txt
+cmake_minimum_required(VERSION 2.8) project(demo) 引入第三方库  mkdir 3rd git clone https://github.com/fmtlib/fmt.git 3rd/fmt 链接第三方库  vi CMakeLists.txt
+cmake_minimum_required(VERSION 2.8) project(demo) add_executable(demo main.cpp) add_subdirectory(3rd/fmt) target_link_libraries(demo fmt) 编写业务逻辑  vi main.cpp
+#include &amp;lt;fmt/core.h&amp;gt; int main() { fmt::print(&amp;#34;Hello, world!\n&amp;#34;); } 项目编译  cmake . make 项目运行  ./demo 可以看到控制台输出：
+Hello, world!</description>
+    </item>
+    
     <item>
       <title>在 Linux 系统通过源码安装 Go</title>
-      <link>/posts/install-go-in-linux/</link>
+      <link>https://idoubi.cc/posts/install-go-in-linux/</link>
       <pubDate>Tue, 25 May 2021 11:19:43 +0800</pubDate>
       
-      <guid>/posts/install-go-in-linux/</guid>
+      <guid>https://idoubi.cc/posts/install-go-in-linux/</guid>
       <description>安装旧版本的 Go  Go 语言是自举的，要安装新版的 Go 语言，需要依赖系统已有的 Go 语言环境。
 在 Centos 中，我们可以通过 yum 来安装 Go 。
 yum install -y go 安装完之后查看 Go 版本
@@ -26,10 +39,10 @@ unzip go1.16.4.zip mv go1.16.4 /usr/local/go1.16.4 export GOROOT=/usr/local/go1.
     
     <item>
       <title>开发一款转换sql查询结果的vscode插件</title>
-      <link>/posts/vscode-extension-sqlresult/</link>
+      <link>https://idoubi.cc/posts/vscode-extension-sqlresult/</link>
       <pubDate>Fri, 19 Mar 2021 16:23:08 +0800</pubDate>
       
-      <guid>/posts/vscode-extension-sqlresult/</guid>
+      <guid>https://idoubi.cc/posts/vscode-extension-sqlresult/</guid>
       <description>背景 做开发的同事应该很多人有过类似的经历：运营同事找过来，让我们帮忙导一份用户下单的数据。
 我们一般的操作流程是：登录跳板机，连上数据库，输入查询 sql，复制 sql 查询结果，发给运营同事。
 sql 查询结果一般长这样： 我们把查询结果保存到一个 txt 文件，发给运营同事，以为万事大吉了。
@@ -46,10 +59,10 @@ vscode 打开插件目录，可以看到自动生成的插件文件结构长这�
     
     <item>
       <title>我写了一款企业微信机器人SDK</title>
-      <link>/posts/go-sdk-for-wework-robot/</link>
+      <link>https://idoubi.cc/posts/go-sdk-for-wework-robot/</link>
       <pubDate>Wed, 02 Dec 2020 10:51:34 +0800</pubDate>
       
-      <guid>/posts/go-sdk-for-wework-robot/</guid>
+      <guid>https://idoubi.cc/posts/go-sdk-for-wework-robot/</guid>
       <description>创建机器人 在企业微信选择一个群聊，右键点击添加机器人，即可创建一个具备基本消息推送能力的机器人。
 下载SDK go get -u github.com/cutesdk/webot 机器人推送消息 使用机器人推送消息非常简单，只需要在创建完机器人之后，拿到机器人的 Webhook地址，使用 SDK 创建一个 Bot 对象，通过链式调用完成消息推送。
 基本使用 package main import ( &amp;#34;github.com/cutesdk/webot&amp;#34; ) func main() { bot := &amp;amp;webot.Bot{ WebhookURL: &amp;#34;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b8f1e424-d48d-46cc-a2c7-d360c8e98b3d&amp;#34;, } bot.Text(&amp;#34;你好，我是机器人&amp;#34;).Send() } 运行上面的代码，添加了机器人的群就会收到消息：
@@ -59,10 +72,10 @@ vscode 打开插件目录，可以看到自动生成的插件文件结构长这�
     
     <item>
       <title>我写了一款跟PHP鸟哥一样的博客皮肤</title>
-      <link>/posts/my-new-hugo-theme-like-laruence/</link>
+      <link>https://idoubi.cc/posts/my-new-hugo-theme-like-laruence/</link>
       <pubDate>Sun, 22 Nov 2020 12:23:45 +0800</pubDate>
       
-      <guid>/posts/my-new-hugo-theme-like-laruence/</guid>
+      <guid>https://idoubi.cc/posts/my-new-hugo-theme-like-laruence/</guid>
       <description>我从2013年开始搭建自己的博客网站，最初用的 WordPress，买了一台云主机，下了一个 CMS 风格的皮肤，当初的网站长这样：
 后来我学习了 Markdown 语法，接触了一些静态网站生成工具，就折腾着把原来的网站迁移到了 Hexo。自己动手写了一个皮肤，整成了这个样子：
 后来慢慢的发现，使用 Hexo ，每次构建发布的时候太慢了，有时候换个皮肤，会遇到一大堆 js 报错，自己开发皮肤的时候也不太好调试。
@@ -86,10 +99,10 @@ More 还是要强烈推荐一波 Hugo，这真的是我用过的最好的一个�
     
     <item>
       <title>快速创建微信小程序</title>
-      <link>/posts/create-wxapp-quickly/</link>
+      <link>https://idoubi.cc/posts/create-wxapp-quickly/</link>
       <pubDate>Mon, 19 Oct 2020 14:27:56 +0800</pubDate>
       
-      <guid>/posts/create-wxapp-quickly/</guid>
+      <guid>https://idoubi.cc/posts/create-wxapp-quickly/</guid>
       <description>前言 做过微信小程序开发的朋友应该知道，微信提供了几种创建小程序的方式：
     个人类型 机构类型     微信官网注册 填写个人身份证、手机号等信息，扫码绑定个人微信 填写机构代码、法人手机号等信息，上传营业执照，需要法人微信扫码验证   公众号后台注册 不支持 复用已认证的微信服务号资质创建小程序，最多创建五个   第三方平台注册 不支持 利用微信第三方平台资质，快速创建小程序    对比一下这几种方式，我们发现：
 如果要在微信官网申请小程序，需要填很多资料，并且需要为新注册的小程序绑定一个身份证、手机号、微信，很容易受到个人可创建小程序数量的限制。
@@ -120,10 +133,10 @@ A：目前使用的第三方平台方是”任想程序“，如果你需要用�
     
     <item>
       <title>在「VS Code」搭建「C&#43;&#43;」开发环境</title>
-      <link>/posts/cpp-in-vscode/</link>
+      <link>https://idoubi.cc/posts/cpp-in-vscode/</link>
       <pubDate>Sat, 25 Jul 2020 12:29:30 +0800</pubDate>
       
-      <guid>/posts/cpp-in-vscode/</guid>
+      <guid>https://idoubi.cc/posts/cpp-in-vscode/</guid>
       <description>大家都知道「VS Code」是一个“真香”编辑器，用来做「C++」开发也是一样的香！
 开始写 C++ 程序 第一次接触 C++，我们先不折腾编辑器的事情，随便用个能写代码的软件，写一个能输出“Hello World”的可执行程序再说。
 在 Linux 机器上用 vi hello.cpp，先写几行代码：
@@ -137,10 +150,10 @@ $ ./hello Hello World# VS Code 编译/运行 C++ 代码 下面我们开始对 VS
     
     <item>
       <title>使用「Air」实现热加载，助力「Go」项目开发调试</title>
-      <link>/posts/go-dev-with-air/</link>
+      <link>https://idoubi.cc/posts/go-dev-with-air/</link>
       <pubDate>Sat, 25 Jul 2020 12:04:25 +0800</pubDate>
       
-      <guid>/posts/go-dev-with-air/</guid>
+      <guid>https://idoubi.cc/posts/go-dev-with-air/</guid>
       <description>Go 是一种静态编译型语言，写完源代码后，需要编译成二进制可执行文件，才能运行程序看到相应的效果。我们在开发 Go 程序的过程中经常需要调试，如果没有热加载功能，这将是非常痛苦的一件事。
 Air 是 Go 生态中一个可以实现热加载的库，在开发 Go 项目的时候引入 Air，可以很大程度上提升开发调试的效率。
 安装Air go get -u github.com/cosmtrek/air 安装完成后，我们执行air -h可以看到Air的基本用法：
@@ -150,10 +163,10 @@ $ air -h Usage of air: -c string config path -d debug mode -v show version 热�
     
     <item>
       <title>基于「Hugo」搭建个人博客网站</title>
-      <link>/posts/build-site-with-hugo/</link>
+      <link>https://idoubi.cc/posts/build-site-with-hugo/</link>
       <pubDate>Sun, 19 Apr 2020 22:11:23 +0800</pubDate>
       
-      <guid>/posts/build-site-with-hugo/</guid>
+      <guid>https://idoubi.cc/posts/build-site-with-hugo/</guid>
       <description>前言 搭建个人网站，以前我们一般会选择 WordPress，因为其使用范围广（据说全世界 80%的网站都是用它搭建的）、主题丰富、上手简单。
 近年来，markdown 内容格式渐渐流行，我们更愿意使用 markdown 格式来写文章，写完后用静态网站生成工具把文章内容转换成 html 格式，再发布到个人网站。生成静态网站的工具中，比较优秀的有 Jekyll、Hexo、Hugo 几个。
 简单比较一下动态网站框架 WordPress 与静态网站生成框架 Hexo、Hugo 的区别：
@@ -163,10 +176,10 @@ $ air -h Usage of air: -c string config path -d debug mode -v show version 热�
     
     <item>
       <title>在个人博客实现「小课」系统</title>
-      <link>/posts/course-in-blog/</link>
+      <link>https://idoubi.cc/posts/course-in-blog/</link>
       <pubDate>Wed, 15 Apr 2020 22:58:04 +0800</pubDate>
       
-      <guid>/posts/course-in-blog/</guid>
+      <guid>https://idoubi.cc/posts/course-in-blog/</guid>
       <description>程序员这个行业，是一个终身学习的行业，经常会有新技术出现。我是一个很爱学习的人，喜欢尝鲜。每次想去学习一项新技术的时候，总是苦于找不到合适的入门教程。于是有了想自己写个小课系统的想法：希望能通过写一系列的文章，组织成一门小课，帮助想学习某项技术的同学快速入门。
 有了这个想法之后，我开始准备搭建小课平台，一开始想的是做一个前后端分离的网站，后端用 Go 写 API，前端用 vue 写页面。
 使用 vue + ElementUI 搭建出来的第一个版本长这样：
@@ -184,10 +197,10 @@ $ air -h Usage of air: -c string config path -d debug mode -v show version 热�
     
     <item>
       <title>「goz」开源库，在Go中快速发起HTTP请求</title>
-      <link>/posts/goz/</link>
+      <link>https://idoubi.cc/posts/goz/</link>
       <pubDate>Sat, 15 Feb 2020 16:50:37 +0000</pubDate>
       
-      <guid>/posts/goz/</guid>
+      <guid>https://idoubi.cc/posts/goz/</guid>
       <description>goz 是一个用于在 Go 代码中快速发起 HTTP 请求的开源库， 部分实现参考了 PHP 流行请求库： guzzle
  安装 go get -u github.com/idoubi/goz 文档 API 文档地址: https://godoc.org/github.com/idoubi/goz
 基本使用 package main import ( &amp;#34;github.com/idoubi/goz&amp;#34; ) func main() { cli := goz.NewClient() resp, err := cli.Get(&amp;#34;http://127.0.0.1:8091/get&amp;#34;) if err != nil { log.Fatalln(err) } fmt.Printf(&amp;#34;%T&amp;#34;, resp) // Output: *goz.Response } 查询参数  map 形式  cli := goz.NewClient() resp, err := cli.Get(&amp;#34;http://127.0.0.1:8091/get-with-query&amp;#34;, goz.Options{ Query: map[string]interface{}{ &amp;#34;key1&amp;#34;: &amp;#34;value1&amp;#34;, &amp;#34;key2&amp;#34;: []string{&amp;#34;value21&amp;#34;, &amp;#34;value22&amp;#34;}, &amp;#34;key3&amp;#34;: &amp;#34;333&amp;#34;, }, }) if err !</description>
@@ -195,10 +208,10 @@ $ air -h Usage of air: -c string config path -d debug mode -v show version 热�
     
     <item>
       <title>使用「Go」语言开发命令行工具</title>
-      <link>/posts/create-a-cli-tool-in-macos/</link>
+      <link>https://idoubi.cc/posts/create-a-cli-tool-in-macos/</link>
       <pubDate>Sat, 04 Jan 2020 16:50:37 +0000</pubDate>
       
-      <guid>/posts/create-a-cli-tool-in-macos/</guid>
+      <guid>https://idoubi.cc/posts/create-a-cli-tool-in-macos/</guid>
       <description>使用 MacOS 做开发的朋友都知道，我们一般会使用 Homebrew 做软件包管理，经常会用到 brew install [soft] 来安装各种各样的命令行软件。今天通过一个百科查找的命令行工具（tellme）示例，我们来学习一下如何使用 Go 语言开发自己的命令行软件。
 我们需要用到 cobra 这个 Go 模块来做命令行工具开发，这个开源库其实是对 Go 官方库 flag 的一个封装，可以简化获取参数的操作。
 创建命令行项目  开启 Go Module  export GO111MODULE=on  安装 cobra 工具  go get -u github.com/spf13/cobra/cobra  创建命令行项目  # 创建项目目录 mkdir -p /data/idoubi/tellme &amp;amp;&amp;amp; cd /data/idoubi/tellme # 定义模块 go mod init github.com/idoubi/tellme # 初始化命令行项目 cobra init --pkg-name github.com/idoubi/tellme  检测运行  go run main.go -h 执行完上述操作后，如果控制台输出了帮助信息，证明我们的命令行项目创建成功了。
@@ -207,10 +220,10 @@ $ air -h Usage of air: -c string config path -d debug mode -v show version 热�
     
     <item>
       <title>「VS Code」打造类sublime的高颜值编辑器</title>
-      <link>/posts/vscode-sublime-theme/</link>
+      <link>https://idoubi.cc/posts/vscode-sublime-theme/</link>
       <pubDate>Mon, 08 Jul 2019 21:43:33 +0000</pubDate>
       
-      <guid>/posts/vscode-sublime-theme/</guid>
+      <guid>https://idoubi.cc/posts/vscode-sublime-theme/</guid>
       <description>用惯了 sublime 编辑器，最近因为实在忍受不了 sublime 的低性能，而决定转向vscode。然而 vscode 自带的主题并不能满足我对编辑器颜值的要求，幸好在网上找到一款类似 sublime 的皮肤，安装上之后有一种用 sublime 写代码的既视感。记录下来，分享给有同样需求的朋友。
 安装主题 MacOS 系统按Command+Shift+P弹出命令框，输入Install Extensions进入扩展安装页面，搜索Monokai ST3和vscode-icons扩展并安装之。
 点击编辑器左下角的设置图标，在Color Theme中选择Monikai ST3，在File Icon Theme中选择vscode-icons即可完整主题的设置。
@@ -221,10 +234,10 @@ $ air -h Usage of air: -c string config path -d debug mode -v show version 热�
     
     <item>
       <title>「Mac」在iterm2中使用rzsz命令进行文件传输</title>
-      <link>/posts/mac-use-rzsz-in-iterm2/</link>
+      <link>https://idoubi.cc/posts/mac-use-rzsz-in-iterm2/</link>
       <pubDate>Wed, 29 May 2019 09:24:19 +0000</pubDate>
       
-      <guid>/posts/mac-use-rzsz-in-iterm2/</guid>
+      <guid>https://idoubi.cc/posts/mac-use-rzsz-in-iterm2/</guid>
       <description>在Mac系统中，我们常用的终端工具是iterm2，有时候需要通过ssh连接上服务器，并在服务器上面通过rz、sz命令上传文件或下载文件到本地。要实现此场景下的需求，我们需要在服务器和本地分别配置lrzsz命令行工具。
 服务器上安装lrzsz 两种安装方式二选一
  yum安装  yum install lrzsz  源码编译安装  cd wget http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz tar zxvf lrzsz-0.12.20.tar.gz &amp;amp;&amp;amp; cd lrzsz-0.12.20 ./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install 创建软连接
@@ -235,10 +248,10 @@ ln -s /usr/local/bin/lrz rz ln -s /usr/local/bin/lsz sz Mac系统安装lrzsz bre
     
     <item>
       <title>「Sublime」配置Go开发环境</title>
-      <link>/posts/sublime-go-dev/</link>
+      <link>https://idoubi.cc/posts/sublime-go-dev/</link>
       <pubDate>Sat, 27 Apr 2019 17:01:52 +0000</pubDate>
       
-      <guid>/posts/sublime-go-dev/</guid>
+      <guid>https://idoubi.cc/posts/sublime-go-dev/</guid>
       <description>安装GoSublime插件 GoSublime是在Sublimeb编辑器中开发Go语言必备的插件之一，提供Go源码编译、格式化、包自动导入等功能。之前可以通过Sublime的软件仓库直接安装，现在的版本已经搜不到这个插件了，我们需要通过源码进行安装。
  复制插件源码到Sublime包扩展目录  # 进入sublime插件目录 cd &amp;#39;/Users/mikemin/Library/Application Support/Sublime Text 3/Packages&amp;#39; # 下载GoSublime git clone https://github.com/DisposaBoy/GoSublime.git  安装Margo依赖  # 安装margo go get github.com/slene/margo # 配置margo cd GoSublime/src mkdir margo cp margo.sh/extension-example/extension-example.go margo/margo.go  GoSublime插件配置  { &amp;quot;env&amp;quot;: { &amp;quot;GOPATH&amp;quot;: &amp;quot;/data/go&amp;quot;, &amp;quot;GOROOT&amp;quot;: &amp;quot;/usr/local/opt/go/libexec&amp;quot; }, &amp;quot;fmt_enabled&amp;quot;: true, &amp;quot;fmt_cmd&amp;quot;: [ &amp;quot;goimports&amp;quot; ] }  在GoSublime插件中配置包自动导入前，请先确保安装了goimports工具。
  goimports工具安装与使用
@@ -247,20 +260,20 @@ ln -s /usr/local/bin/lrz rz ln -s /usr/local/bin/lsz sz Mac系统安装lrzsz bre
     
     <item>
       <title>「Hexo」设置代码语法高亮</title>
-      <link>/posts/hexo-highlight/</link>
+      <link>https://idoubi.cc/posts/hexo-highlight/</link>
       <pubDate>Sat, 27 Apr 2019 17:01:16 +0000</pubDate>
       
-      <guid>/posts/hexo-highlight/</guid>
+      <guid>https://idoubi.cc/posts/hexo-highlight/</guid>
       <description>在使用某个hexo主题的时候，我们有时候会觉得文章详情中的代码高亮显示的样式并不是很好看，通过下面的方式我们可以选择一套自己喜爱的代码高亮样式，让我们的文章阅读起来更有视觉触动。
  配置markdown渲染引擎  使用新的渲染引擎  npm un hexo-renderer-marked --save npm i hexo-renderer-markdown-it --save  在_config.yml中配置渲染参数  markdown: &#39;commonmark&#39;  重新预览  hexo clean hexo s --draft 配置代码高亮  设置code-prettify  # 下载源码 git clone https://github.com/google/code-prettify.git # 拷贝样式 cp code-prettify/src/prettify.css hexo/themes/hyde/source/css/ cp code-prettify/src/prettify.js hexo/themes/hyde/source/js/  设置皮肤  # 下载源码 git clone https://github.com/jmblog/color-themes-for-google-code-prettify.git # 拷贝样式 cd color-themes-for-google-code-prettify/dist/themes cp tomorrow-night.min.css hexo/themes/hyde/source/css/  禁用默认的高亮设置  # 修改_config.yml highlight: enable: false line_number: false auto_detect: false tab_replace: false  在主题模板文件中设置高亮  # head标签里引入css &amp;lt;%- css(&#39;css/prettify.</description>
     </item>
     
     <item>
       <title>「微信开发」本地调试指南</title>
-      <link>/posts/wechatdev-local-debug/</link>
+      <link>https://idoubi.cc/posts/wechatdev-local-debug/</link>
       <pubDate>Thu, 18 Apr 2019 22:20:10 +0000</pubDate>
       
-      <guid>/posts/wechatdev-local-debug/</guid>
+      <guid>https://idoubi.cc/posts/wechatdev-local-debug/</guid>
       <description>前言 在微信公众号的开发模式下，接口配置的URL必须是一个外网地址，这就要求我们在开发调试的时候，必须登录服务器去打一些断点信息，经常一言不合就出现“该公众号提供的服务出现故障，请稍后再试”这种错误提示。
 我们希望能有一种解决方案，可以把一个外网地址映射到本地的开发环境，能够实时捕捉到微信公众号发送过来的调试信息，便于我们快速定位问题，完成功能开发。
 网上有很多解决方案，比如使用花生壳、ngrok等产品提供的内网穿透技术，实现外网域名到本地开发环境的映射，详情可自行Google。
@@ -271,10 +284,10 @@ ln -s /usr/local/bin/lrz rz ln -s /usr/local/bin/lsz sz Mac系统安装lrzsz bre
     
     <item>
       <title>Mysql百万级数据迁移实战笔记</title>
-      <link>/posts/mysql-data-migration/</link>
+      <link>https://idoubi.cc/posts/mysql-data-migration/</link>
       <pubDate>Sat, 30 Jun 2018 20:34:20 +0000</pubDate>
       
-      <guid>/posts/mysql-data-migration/</guid>
+      <guid>https://idoubi.cc/posts/mysql-data-migration/</guid>
       <description>背景 上个月跟朋友一起做了个微信小程序，趁着5.20节日的热度，两个礼拜内迅速积累了一百多万用户，我们在小程序页面增加了收集formid的埋点，用于给微信用户发送模板消息通知。
 这个小程序一开始的后端逻辑是用douchat框架写的，使用框架自带的dc_mp_fans表存储微信端授权登录的用户信息，使用dc_mp_tempmsg表存储formid。截止到目前，收集到的数据超过380万，很大一部分formid都已经成功使用给用户发送过模板通知，起到了较好的二次推广的效果。
 随着数据量的增大，之前使用的服务器空间开始有点不够用，最近新写了一个专门用于做小程序后台开发的框架，于是想把原来的数据迁移到新系统的数据库。买了一台4核8G的机器，开始做数据迁移。下面对迁移过程做一个简单的记录。 方案选择  mysqldump迁移  平常开发中，我们比较经常使用的数据备份迁移方式是用mysqldump工具导出一个sql文件，再在新数据库中导入sql来完成数据迁移。试验发现，通过mysqldump导出百万级量的数据库成一个sql文件，大概耗时几分钟，导出的sql文件大小在1G左右，然后再把这个1G的sql文件通过scp命令复制到另一台服务器，大概也需要耗时几分钟。在新服务器的数据库中通过source命令来导入数据，我跑了一晚上都没有把数据导入进来，cpu跑满。
@@ -290,10 +303,10 @@ ln -s /usr/local/bin/lrz rz ln -s /usr/local/bin/lsz sz Mac系统安装lrzsz bre
     
     <item>
       <title>小程序源码反编译实战笔记</title>
-      <link>/posts/get-wxapkg/</link>
+      <link>https://idoubi.cc/posts/get-wxapkg/</link>
       <pubDate>Thu, 31 May 2018 16:50:37 +0000</pubDate>
       
-      <guid>/posts/get-wxapkg/</guid>
+      <guid>https://idoubi.cc/posts/get-wxapkg/</guid>
       <description>最近在做微信小程序开发，看到一些做的比较有意思的小程序，想看一看他们的源码，于是研究了一下小程序源码反编译相关的技术。结合本次经历，总结如下。
 手机root 要拿到小程序在手机上的源码包，需要有一台越狱的iphone或者一台拥有root权限的android机，正好我手里有一台闲置的小米4，就拿来用了，试过很多种方式给小米4root，差点搞成板砖机，一直在recorvy模式启动不了，最后尝试了小米官网的刷机方法，把系统刷成了开发版，完美root。
 小米4刷机教程：https://www.miui.com/shuaji-305.html
@@ -318,10 +331,10 @@ git clone https://github.com/qwerty472123/wxappUnpacker.git cd wxappUnpacker npm
     
     <item>
       <title>开源一款hexo工作室主题</title>
-      <link>/posts/hexo-theme-studio/</link>
+      <link>https://idoubi.cc/posts/hexo-theme-studio/</link>
       <pubDate>Tue, 15 May 2018 10:47:44 +0000</pubDate>
       
-      <guid>/posts/hexo-theme-studio/</guid>
+      <guid>https://idoubi.cc/posts/hexo-theme-studio/</guid>
       <description>项目地址 Github: https://github.com/mikemintang/hexo-theme-studio
 项目截图 使用教程  安装 hexo  官网教程：https://hexo.io/zh-cn/docs/
 安装 hexo-theme-studio 主题  git clone https://github.com/mikemintang/hexo-theme-studio.git themes/studio
@@ -332,10 +345,10 @@ git clone https://github.com/qwerty472123/wxappUnpacker.git cd wxappUnpacker npm
     
     <item>
       <title>douchat 4.0 新版发布，助力小程序后台开发</title>
-      <link>/posts/douchat4-release/</link>
+      <link>https://idoubi.cc/posts/douchat4-release/</link>
       <pubDate>Tue, 08 May 2018 16:50:37 +0000</pubDate>
       
-      <guid>/posts/douchat4-release/</guid>
+      <guid>https://idoubi.cc/posts/douchat4-release/</guid>
       <description>douchat是什么 douchat（中文名：豆信）是一款专为微信开发而创造的php开源框架，具有简洁、高效、优雅等特点。
 新版本功能 douchat V4.0.0版本主要新增了小程序开发支持，具体包括：
  插件新增Api控制器，可快速实现供小程序调用的接口 封装了小程序登录态管理逻辑，可以更快捷的实现小程序端用户登录逻辑 框架后台新增了小程序账号管理、小程序用户管理等功能 新增Wxapps目录，并添加了一个自带的Demo小程序模板  主要功能介绍 多账户管理 豆信后台支持创建多个用户，每个登录用户可以创建多个公众号和小程序账号。 多应用管理 豆信支持通过插件的形式来扩展系统的功能，每一个插件可以用于公众号h5页面访问，也可以为小程序应用提供接口。 开发友好 豆信封装了诸多对开发者友好的业务逻辑，让开发者能够更快速的实现自己的应用功能。
@@ -345,20 +358,20 @@ git clone https://github.com/qwerty472123/wxappUnpacker.git cd wxappUnpacker npm
     
     <item>
       <title>基于go&#43;vue实现的golang每日新闻数据浏览与检索平台</title>
-      <link>/posts/%E5%9F%BA%E4%BA%8Ego-vue%E5%AE%9E%E7%8E%B0%E7%9A%84golang%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB%E6%95%B0%E6%8D%AE%E6%B5%8F%E8%A7%88%E4%B8%8E%E6%A3%80%E7%B4%A2%E5%B9%B3%E5%8F%B0/</link>
+      <link>https://idoubi.cc/posts/%E5%9F%BA%E4%BA%8Ego-vue%E5%AE%9E%E7%8E%B0%E7%9A%84golang%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB%E6%95%B0%E6%8D%AE%E6%B5%8F%E8%A7%88%E4%B8%8E%E6%A3%80%E7%B4%A2%E5%B9%B3%E5%8F%B0/</link>
       <pubDate>Tue, 09 Jan 2018 16:50:37 +0000</pubDate>
       
-      <guid>/posts/%E5%9F%BA%E4%BA%8Ego-vue%E5%AE%9E%E7%8E%B0%E7%9A%84golang%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB%E6%95%B0%E6%8D%AE%E6%B5%8F%E8%A7%88%E4%B8%8E%E6%A3%80%E7%B4%A2%E5%B9%B3%E5%8F%B0/</guid>
+      <guid>https://idoubi.cc/posts/%E5%9F%BA%E4%BA%8Ego-vue%E5%AE%9E%E7%8E%B0%E7%9A%84golang%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB%E6%95%B0%E6%8D%AE%E6%B5%8F%E8%A7%88%E4%B8%8E%E6%A3%80%E7%B4%A2%E5%B9%B3%E5%8F%B0/</guid>
       <description>介绍 gonews是基于go+vue实现的golang每日新闻浏览与检索平台
  项目地址： Github 线上Demo：GoNews 数据来源：GoCN每日新闻  项目截图 部署  获取新闻数据  git clone https://github.com/gocn/news /data/news  获取源码  go get -u github.com/mikemintang/gonews  解析数据  nohup gonews -d /data/news &amp;gt; /data/log/gonews.log 2&amp;gt;&amp;amp;1  启动Api  nohup gonews -a api -p 8017 &amp;gt; /data/log/gonews.log 2&amp;gt;&amp;amp;1 &amp;amp;  前端部署  cd $GOPATH/src/github.com/mikemintang/gonews/web npm install npm run build  Nginx配置  server { listen 80; server_name gonews.idoubi.cc; index index.html index.htm index.php; root /data/go/src/mikemintang/gonews/web; location /api { rewrite ^.</description>
     </item>
     
     <item>
       <title>SeasLog快速上手指南</title>
-      <link>/posts/seaslog%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/</link>
+      <link>https://idoubi.cc/posts/seaslog%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/</link>
       <pubDate>Sun, 10 Dec 2017 13:08:22 +0000</pubDate>
       
-      <guid>/posts/seaslog%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/</guid>
+      <guid>https://idoubi.cc/posts/seaslog%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/</guid>
       <description>什么是 SeasLog log 日志，通常是系统或软件、应用的运行记录。通过 log 的分析，可以方便用户了解系统或软件、应用的运行情况；如果你的应用 log 足够丰富，也可以分析以往用户的操作行为、类型喜好、地域分布或其他更多信息；如果一个应用的 log 同时也分了多个级别，那么可以很轻易地分析得到该应用的健康状况，及时发现问题并快速定位、解决问题，补救损失。
 SeasLog是一个 C 语言编写的 PHP 扩展，提供一组规范标准的功能函数，在 PHP 项目中方便、规范、高效地写日志，以及快速地读取和查询日志。SeasLog 具备以下几个特点：
  高性能  SeasLog 使用 C 语言编写，并带有缓冲池的功能。每次写入的日志，是先写入到内存当中，当达到一定的数量时，才写入到文件当中。
@@ -371,10 +384,10 @@ SeasLog是一个 C 语言编写的 PHP 扩展，提供一组规范标准的功�
     
     <item>
       <title>golang实现RPC的几种方式</title>
-      <link>/posts/golang%E5%AE%9E%E7%8E%B0rpc%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <link>https://idoubi.cc/posts/golang%E5%AE%9E%E7%8E%B0rpc%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
       <pubDate>Sun, 03 Dec 2017 11:45:26 +0000</pubDate>
       
-      <guid>/posts/golang%E5%AE%9E%E7%8E%B0rpc%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <guid>https://idoubi.cc/posts/golang%E5%AE%9E%E7%8E%B0rpc%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
       <description>什么是RPC 远程过程调用（Remote Procedure Call，缩写为 RPC）是一个计算机通信协议。 该协议允许运行于一台计算机的程序调用另一台计算机的子程序，而程序员无需额外地为这个交互作用编程。 如果涉及的软件采用面向对象编程，那么远程过程调用亦可称作远程调用或远程方法调用。维基百科：远程过程调用
 用通俗易懂的语言描述就是：RPC允许跨机器、跨语言调用计算机程序方法。打个比方，我用go语言写了个获取用户信息的方法getUserInfo，并把go程序部署在阿里云服务器上面，现在我有一个部署在腾讯云上面的php项目，需要调用golang的getUserInfo方法获取用户信息，php跨机器调用go方法的过程就是RPC调用。
 golang中如何实现RPC 在golang中实现RPC非常简单，有封装好的官方库和一些第三方库提供支持。Go RPC可以利用tcp或http来传递数据，可以对要传递的数据使用多种类型的编解码方式。golang官方的net/rpc库使用encoding/gob进行编解码，支持tcp或http数据传输方式，由于其他语言不支持gob编解码方式，所以使用net/rpc库实现的RPC方法没办法进行跨语言调用。
@@ -387,10 +400,10 @@ package main import ( &amp;#34;errors&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;lo
     
     <item>
       <title>protobuf快速上手指南</title>
-      <link>/posts/protobuf%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/</link>
+      <link>https://idoubi.cc/posts/protobuf%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/</link>
       <pubDate>Sat, 02 Dec 2017 14:08:15 +0000</pubDate>
       
-      <guid>/posts/protobuf%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/</guid>
+      <guid>https://idoubi.cc/posts/protobuf%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/</guid>
       <description>什么是 protobuf Google Protocol Buffer( 简称 Protobuf) 是 Google 公司内部的混合语言数据标准。
 Protocol Buffers 是一种轻便高效的结构化数据存储格式，可以用于结构化数据串行化，或者说序列化。它很适合做数据存储或 RPC 数据交换格式。可用于通讯协议、数据存储等领域的语言无关、平台无关、可扩展的序列化结构数据格式。
 如何安装 protobuf  在 github 获取 protobuf 源码，windows 系统可以直接下载 exe 文件：https://github.com/google/protobuf/releases   macos 和 linux 环境使用源码进行安装的步骤  # 获取源码包 wget https://github.com/google/protobuf/archive/v3.5.0.tar.gz # 解压缩并进入源码目录 tar -zxvf v3.5.0.tar.gz cd protobuf-3.5.0 # 生成configure文件 ./autogen.sh # 编译安装 ./configure make make check make install  在执行./autogen.sh过程中可能会因缺乏 automake 依赖库而报错：autoreconf: failed to run aclocal: No such file or directory，要解决此错误，在 linux 系统可以通过sudo yum install automake或者sudo apt-get install automake安装 automake，在 macos 系统可以通过brew install automake安装 automake。</description>
@@ -398,10 +411,10 @@ Protocol Buffers 是一种轻便高效的结构化数据存储格式，可以用
     
     <item>
       <title>SQL2Struct：一款根据sql语句自动生成golang结构体的chrome插件</title>
-      <link>/posts/sql2struct%E4%B8%80%E6%AC%BE%E6%A0%B9%E6%8D%AEsql%E8%AF%AD%E5%8F%A5%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90golang%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84chrome%E6%8F%92%E4%BB%B6/</link>
+      <link>https://idoubi.cc/posts/sql2struct%E4%B8%80%E6%AC%BE%E6%A0%B9%E6%8D%AEsql%E8%AF%AD%E5%8F%A5%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90golang%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84chrome%E6%8F%92%E4%BB%B6/</link>
       <pubDate>Mon, 06 Nov 2017 10:47:44 +0000</pubDate>
       
-      <guid>/posts/sql2struct%E4%B8%80%E6%AC%BE%E6%A0%B9%E6%8D%AEsql%E8%AF%AD%E5%8F%A5%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90golang%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84chrome%E6%8F%92%E4%BB%B6/</guid>
+      <guid>https://idoubi.cc/posts/sql2struct%E4%B8%80%E6%AC%BE%E6%A0%B9%E6%8D%AEsql%E8%AF%AD%E5%8F%A5%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90golang%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84chrome%E6%8F%92%E4%BB%B6/</guid>
       <description>前言 最近在用 golang 写 api，用到 gorm 包进行数据库操作，gorm是 golang 中非常流行的一个 orm 包，使用 gorm 进行数据库操作前，一般需要先用一个 golang 结构体对数据表字段进行映射，于是我们经常需要根据数据表中的字段名和类型来手动在 go 代码中写 struct，有时候数据表字段很多的情况下，这种方式很耗费精力。于是便想到了写一个 chrome 插件，根据数据表的 DDL 语句来自动生成 golang 结构体，可以配置 go 结构体字段类型与 mysql 数据表字段类型的一个映射关系。
 SQL2Struct  SQL2Struct 是一款对 golang 开发者友好的 chrome 插件，根据在 mysql 中创建数据表的 sql 语句，自动生成 golang 中的 struct，在 golang 开发者使用诸如 gorm 之类的框架时，可以很好的把 mysql 中的数据表与 orm 的结构体关联起来。
  github 地址：https://github.com/mikemintang/sql2struct
@@ -411,10 +424,10 @@ SQL2Struct  SQL2Struct 是一款对 golang 开发者友好的 chrome 插件，�
     
     <item>
       <title>goimports工具安装与使用</title>
-      <link>/posts/goimports%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</link>
+      <link>https://idoubi.cc/posts/goimports%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Mon, 06 Nov 2017 10:40:16 +0000</pubDate>
       
-      <guid>/posts/goimports%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</guid>
+      <guid>https://idoubi.cc/posts/goimports%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</guid>
       <description>goimports是干嘛的 go是一门强类型的编译型语言，有着很严格的类型约束与语法规范，在golang代码中，如果使用到的包没有被引入或者是引入了的包没有被使用，都会编译不通过。所以我们在写go代码的时候，用到包的时候需要首先import一下，不用的时候，要把import包的语句删除或者是注释，但是总是这样手动去操作并不是很方便，比如我们在开发的时候需要用fmt包打印一些调试信息，为了让打印出来的数组或结构体格式好看一点，我们有时候需要使用encoding/json包来进行格式化。在调试完成后，我们必须要手动把引入的包删除掉，然后再进行编译。
 针对上面提到的日常开发中经常面对的手动管理包的问题，goimports出现了。goimports可以自动对代码中的依赖包进行管理，如果有用到，就会自动import，也会对没有用到的包进行自动删除。
 安装goimports 因为被墙的原因，直接通过go get可能不能正确拉取到goimports包，我们这里使用github源码编译的方式进行安装。
@@ -426,30 +439,30 @@ SQL2Struct  SQL2Struct 是一款对 golang 开发者友好的 chrome 插件，�
     
     <item>
       <title>linux下安装python</title>
-      <link>/posts/linux%E4%B8%8B%E5%AE%89%E8%A3%85python/</link>
+      <link>https://idoubi.cc/posts/linux%E4%B8%8B%E5%AE%89%E8%A3%85python/</link>
       <pubDate>Sun, 29 Oct 2017 10:29:34 +0000</pubDate>
       
-      <guid>/posts/linux%E4%B8%8B%E5%AE%89%E8%A3%85python/</guid>
+      <guid>https://idoubi.cc/posts/linux%E4%B8%8B%E5%AE%89%E8%A3%85python/</guid>
       <description>python源码下载页 https://www.python.org/downloads/source/
 安装python # 下载源码 wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz # 解压缩 tar -zxvf Python-3.6.3.tgz # 进入源码目录 cd Python-3.6.3 # 配置(指定安装到/usr/local/python3目录) ./configure --prefix=/usr/local/python3 # 编译 make # 安装 make install 使用python3作为默认版本 # 进入bin目录 cd /usr/bin # 查看所有的python命令 ls | grep python # 将python3作为默认python mv python python2.20171027 mv python3 python # 查看当前python版本 python -V 安装pip # 下载pip安装文件 wget -c https://bootstrap.pypa.io/get-pip.py # 安装pip python get-pip.py python2 get-pip.py </description>
     </item>
     
     <item>
       <title>golang版本的curl请求库</title>
-      <link>/posts/golang%E7%89%88%E6%9C%AC%E7%9A%84curl%E8%AF%B7%E6%B1%82%E5%BA%93/</link>
+      <link>https://idoubi.cc/posts/golang%E7%89%88%E6%9C%AC%E7%9A%84curl%E8%AF%B7%E6%B1%82%E5%BA%93/</link>
       <pubDate>Thu, 14 Sep 2017 21:31:55 +0000</pubDate>
       
-      <guid>/posts/golang%E7%89%88%E6%9C%AC%E7%9A%84curl%E8%AF%B7%E6%B1%82%E5%BA%93/</guid>
+      <guid>https://idoubi.cc/posts/golang%E7%89%88%E6%9C%AC%E7%9A%84curl%E8%AF%B7%E6%B1%82%E5%BA%93/</guid>
       <description>Github地址 https://github.com/mikemintang/go-curl
 安装 go get github.com/mikemintang/go-curl 使用 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;github.com/mikemintang/go-curl&amp;#34; ) func main() { url := &amp;#34;http://php.dev/api.php&amp;#34; headers := map[string]string{ &amp;#34;User-Agent&amp;#34;: &amp;#34;Sublime&amp;#34;, &amp;#34;Authorization&amp;#34;: &amp;#34;Bearer access_token&amp;#34;, &amp;#34;Content-Type&amp;#34;: &amp;#34;application/json&amp;#34;, } cookies := map[string]string{ &amp;#34;userId&amp;#34;: &amp;#34;12&amp;#34;, &amp;#34;loginTime&amp;#34;: &amp;#34;15045682199&amp;#34;, } queries := map[string]string{ &amp;#34;page&amp;#34;: &amp;#34;2&amp;#34;, &amp;#34;act&amp;#34;: &amp;#34;update&amp;#34;, } postData := map[string]interface{}{ &amp;#34;name&amp;#34;: &amp;#34;mike&amp;#34;, &amp;#34;age&amp;#34;: 24, &amp;#34;interests&amp;#34;: []string{&amp;#34;basketball&amp;#34;, &amp;#34;reading&amp;#34;, &amp;#34;coding&amp;#34;}, &amp;#34;isAdmin&amp;#34;: true, } // 链式操作  req := curl.NewRequest() resp, err := req.</description>
     </item>
     
     <item>
       <title>八月书评二则</title>
-      <link>/posts/%E5%85%AB%E6%9C%88%E4%B9%A6%E8%AF%84%E4%BA%8C%E5%88%99/</link>
+      <link>https://idoubi.cc/posts/%E5%85%AB%E6%9C%88%E4%B9%A6%E8%AF%84%E4%BA%8C%E5%88%99/</link>
       <pubDate>Sat, 26 Aug 2017 11:18:40 +0000</pubDate>
       
-      <guid>/posts/%E5%85%AB%E6%9C%88%E4%B9%A6%E8%AF%84%E4%BA%8C%E5%88%99/</guid>
+      <guid>https://idoubi.cc/posts/%E5%85%AB%E6%9C%88%E4%B9%A6%E8%AF%84%E4%BA%8C%E5%88%99/</guid>
       <description>《不如去闯》  与其去想，不如去读； 与其去想，不如去问； 与其去想，不如去做； 与其去想，不如去闯。
  这是作者结合自己的奋斗经历在本书传达给我们的观点。
 在上下班的地铁上，花了近五个小时的时间看完了这本《不如去闯》，深深被书中主人公的奋斗经历所吸引。作者Leo是典型的别人家的孩子，从小成绩优异，兴趣广泛，在高中关键时段放弃了保送大学的机会，闭关奋战耶鲁大学的本科申请，强大的意志力与决然的勇气令人敬佩。成功被耶鲁大学全奖录取后，Leo开始了他精彩的大学生活，在校园内，与各种牛人名师为伍，繁忙而充实。毕业后的Leo加入全球顶尖的投行高盛，让我们看到了他同样精彩的职场生活。两年后从高盛离职，Leo开始了创业，又继续进入哈佛商学院深造，精彩的人生一直在继续。
@@ -469,10 +482,10 @@ SQL2Struct  SQL2Struct 是一款对 golang 开发者友好的 chrome 插件，�
     
     <item>
       <title>开发一个自己的composer包</title>
-      <link>/posts/%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84composer%E5%8C%85/</link>
+      <link>https://idoubi.cc/posts/%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84composer%E5%8C%85/</link>
       <pubDate>Mon, 21 Aug 2017 17:04:20 +0000</pubDate>
       
-      <guid>/posts/%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84composer%E5%8C%85/</guid>
+      <guid>https://idoubi.cc/posts/%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84composer%E5%8C%85/</guid>
       <description>php的composer类似于node的包管理机制，都是可以通过一些命令操作下载开发者发布的功能包，并且包之间可以互相依赖，管理起来比较方便。下面根据自己踩过的坑总结一下如何创建一个自己的composer包。
  创建一个composer包 在packages目录下面创建一个自己的composer包：mikephp-db，composer.json里面填写包的基本信息，src目录下面是包的功能代码。
 composer.json的内容
@@ -486,10 +499,10 @@ composer.json的内容
     
     <item>
       <title>在php中使用curl多线程下载图片</title>
-      <link>/posts/%E5%9C%A8php%E4%B8%AD%E4%BD%BF%E7%94%A8curl%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87/</link>
+      <link>https://idoubi.cc/posts/%E5%9C%A8php%E4%B8%AD%E4%BD%BF%E7%94%A8curl%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87/</link>
       <pubDate>Fri, 30 Dec 2016 10:25:39 +0000</pubDate>
       
-      <guid>/posts/%E5%9C%A8php%E4%B8%AD%E4%BD%BF%E7%94%A8curl%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87/</guid>
+      <guid>https://idoubi.cc/posts/%E5%9C%A8php%E4%B8%AD%E4%BD%BF%E7%94%A8curl%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87/</guid>
       <description>遇到一个需求：要下载这个网站http://www.laredoute.com/上面的商品图片到本地。 分析了一下，这个网站是一个国外的站点，受 cdn 节点的影响，在国内打开的速度比较慢。另一方面，要下载的商品图片较大，单张图片的大小有超过 200kb 的。 现在的需求是，要在短时间内批量下载该网站上面的商品图片到本地，鉴于这两点考虑，如果使用 php 来做的话，单纯的用 file_get_contents 可能行不通，于是想到了用 php 的 curl 库来处理。
  虽然用 curl 来下载图片比起用 file_get_contents 来处理效率更高，稳定性更好，但是如果使用 curl 单线程来处理的话，效率并不会得到非常明显的提升。所幸的是，curl 库提供了 curl_multi 功能，让我们可以使用 curl 多线程来处理业务逻辑，可以显著的提升效率。下面拿下载上述站点上面的 8 张图片为例，分别使用 curl 单线程和 curl 多线程来进行图片下载，并对两者的效率做一个比较。
 single.php：curl 单线程下载图片 &amp;lt;?php /** * 单线程下载远程图片 * @author 艾逗笔&amp;lt;765532665@qq.com&amp;gt; */ set_time_limit(300); // 设置程序执行超时时间为5分钟  // 要下载的图片数组 $pics = array( &amp;#39;http://media.laredoute.com/products/1200by1200/37/01/01/37010132_90_CO_1_2850804.jpg&amp;#39;, &amp;#39;http://media.laredoute.com/products/1200by1200/37/01/01/37010132_10_CO_2_2850799.jpg&amp;#39;, &amp;#39;http://media.laredoute.com/products/1200by1200/57/02/02/57020206_1_CO_1_057020206-9be173d2-6bc3-44ba-b9cb-111010ed0051.jpg&amp;#39;, &amp;#39;http://media.laredoute.com/products/1200by1200/37/01/01/37010132_10_CO_1_2850800.jpg&amp;#39;, &amp;#39;http://media.laredoute.com/products/641by641/35/00/42/350042687_1_CO_1_7639577.jpg&amp;#39;, &amp;#39;http://media.laredoute.com/products/641by641/35/00/34/350034174_1_CO_1_7669890.jpg&amp;#39;, &amp;#39;http://media.laredoute.com/products/641by641/35/00/42/350042718_1_CO_1_7009919.jpg&amp;#39;, &amp;#39;http://media.laredoute.com/products/641by641/35/00/39/350039748_1_CO_3_6958274.jpg&amp;#39; ); $beginTime = time(); // 开始下载图片的时间 $lastTime = $beginTime; // 上一次下载图片的时间 $count = 0; // 计数器 echo &amp;#39;begin download at &amp;#39; .</description>
@@ -497,10 +510,10 @@ single.php：curl 单线程下载图片 &amp;lt;?php /** * 单线程下载远程
     
     <item>
       <title>聊一聊微信开发那些事儿</title>
-      <link>/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</link>
+      <link>https://idoubi.cc/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</link>
       <pubDate>Wed, 02 Nov 2016 13:12:18 +0000</pubDate>
       
-      <guid>/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</guid>
+      <guid>https://idoubi.cc/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</guid>
       <description> Programming make the world a better place, anyone can be anything
  前言 微信公众号2012年正式推出，至今已走过5个年头，在这五年的时间内，很多微信第三方企业迅速崛起，典型代表有微盟、微客来这些以公众号托管为主的企业。而今天我想跟大家聊的是微信公众号开发这个领域的一些事情。
 经历 我是2013年末接触微信开发的，那时候还在上学，有朋友说想在学校搞一个微信公众号卖水果，于是我开始接触微信开发。最开始是看青龙老贼的教程入门的，后来接触到了github上面一个非常流行的类库wechat-php-sdk，再后来接触到了weiphp、微擎这样的开发框架，再到现在自己写的框架豆信，在微信开发这个领域已经走过了3个年头，期间开发过微商城、微餐饮、微投票等多款微信端应用，对于微信官方提供的接口算得上是滚瓜烂熟。
@@ -514,10 +527,10 @@ single.php：curl 单线程下载图片 &amp;lt;?php /** * 单线程下载远程
     
     <item>
       <title>AES加解密在php接口请求过程中的应用</title>
-      <link>/posts/aes%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%9C%A8php%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <link>https://idoubi.cc/posts/aes%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%9C%A8php%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
       <pubDate>Tue, 25 Oct 2016 12:10:37 +0000</pubDate>
       
-      <guid>/posts/aes%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%9C%A8php%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <guid>https://idoubi.cc/posts/aes%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%9C%A8php%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
       <description>在 php 请求接口的时候，我们经常需要考虑的一个问题就是数据的安全性，因为数据传输过程中很有可能会被用 fillder 这样的抓包工具进行截获。一种比较好的解决方案就是在客户端请求发起之前先对要请求的数据进行加密，服务端 api 接收到请求数据后再对数据进行解密处理，返回结果给客户端的时候也对要返回的数据进行加密，客户端接收到返回数据的时候再解密。因此整个 api 请求过程中数据的安全性有了一定程度的提高。
 今天结合一个简单的 demo 给大家分享一下 AES 加解密技术在 php 接口请求中的应用。
 AES 加解密基础类： &amp;lt;?php /** * 加密基础类 */ class Crypt_AES { protected $_cipher = &amp;#34;rijndael-128&amp;#34;; protected $_mode = &amp;#34;cbc&amp;#34;; protected $_key; protected $_iv = null; protected $_descriptor = null; /** * 是否按照PKCS #7 的标准进行填充 * 为否默认将填充“&amp;amp;#92;&amp;amp;#48;”补位 * @var boolean */ protected $_PKCS7 = false; /** * 构造函数，对于密钥key应区分2进制字符串和16进制的。 * 如需兼容PKCS#7标准，应选项设置开启PKCS7，默认关闭 * @param string $key * @param mixed $iv 向量值 * @param array $options */ public function __construct($key = null, $iv = null, $options = null) { if (null !</description>
@@ -525,10 +538,10 @@ AES 加解密基础类： &amp;lt;?php /** * 加密基础类 */ class Crypt_AES 
     
     <item>
       <title>浅谈shtml与html的区别</title>
-      <link>/posts/%E6%B5%85%E8%B0%88shtml%E4%B8%8Ehtml%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <link>https://idoubi.cc/posts/%E6%B5%85%E8%B0%88shtml%E4%B8%8Ehtml%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
       <pubDate>Fri, 14 Oct 2016 10:04:29 +0000</pubDate>
       
-      <guid>/posts/%E6%B5%85%E8%B0%88shtml%E4%B8%8Ehtml%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <guid>https://idoubi.cc/posts/%E6%B5%85%E8%B0%88shtml%E4%B8%8Ehtml%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
       <description>遇到有人咨询 shtml 与 html 的区别，顺手查了一波资料，根据我的理解整理一下与大家分享。
  何为 shtml？  shtml 跟 html 类似，也是一种用于网页设计的标记型语言，区别在于：html 是一种纯静态的标记型语言，在 html 文档里面写的内容是什么，用户打开浏览器看到的就是什么，而 shtml 是一种半静态半动态的标记型语言，在 shtml 里面可以包含 SSI 命令，当用户在浏览器浏览 shtml 文档的时候，里面包含的 SSI 命令会被解析，然后再呈现内容给用户。
  何为 SSI？  SSI 是为 WEB 服务器提供的一套命令，这些命令只要直接嵌入到 HTML 文档的注释内容之中即可。例如： &amp;lt;!--#include file=&amp;quot;index.html&amp;quot;--&amp;gt; &amp;lt;!--#echo var=&amp;quot;DOCUMENT_NAME&amp;quot;--&amp;gt;都属于 SSI 指令。前者用于包含一个 html 文件，后者用于显示当前文档的名称。
@@ -537,19 +550,19 @@ AES 加解密基础类： &amp;lt;?php /** * 加密基础类 */ class Crypt_AES 
     
     <item>
       <title>git常用命令整理</title>
-      <link>/posts/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</link>
+      <link>https://idoubi.cc/posts/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</link>
       <pubDate>Mon, 21 Mar 2016 18:20:13 +0000</pubDate>
       
-      <guid>/posts/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</guid>
+      <guid>https://idoubi.cc/posts/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</guid>
       <description>拉取分支代码：git clone -b [branch_name] [remote_url] 查看所有远程分支：git branch -a 查看本地分支：git branch 创建分支：git branch [branch_name] 切换到分支：git checkout [branch_name] 删除本地分支：git branch -d [branch_name] 删除远程分支：git push origin --delete [branch_name] 拉取远程分支：git fetch origin [branc_name] 合并本地分支：git merge [branch_name] 撤销合并：git reset --hard [commit_id] 重命名本地分支：git branch -m [old_branch_name] [new_branch_name] 丢弃未提交的更改：git clean -df 丢弃所有已commit的修改：git checkout . 将更改暂存：git stash 拉取代码: git pull 恢复暂存：git stash pop 将远程仓库与本地仓库关联：git remote add origin [remote_url] 删除远程仓库与本地仓库的关联：git remote rm origin 将本地的代码推送到关联的远程仓库：git push -u origin [branch_name] http://developer.</description>
     </item>
     
     <item>
       <title>使用Apache的ab工具进行网站性能压力测试</title>
-      <link>/posts/%E4%BD%BF%E7%94%A8apache%E7%9A%84ab%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</link>
+      <link>https://idoubi.cc/posts/%E4%BD%BF%E7%94%A8apache%E7%9A%84ab%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Mon, 15 Feb 2016 09:06:02 +0000</pubDate>
       
-      <guid>/posts/%E4%BD%BF%E7%94%A8apache%E7%9A%84ab%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</guid>
+      <guid>https://idoubi.cc/posts/%E4%BD%BF%E7%94%A8apache%E7%9A%84ab%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</guid>
       <description>年前给中百仓促超市做了微信摇一摇抽奖的功能开发，顾客凭借在中百购物的发票联可以在微信中参与抽奖。由于中百仓储超市微信公众号的关注量较大，客户担心太多用户同时参与抽奖的话会导致服务器崩溃而不能给用户提供正常的服务，因此要求我们对中百仓促超市微信公众号接入的网站性能进行压力测试。下面总结一下使用 Apache 的 ab 工具进行压力测试的过程。
 装了 wampserver 的情况下可以直接使用 ab 工具，win+R 后输入 cmd 弹出 dos 命令窗口，进入 wamp 的安装目录并且启动 ab 工具。
 1000 请求，200 并发下的压力测试结果： 1000 请求，300 并发下的压力测试结果： 1000 请求，100 并发下的压力测试结果： 由上面的测试结果分析可知，这台服务器的最佳并发量应该控制在 100 以下。
@@ -566,10 +579,10 @@ wampserver：https://www.baidu.com/s?ie=UTF-8&amp;amp;wd=wampserver
     
     <item>
       <title>省市区三级联动js实现</title>
-      <link>/posts/%E7%9C%81%E5%B8%82%E5%8C%BA%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8js%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://idoubi.cc/posts/%E7%9C%81%E5%B8%82%E5%8C%BA%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8js%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Tue, 03 Nov 2015 12:53:27 +0000</pubDate>
       
-      <guid>/posts/%E7%9C%81%E5%B8%82%E5%8C%BA%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8js%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://idoubi.cc/posts/%E7%9C%81%E5%B8%82%E5%8C%BA%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8js%E5%AE%9E%E7%8E%B0/</guid>
       <description>接了一个广州电信微信公众号开发的单子，用户在兑换礼品的时候需要填写个人信息，这个时候需要用到省市区三级联动的功能。于是开始在网上找省市区三级联动的 js，终于找到一篇：http://www.cnblogs.com/zjfree/archive/2013/08/20/3269864.html
 这是使用 QQ 网站用的 js 来实现省市区三级联动的，既然腾讯都用了，姑且我也用这个 js 吧。
 下面讲一下使用过程：
@@ -579,10 +592,10 @@ wampserver：https://www.baidu.com/s?ie=UTF-8&amp;amp;wd=wampserver
     
     <item>
       <title>「Fiddler」网页采集必备抓包利器</title>
-      <link>/posts/fiddler%E7%BD%91%E9%A1%B5%E9%87%87%E9%9B%86%E5%BF%85%E5%A4%87%E6%8A%93%E5%8C%85%E5%88%A9%E5%99%A8/</link>
+      <link>https://idoubi.cc/posts/fiddler%E7%BD%91%E9%A1%B5%E9%87%87%E9%9B%86%E5%BF%85%E5%A4%87%E6%8A%93%E5%8C%85%E5%88%A9%E5%99%A8/</link>
       <pubDate>Fri, 19 Dec 2014 11:30:29 +0000</pubDate>
       
-      <guid>/posts/fiddler%E7%BD%91%E9%A1%B5%E9%87%87%E9%9B%86%E5%BF%85%E5%A4%87%E6%8A%93%E5%8C%85%E5%88%A9%E5%99%A8/</guid>
+      <guid>https://idoubi.cc/posts/fiddler%E7%BD%91%E9%A1%B5%E9%87%87%E9%9B%86%E5%BF%85%E5%A4%87%E6%8A%93%E5%8C%85%E5%88%A9%E5%99%A8/</guid>
       <description>最近这段时间，网页采集方面的工作做得比较多。用curl技术开发了一个微信文章聚合类产品，把抓取到的数据转换成json格式，并在android端调用json数据接口加以显示；基于weiphp做了一个掌上头条插件，也是用的网页采集技术；和一个创业团队一起在做一个高考志愿填报系统，所有的数据也是从别的地方抓取。总而言之，网页抓取与网页采集技术是一项非常实用的技能，他能让我们高效快速的获取我们开发产品所需要的一些基本数据。
 网页抓取与网页采集过程中难免需要用到抓包技术，所谓抓包，就是我们在访问一个目标网站的时候，需要分析我们提交给浏览器的一些http请求以及提交给浏览器的一些数据，在知道请求是如何发起的以及post了哪些数据之后，我们才能针对目标网页写出相应的采集程序。特别是在模拟登陆一些需要用户进行登陆验证的网站时，抓包分析就变得很重要。
 一些浏览器自带抓包分析工具或者有其可扩展的抓包插件，像火狐浏览器有firebug插件，IE浏览器有HttpWatch。每个抓包工具都有其独特的功能，这里就不一一介绍了，今天给大家介绍一个好用的抓包工具Fiddler。
@@ -604,10 +617,10 @@ wampserver：https://www.baidu.com/s?ie=UTF-8&amp;amp;wd=wampserver
     
     <item>
       <title>使用Xshell命令配置阿里云运行环境小结</title>
-      <link>/posts/%E4%BD%BF%E7%94%A8xshell%E5%91%BD%E4%BB%A4%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%B0%8F%E7%BB%93/</link>
+      <link>https://idoubi.cc/posts/%E4%BD%BF%E7%94%A8xshell%E5%91%BD%E4%BB%A4%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%B0%8F%E7%BB%93/</link>
       <pubDate>Fri, 19 Dec 2014 10:23:52 +0000</pubDate>
       
-      <guid>/posts/%E4%BD%BF%E7%94%A8xshell%E5%91%BD%E4%BB%A4%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%B0%8F%E7%BB%93/</guid>
+      <guid>https://idoubi.cc/posts/%E4%BD%BF%E7%94%A8xshell%E5%91%BD%E4%BB%A4%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%B0%8F%E7%BB%93/</guid>
       <description>1、配置服务器连接属性
 2、下载一键安装包并放置在阿里云 root 目录下
 3、输入安装命令
@@ -620,10 +633,10 @@ linux_setup_1.4.1](http://blogcdn.idoustudio.com/2014/12/linux_setup_1.4.1.zip)
     
     <item>
       <title>用SVN版本管理工具在本地对项目代码进行管理</title>
-      <link>/posts/%E7%94%A8svn%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%8E%A7%E5%88%B6%E4%B9%90%E4%BD%B3%E8%82%B4/</link>
+      <link>https://idoubi.cc/posts/%E7%94%A8svn%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%8E%A7%E5%88%B6%E4%B9%90%E4%BD%B3%E8%82%B4/</link>
       <pubDate>Tue, 21 Oct 2014 11:50:02 +0000</pubDate>
       
-      <guid>/posts/%E7%94%A8svn%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%8E%A7%E5%88%B6%E4%B9%90%E4%BD%B3%E8%82%B4/</guid>
+      <guid>https://idoubi.cc/posts/%E7%94%A8svn%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%8E%A7%E5%88%B6%E4%B9%90%E4%BD%B3%E8%82%B4/</guid>
       <description>对于一个程序开发人员来说，对代码的版本控制毫无疑问是一个非常关键的工作。因为一直都是一个人在写程序做产品，没有团队协作的概念，所以我以前做一些产品的时候基本上就是有了一个想法立马就去开始写程序了。没有写过需求文档，没有进行过市场调研，更没有规范化的开发进度控制、代码管理等，因此我以前做过的“武大微淘”、“凌波微购”、“厚德网”等产品的完整源代码现在都找不到了，有时候想起来还是觉得挺悲伤的。就拿“武大微淘”来说，我记得我是从 2014 年 2 月 15 号，也就是大三下学期刚开学开始，每天都去图书馆写程序，大概写了半个月才把“武大微淘”的基本功能写完，那时候的功能想想还是很不错的，虽然做的也是一个微信电商平台，但“武大微淘”相比于其他的微信购物类产品而言还是有很多亮点，比如说支持用户直接在微信中回复关键词查询商品分类、商品列表等，还有就是通过回复“商品编号+份数+地址”可以在微信中直接提交订单、管理员输入“查询+订单号”直接在微信中查看订单等。
 如果可以的话我还是希望 能把以前做的一些产品的源代码找到，稍微修改一下还能继续使用，指不定还能卖给某些感兴趣的人。可惜的是以前图样图森破，不懂得对代码进行管理，导致现在想找都很难找到了。因此，以后开发什么产品一定要学会用代码管理工具，把每个版本的代码完整的保留下来。
 ok。现在开始进入正题。分享如何在本地配置 SVN。
@@ -637,10 +650,10 @@ ok。现在开始进入正题。分享如何在本地配置 SVN。
     
     <item>
       <title>ajax在新闻资讯类产品中的应用</title>
-      <link>/posts/ajax%E5%9C%A8%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF%E7%B1%BB%E4%BA%A7%E5%93%81%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <link>https://idoubi.cc/posts/ajax%E5%9C%A8%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF%E7%B1%BB%E4%BA%A7%E5%93%81%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
       <pubDate>Fri, 17 Oct 2014 11:15:17 +0000</pubDate>
       
-      <guid>/posts/ajax%E5%9C%A8%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF%E7%B1%BB%E4%BA%A7%E5%93%81%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <guid>https://idoubi.cc/posts/ajax%E5%9C%A8%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF%E7%B1%BB%E4%BA%A7%E5%93%81%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
       <description>最近一直在做一款叫做“高校头条”的新闻资讯类产品，初衷是想通过数据抓取的技术把大学生最常浏览的新闻资讯类信息汇集到一起，通过一定的算法分析，根据用户的兴趣给他们推荐相应的内容。微信端产品已经上线一段时间了，目前在捣鼓安卓端需要怎么做，希望等安卓端做出来之后就开始推广给所有人用。
 所谓的微信端“高校头条”，其实就是在微信中链接了一个 wap 站点，使用 bootstrap 做了一个移动端适配的前台，使用 weiphp 作为后台，通过在后台设置抓取地址和一定的抓取规则，使用 curl 技术抓取各个微信订阅号里面的内容，再把抓取到的内容存储到数据库，在 wap 站点直接输出数据库里面的新闻资讯信息，在微信端通过关键词查询获取相应的内容。整个产品的实现原理就是这样子，今天想要总结的一个技术是：通过 ajax 调用数据，在 wap 站点输出新闻列表。
 AJAX 即“Asynchronous Javascript And XML[1] ”（异步 JavaScript 和 XML[1] ），是指一种创建交互式网页应用的网页开发技术。百度百科上是这么解释的。ajax 也是业内评价非常高的一种技术，一般功能较为完善的网站都或多或少使用了 ajax。ajax 最主要的特点是异步，使用异步最主要的作用是提高用户体验，也许我们会经常遇到，在点击某一个网站链接的时候，浏览器跳转半天都不能把我们想看的内容呈现出来，这时候网页浏览者的耐心肯定会受到很大的挑战，也就是所谓的用户体验极差。而使用 ajax 获取数据，一般网页是不会出现这种情况的，ajax 可以设置局部刷新，我们只要把需要通过点击链接而切换内容的区域设置成 ajax 获取数据就行了，这样用户点击某个链接的时候，网站是不会整体跳转的，也不会出现一片空白的情况，用户看到所需内容所等待的时间也非常少，很明显的提高了用户体验。
@@ -651,10 +664,10 @@ AJAX 即“Asynchronous Javascript And XML[1] ”（异步 JavaScript 和 XML[1]
     
     <item>
       <title>一个程序员关于订单打印的思考</title>
-      <link>/posts/%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0%E7%9A%84%E6%80%9D%E8%80%83/</link>
+      <link>https://idoubi.cc/posts/%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0%E7%9A%84%E6%80%9D%E8%80%83/</link>
       <pubDate>Wed, 15 Oct 2014 15:04:17 +0000</pubDate>
       
-      <guid>/posts/%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0%E7%9A%84%E6%80%9D%E8%80%83/</guid>
+      <guid>https://idoubi.cc/posts/%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E6%89%93%E5%8D%B0%E7%9A%84%E6%80%9D%E8%80%83/</guid>
       <description>乐佳肴台式茶餐屋 10 月 10 号开业以来，生意一直很好。我们在开业前几天就入驻了淘点点、美团外卖、乐外卖等系统。做外卖订餐的，我们肯定需要把用户下的订单打印出来然后再根据订单安排配送员给用户配送，前几天我对乐佳肴入驻的三个平台进行了调试，在淘宝上买了一个 58mm 无线蓝牙打印机，但是调试后发现只有美团外卖的订单能够打印出来，淘点点的订单打印不出来。淘点点指定的打印机好像是一款叫做“佳博”的无线打印机。乐外卖则在系统后台就指明了只能使用乐外卖提供的打印机才能打印在乐外卖平台上产生的订单，还给出了乐外卖打印机在淘宝上的购买链接，价格最便宜的 550 元，最新的 650 元。看到那个价格的时候我也是醉了。
 作为一个自尊心很强的程序员，作为武汉凌波微购网络科技有限公司的首席技术官，我岂能眼睁睁的看着我们的乐佳肴花几百块钱去买三个不同的打印机分别适应我们入驻的三个平台？于是我想到了写一套统一的程序把三个平台的订单整合起来，用一个统一的打印机打印。
 我最开始的想法是用模拟登陆技术，分别登陆淘点点、美团外卖、乐外卖三个系统的商家管理后台，然后用网页抓取技术把订单抓取下来存到本地的数据库，最后再调用打印机程序统一打印。不过后来发现淘点点跟美团外卖好像只有移动端的商家管理后台，没有 pc 端的，而乐外卖的管理后台登陆进去之后是一堆乱码，于是模拟抓取订单的这个想法行不通了。
@@ -666,10 +679,10 @@ var oldstr = document.body.innerHTML; document.body.innerHTML = headstr+newstr+f
     
     <item>
       <title>阿里云服务器phpmyadmin无法登陆问题及其解决办法</title>
-      <link>/posts/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8phpmyadmin%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <link>https://idoubi.cc/posts/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8phpmyadmin%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
       <pubDate>Sun, 07 Sep 2014 12:38:13 +0000</pubDate>
       
-      <guid>/posts/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8phpmyadmin%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <guid>https://idoubi.cc/posts/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8phpmyadmin%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
       <description>比起一般的虚拟主机，阿里云服务器在访问速度和稳定性方面都有很突出的优势。我是半年前开始使用阿里云的，用的是最低的配置，55 块钱一个月，由于不懂得 Linux 服务器和 shell 编程，所以在买下阿里云服务器之后用的是阿里云官方提供的一键安装 web 服务。http://help.aliyun.com/view/13435438.html
 使用一键安装 web 教程配置好的阿里云服务器使用起来还是挺方便的，就是偶尔会出现一些莫名其妙的问题，比如数据库登录不上，无法更改网站根目录之类的，可惜的是我不懂 linux 服务器，所以出现了什么问题只能求助别人或者各种百度，这样挺不方便的。看来要找个时间好好学一学 linux 服务器。
 记录一下使用阿里云服务器以来遇到最多的数据库登录不上的问题及解决办法：
@@ -683,10 +696,10 @@ var oldstr = document.body.innerHTML; document.body.innerHTML = headstr+newstr+f
     
     <item>
       <title>阿里2014实习生招聘前端开发笔试题</title>
-      <link>/posts/%E9%98%BF%E9%87%8C2014%E5%AE%9E%E4%B9%A0%E7%94%9F%E6%8B%9B%E8%81%98%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AF%95%E9%A2%98/</link>
+      <link>https://idoubi.cc/posts/%E9%98%BF%E9%87%8C2014%E5%AE%9E%E4%B9%A0%E7%94%9F%E6%8B%9B%E8%81%98%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AF%95%E9%A2%98/</link>
       <pubDate>Mon, 31 Mar 2014 19:24:29 +0000</pubDate>
       
-      <guid>/posts/%E9%98%BF%E9%87%8C2014%E5%AE%9E%E4%B9%A0%E7%94%9F%E6%8B%9B%E8%81%98%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AF%95%E9%A2%98/</guid>
+      <guid>https://idoubi.cc/posts/%E9%98%BF%E9%87%8C2014%E5%AE%9E%E4%B9%A0%E7%94%9F%E6%8B%9B%E8%81%98%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%AC%94%E8%AF%95%E9%A2%98/</guid>
       <description>1、现有一个Page类，其原型对象上有许多以post开头方法（如postMsg）；另有一拦截函数check，只返回true或false。请设计一个函数，该函数应批量改造原Page的postXXX方法，在保留其原有功能的同时，为每个postXXX方法增加拦截验证功能，当check()返回true时继续执行原postXXX方法，返回false时不再执行原postXXX方法。
 2、下面这段代码想要循环延时输出结果0 1 2 3 4 , 请问输出结果是否正确，如果不正确，请说明为什么，并请修改循环内的代码使其能输出正确结果。
 for(var i= 0; i &amp;lt; 5; i++){ setTimeout(function(){ console.log(i+&#39; &#39;); }, 100); } 3、在不使用图片的情况下，实现图示的气泡框： 4、请简述用html5实现flappy bird的具体思路以及相关程序设计
@@ -700,10 +713,10 @@ for (var i = 0; i &amp;lt; 5; i++) { (function (index) { jsonp(&amp;quot;http://
     
     <item>
       <title>你是否懂得我的坚持</title>
-      <link>/posts/%E4%BD%A0%E6%98%AF%E5%90%A6%E6%87%82%E5%BE%97%E6%88%91%E7%9A%84%E5%9D%9A%E6%8C%81/</link>
+      <link>https://idoubi.cc/posts/%E4%BD%A0%E6%98%AF%E5%90%A6%E6%87%82%E5%BE%97%E6%88%91%E7%9A%84%E5%9D%9A%E6%8C%81/</link>
       <pubDate>Thu, 20 Mar 2014 02:00:42 +0000</pubDate>
       
-      <guid>/posts/%E4%BD%A0%E6%98%AF%E5%90%A6%E6%87%82%E5%BE%97%E6%88%91%E7%9A%84%E5%9D%9A%E6%8C%81/</guid>
+      <guid>https://idoubi.cc/posts/%E4%BD%A0%E6%98%AF%E5%90%A6%E6%87%82%E5%BE%97%E6%88%91%E7%9A%84%E5%9D%9A%E6%8C%81/</guid>
       <description>开学一个多月了，去上课的次数加起来不超过五次，以至于昨天学委发短信警告我了。上次年级大会上辅导员说每年都有很多学生拿不到毕业证的时候我听着特别难受。上大学以前，我在班里的成绩一直都是前两名，高中连续五学期拿一等奖学金，数学竞赛湖南省一等奖，是很多人眼中的尖子生。大一一年虽然也没怎么学习，好歹成绩不算太差，那一年班里 30 个学生，我排 14。大一有一门期末考试给同学送了将近 60 分的助攻。
 大一暑假，开始接触计算机，从最开始的 Photoshop 到后来的网页设计、网页编程再到现在的互联网创业，我一条路走到黑，与计算机结下了不解之缘。我深信我是一个自控能力比较强的人，无论做什么都不会过度沉迷，就像我吸烟，我喝酒，我打游戏，一切都只是浅尝辄止，一切都能自己控制。但是，我却败给了计算机。 曾经很喜欢一句话：计算机是一个疯狂的领域，正是因为其疯狂，才让激情有了生长的土壤。计算机着实令我疯狂，我可以为了写代码连续对着电脑十几个小时，我可以为了做产品连续翘课一个月，我可以为了做开发放弃我最爱的篮球，最宝贵的时间和最美好的爱情。
 这一年来，得到了很多，也失去了很多。我从一个对电脑一窍不通的门外汉成为了一个能够熟练运用大部分开源系统二次开发的别人眼中的“大神”。而这所谓的“大神”在我自己的眼中和在真正的大神眼中依旧只是个门外汉。我承认我是一个聪明的人，我可以在很短的时间内看完一本几百页的编程书，我可以在简单接触 thinkphp 框架后直接拿来做微信开发，我可以将 wordpress、前台模板、sae 完美的结合起来做 blog，做 cms。我可以在网上随便找一个订餐系统来做我互联网创业的产品。这就是我的能力，广泛涉猎后能够汲取最有用的技术和知识用于实践之中。
@@ -717,10 +730,10 @@ for (var i = 0; i &amp;lt; 5; i++) { (function (index) { jsonp(&amp;quot;http://
     
     <item>
       <title>关于asp网站本地开发环境的配置</title>
-      <link>/posts/%E5%85%B3%E4%BA%8Easp%E7%BD%91%E7%AB%99%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E9%85%8D%E7%BD%AE/</link>
+      <link>https://idoubi.cc/posts/%E5%85%B3%E4%BA%8Easp%E7%BD%91%E7%AB%99%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 20 Jan 2014 22:49:29 +0000</pubDate>
       
-      <guid>/posts/%E5%85%B3%E4%BA%8Easp%E7%BD%91%E7%AB%99%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://idoubi.cc/posts/%E5%85%B3%E4%BA%8Easp%E7%BD%91%E7%AB%99%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E9%85%8D%E7%BD%AE/</guid>
       <description>采用不同的语言开发网站所需要的开发环境也会有所不同，php 网站开发环境需要 apache 作为服务器，一般用 mysql 数据库，对于 php 的开发环境配置一般人会选择集成环境包，比如 wampserver 之类的，可以省去很多力气。jsp 网站需要 tomcat 作为服务器，一般用 mysql 或者 sql server 数据库，开发环境的配置需要配置环境变量什么的，过程有点繁琐。而 asp 网站一般是用 IIS 作为服务器，windows 系统一般自带 IIS 服务，但是开发环境需要自己配置。
 下面主要讲一下 asp 开发环境的配置步骤。
 1、打开或关闭 windows 功能
@@ -734,10 +747,10 @@ a、双击 Internet 信息服务(IIS)管理器面板中的 ASP，进行两处配
     
     <item>
       <title>仿Qzone登录页写的未来网后台登录界面</title>
-      <link>/posts/%E4%BB%BFqzone%E7%99%BB%E5%BD%95%E9%A1%B5%E5%86%99%E7%9A%84%E6%9C%AA%E6%9D%A5%E7%BD%91%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2/</link>
+      <link>https://idoubi.cc/posts/%E4%BB%BFqzone%E7%99%BB%E5%BD%95%E9%A1%B5%E5%86%99%E7%9A%84%E6%9C%AA%E6%9D%A5%E7%BD%91%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2/</link>
       <pubDate>Sat, 18 Jan 2014 23:03:01 +0000</pubDate>
       
-      <guid>/posts/%E4%BB%BFqzone%E7%99%BB%E5%BD%95%E9%A1%B5%E5%86%99%E7%9A%84%E6%9C%AA%E6%9D%A5%E7%BD%91%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2/</guid>
+      <guid>https://idoubi.cc/posts/%E4%BB%BFqzone%E7%99%BB%E5%BD%95%E9%A1%B5%E5%86%99%E7%9A%84%E6%9C%AA%E6%9D%A5%E7%BD%91%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2/</guid>
       <description>一个很简单的前台程序，背景图片直接用的 Qzone 登录页背景图，自己写了个 html 页面和几十行 css，写了一个常用的 js 切换 tab 功能，demo 页面放在 sae 上，用的是 thinkphp 框架。本来想实现模拟登录 Qzone 功能，但是 Qzone 的表单设置得比较巧妙，还没搞清楚应该怎样 post 数据，关于网页抓取和模拟登录的开发一定要抓紧时间学习，这是一个很关键的技术，武大助手就是用的模拟登录教务部管理系统的功能，我要是能尽快摸索出模拟登录的方法，这必定是极好的事情。 Qzone 登录页地址：http://i.qq.com/
 HTML code：
 &amp;lt;!DOCTYPE html PUBLIC &amp;#34;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;#34; &amp;#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;#34;&amp;gt; &amp;lt;html xmlns=&amp;#34;http://www.w3.org/1999/xhtml&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta http-equiv=&amp;#34;Content-Type&amp;#34; content=&amp;#34;text/html;charset=utf8&amp;#34; /&amp;gt; &amp;lt;link href=&amp;#34;style.css&amp;#34; rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;用户登录&amp;lt;/title&amp;gt; &amp;lt;script type=&amp;#34;text/JavaScript&amp;#34;&amp;gt; &amp;lt;!-- function settab_zzjs(name,num,n){ for(i=1;i&amp;lt;=n;i++){ var menu=document.getElementById(name+i); var con=document.getElementById(name+&amp;#34;_&amp;#34;+&amp;#34;zzjs&amp;#34;+i); menu.className=i==num?&amp;#34;on_zzjs&amp;#34;:&amp;#34;&amp;#34;; con.style.display=i==num?&amp;#34;block&amp;#34;:&amp;#34;none&amp;#34;; } } //--&amp;gt;  &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;logo&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;form name=&amp;#34;login_form&amp;#34; method=&amp;#34;post&amp;#34; action=&amp;#34;http://zhaopin.</description>
@@ -745,10 +758,10 @@ HTML code：
     
     <item>
       <title>QQ空间魔力日志制作教程</title>
-      <link>/posts/qq%E7%A9%BA%E9%97%B4%E9%AD%94%E5%8A%9B%E6%97%A5%E5%BF%97%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/</link>
+      <link>https://idoubi.cc/posts/qq%E7%A9%BA%E9%97%B4%E9%AD%94%E5%8A%9B%E6%97%A5%E5%BF%97%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/</link>
       <pubDate>Fri, 27 Dec 2013 04:10:19 +0000</pubDate>
       
-      <guid>/posts/qq%E7%A9%BA%E9%97%B4%E9%AD%94%E5%8A%9B%E6%97%A5%E5%BF%97%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://idoubi.cc/posts/qq%E7%A9%BA%E9%97%B4%E9%AD%94%E5%8A%9B%E6%97%A5%E5%BF%97%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/</guid>
       <description>看着日志图片上显示着自己的 QQ 头像、QQ 昵称、QQ 号码 是不是觉得很不可思议呢？是不是很想知道这些神奇的图片是怎么做出来的？ 那么接下来我就结合自己的经验给大家讲一讲这种魔力日志制作的原理和方法。
 制作原理：
 关于魔力日志的制作原理我就不详细说了，相信学过 php 的朋友都懂，上面的截图是网上给的解释，大家可以简单了解一下。看不懂也不要紧，没 php 基础也无所谓，请重点关注接下来的制作步骤。
@@ -771,10 +784,10 @@ http://jingyan.baidu.com/article/ceb9fb10ebf3f68cad2ba012.html
     
     <item>
       <title>那些年我们一起追的前端</title>
-      <link>/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E8%BF%BD%E7%9A%84%E5%89%8D%E7%AB%AF/</link>
+      <link>https://idoubi.cc/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E8%BF%BD%E7%9A%84%E5%89%8D%E7%AB%AF/</link>
       <pubDate>Sun, 22 Dec 2013 12:14:14 +0000</pubDate>
       
-      <guid>/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E8%BF%BD%E7%9A%84%E5%89%8D%E7%AB%AF/</guid>
+      <guid>https://idoubi.cc/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E8%BF%BD%E7%9A%84%E5%89%8D%E7%AB%AF/</guid>
       <description>大学加社团，最重要的还是能够找到自己感兴趣的某个点，找到一群志同道合的朋友，能够通过平时的工作学到技术，能够通过与人交流加深自己对各种事物的认识，这样就足够了。 ——题记
  又到了写述职报告的时候了。这是我第二次写，或许也是最后一次写了。最近这段时间一直很忙，累觉不爱。
 今年 3 月份的时候我开始加入青传，最开始的目的是想在这里找到几个跟我一样热爱 IT 技术，可以一起奋斗，开发产品的人。刚开始在前端待的几个月没有收获什么，除了每两周会有一次培训，其余的时间基本上没有和部里同事接触的机会。期间接到过一次任务，就是设计一个与雅安地震相关的 banner，我当时设计了四种不同的风格，总体来说还不错，因此获得了当时的技术总监和部长的认可。
@@ -795,10 +808,10 @@ http://jingyan.baidu.com/article/ceb9fb10ebf3f68cad2ba012.html
     
     <item>
       <title>手把手教你做网站</title>
-      <link>/posts/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%81%9A%E7%BD%91%E7%AB%99/</link>
+      <link>https://idoubi.cc/posts/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%81%9A%E7%BD%91%E7%AB%99/</link>
       <pubDate>Sat, 07 Dec 2013 02:28:13 +0000</pubDate>
       
-      <guid>/posts/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%81%9A%E7%BD%91%E7%AB%99/</guid>
+      <guid>https://idoubi.cc/posts/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%81%9A%E7%BD%91%E7%AB%99/</guid>
       <description>网页设计是一个大家听得比较多的概念，大家平时上网接触的网站也比较多。网上关于网页设计的教学书籍也有一大堆。要真正学会做网站，要学的知识其实还挺多。一个正规点的网站一般包括两部分，前台和后台。所谓前台就是用户打开网页最先看到的内容，包括网站的布局、颜色搭配等一目了然的视觉元素。而后台则是网站管理员用来控制网站内容的平台，包括对网站内容的增删改以及与网站用户的交互等功能。因此从事网站开发的人可以分为两种，一种叫做前端工程师，另一种叫做后台开发人员。前端工程师要求掌握的技能有photoshop平面设计、html、css、javascript（jquery）、Ajax等，要具备一定的审美能力，能够配合网页美工将做好的网页设计效果图用代码做成一个可以点击的html网页。而后台开发员要做的则是实现网站的必要功能，包括网站数据的显示，网站的后台管理功能以及一些必要的交互功能等，后台开发人员要求具备较强的逻辑思维能力和代码编写能力，会基本的网站后台开发语言，php、asp、jsp等，能够配合前端工程师完成网站的业务处理，最终做出一个成品网站。
 咱们要做一个网站，首先要对网站的功能和样式等方面有一个基本的策划，然后在ps中做出网站的效果图（可以省略），再用代码把前台和后台写好，最后将网站上传到服务器，绑定域名，这样就完成了一个完整网站的设计。要做一个满足自己需求的网站，最好还是要掌握基本的div+css布局和一种后台开发语言，这里推荐php。服务器的话可以选择自己花钱买一个，或者用国内的云计算平台，BAE，SAE都挺不错。这里推荐SAE。
 更多的关于网页设计的知识大家可以自行百度，或者找一些相关的书籍了解一下。现在开始进入正文，教大家在新浪SAE上搭建一个自己的wordpress网站。
@@ -822,10 +835,10 @@ http://jingyan.baidu.com/article/ceb9fb10ebf3f68cad2ba012.html
     
     <item>
       <title>院网修复日志</title>
-      <link>/posts/%E9%99%A2%E7%BD%91%E4%BF%AE%E5%A4%8D%E6%97%A5%E5%BF%97/</link>
+      <link>https://idoubi.cc/posts/%E9%99%A2%E7%BD%91%E4%BF%AE%E5%A4%8D%E6%97%A5%E5%BF%97/</link>
       <pubDate>Wed, 04 Dec 2013 00:05:00 +0000</pubDate>
       
-      <guid>/posts/%E9%99%A2%E7%BD%91%E4%BF%AE%E5%A4%8D%E6%97%A5%E5%BF%97/</guid>
+      <guid>https://idoubi.cc/posts/%E9%99%A2%E7%BD%91%E4%BF%AE%E5%A4%8D%E6%97%A5%E5%BF%97/</guid>
       <description>2013 年 12 月 2 日
 正在上量子力学课，接到黄老师的电话说院网后台登陆不了，让我马上过去修。于是翘课去了院办，检测了很久，发现原来是 session 变量失效的问题，导致登陆参数传递不了，所以后台登不上去，试过很多次方法，修复不了这一问题，却偶然间发现了木马文件，原来是被黑了，院网代码中被植入了百家乐网站的垃圾信息。 删除了几个垃圾文件，还有三个木马始终删不掉，于是去了网络中心找蔡老师帮忙，蔡老师检测了一下 CPU，发现达到了 90%以上，有个叫 w3wp.exe 的文件占用了系统的大部分 CPU，而且手动停止之后又能自动运行。由于 CPU 占用过高，这时候的 IIS 已经跑不起来了，院网自然也访问不了。蔡老师也没找到解决的方法，叫我回院办给服务器装个杀毒软件杀杀毒，于是我就回院办了。当天下午尝试了很多办法解决 IIS 运行的问题，无果。傍晚的时候黄老师叫了樊学长去帮忙修复，樊学长说 w3wp.exe 是 IIS 运行时候的应用程序，不是病毒，但是同时很多个 w3wp.exe 一起运行占用 CPU 达 90%以上很明显不正常。每次重启之后 CPU 会降低到 20%左右，经过十几分钟之后又会自动上升到 90%以上。我们便是趁着 CPU 较低院网能正常访问的时候去修复 session 失效的问题。既然 session 不能正确传递参数，樊学长想到了用 URL 传递 id 参数的办法，来替代 session 保存登陆信息，但是这样做的不便之处是改动量比较大，每一个后台操作页面都需要写一个参数读取的代码，工作量很大。我们两一直改到晚上 10 点才回宿舍。解决的问题只是暂时性的能登陆进后台，但是不能进行文章添加修改删除的操作。IIS 占用 CPU 过高的问题还是没解决。回宿舍后头痛的要死，躺床上就睡了。2 号，翘课一天。说好的学习呵呵了。。。
 2013 年 12 月 3 日
@@ -834,10 +847,10 @@ http://jingyan.baidu.com/article/ceb9fb10ebf3f68cad2ba012.html
     
     <item>
       <title>2013，我想与梦想谈谈</title>
-      <link>/posts/2013%E6%88%91%E6%83%B3%E4%B8%8E%E6%A2%A6%E6%83%B3%E8%B0%88%E8%B0%88/</link>
+      <link>https://idoubi.cc/posts/2013%E6%88%91%E6%83%B3%E4%B8%8E%E6%A2%A6%E6%83%B3%E8%B0%88%E8%B0%88/</link>
       <pubDate>Wed, 27 Feb 2013 20:34:20 +0000</pubDate>
       
-      <guid>/posts/2013%E6%88%91%E6%83%B3%E4%B8%8E%E6%A2%A6%E6%83%B3%E8%B0%88%E8%B0%88/</guid>
+      <guid>https://idoubi.cc/posts/2013%E6%88%91%E6%83%B3%E4%B8%8E%E6%A2%A6%E6%83%B3%E8%B0%88%E8%B0%88/</guid>
       <description>计算机是一个疯狂的领域，正是因为其疯狂，才让激情有了生长的土壤。 ——题记
  2012，我开始与计算机结缘。暑假的时候，我留在学校，空余时间比较多，于是自学了photoshop图像处理技术，一开始接触这门技术，觉得很好玩，在学得差不多的时候就开始弄各种拼图，那时候觉得，把多张不同的图片拼合在一起，实现某个创意是一件很了不起的事情。
 大二上学期开学初期，有一次看到支教队做支教成果展示视频，顿时觉得通过一些照片和视频制作电影是一门神奇的技术，便有了自学技术，做一段包涵自己创意的微电影的想法。于是我自学了windows live影音制作技术。
@@ -857,10 +870,10 @@ http://jingyan.baidu.com/article/ceb9fb10ebf3f68cad2ba012.html
     
     <item>
       <title></title>
-      <link>/readme/</link>
+      <link>https://idoubi.cc/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/readme/</guid>
+      <guid>https://idoubi.cc/readme/</guid>
       <description> 我是艾逗笔，因为深受 Adobe 公司开发的软件影响，故取此昵称。 我喜欢写代码，主攻后端，爱好前端，目标成为一个“全栈工程师”。 我喜欢运动，爱好打篮球，周末会去爬爬山。
   开源爱好者，喜欢自己造轮子。 狼人杀悍跳王者。 理想主义者，强迫症，代码洁癖。  联系方式
  个人博客：http://idoubi.cc 微博：http://weibo.com/u/2611593311 Github：https://github.com/idoubi  </description>
@@ -868,10 +881,10 @@ http://jingyan.baidu.com/article/ceb9fb10ebf3f68cad2ba012.html
     
     <item>
       <title>个人作品</title>
-      <link>/works/</link>
+      <link>https://idoubi.cc/works/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/works/</guid>
+      <guid>https://idoubi.cc/works/</guid>
       <description>豆信  一款简洁、高效的微信开发框架
  GoNews  Golang 每日新闻检索平台
  SQL2Struct  根据 SQL 语句生成 Golang 结构体的 Chrome 插件
@@ -881,10 +894,10 @@ http://jingyan.baidu.com/article/ceb9fb10ebf3f68cad2ba012.html
     
     <item>
       <title>关于我</title>
-      <link>/about/</link>
+      <link>https://idoubi.cc/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://idoubi.cc/about/</guid>
       <description> 有逻辑的脑子万里挑一。
   曾经的 Adobe 软件狂热粉，故取此昵称。 2015 年毕业于武汉大学核工程专业，自学转行入坑 IT。 2018 年入职鹅厂，做后台开发。 主要技术栈 Go + PHP，业余爱好前端技术，目标成为”全栈“。 开源爱好者，喜欢自己造轮子。 理想主义者，强迫症，代码洁癖。  联系方式
  个人博客：http://idoubi.cc 微博：http://weibo.com/u/2611593311 Github：https://github.com/idoubi  </description>
@@ -892,10 +905,10 @@ http://jingyan.baidu.com/article/ceb9fb10ebf3f68cad2ba012.html
     
     <item>
       <title>社交平台</title>
-      <link>/social/</link>
+      <link>https://idoubi.cc/social/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/social/</guid>
+      <guid>https://idoubi.cc/social/</guid>
       <description> 个人网站 Github 微博 知乎 掘金 简书 SegmentFault 小专栏  </description>
     </item>
     

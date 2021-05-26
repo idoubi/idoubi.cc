@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shtml on 艾逗笔</title>
-    <link>/tags/shtml/</link>
+    <link>https://idoubi.cc/tags/shtml/</link>
     <description>Recent content in shtml on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn-zh</language>
-    <lastBuildDate>Fri, 14 Oct 2016 10:04:29 +0000</lastBuildDate><atom:link href="/tags/shtml/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
+    <lastBuildDate>Fri, 14 Oct 2016 10:04:29 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/shtml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>浅谈shtml与html的区别</title>
-      <link>/posts/%E6%B5%85%E8%B0%88shtml%E4%B8%8Ehtml%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <link>https://idoubi.cc/posts/%E6%B5%85%E8%B0%88shtml%E4%B8%8Ehtml%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
       <pubDate>Fri, 14 Oct 2016 10:04:29 +0000</pubDate>
       
-      <guid>/posts/%E6%B5%85%E8%B0%88shtml%E4%B8%8Ehtml%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <guid>https://idoubi.cc/posts/%E6%B5%85%E8%B0%88shtml%E4%B8%8Ehtml%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
       <description>遇到有人咨询 shtml 与 html 的区别，顺手查了一波资料，根据我的理解整理一下与大家分享。
  何为 shtml？  shtml 跟 html 类似，也是一种用于网页设计的标记型语言，区别在于：html 是一种纯静态的标记型语言，在 html 文档里面写的内容是什么，用户打开浏览器看到的就是什么，而 shtml 是一种半静态半动态的标记型语言，在 shtml 里面可以包含 SSI 命令，当用户在浏览器浏览 shtml 文档的时候，里面包含的 SSI 命令会被解析，然后再呈现内容给用户。
  何为 SSI？  SSI 是为 WEB 服务器提供的一套命令，这些命令只要直接嵌入到 HTML 文档的注释内容之中即可。例如： &amp;lt;!--#include file=&amp;quot;index.html&amp;quot;--&amp;gt; &amp;lt;!--#echo var=&amp;quot;DOCUMENT_NAME&amp;quot;--&amp;gt;都属于 SSI 指令。前者用于包含一个 html 文件，后者用于显示当前文档的名称。

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Qzone on 艾逗笔</title>
-    <link>/tags/qzone/</link>
+    <link>https://idoubi.cc/tags/qzone/</link>
     <description>Recent content in Qzone on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn-zh</language>
-    <lastBuildDate>Fri, 27 Dec 2013 04:10:19 +0000</lastBuildDate><atom:link href="/tags/qzone/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
+    <lastBuildDate>Fri, 27 Dec 2013 04:10:19 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/qzone/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>QQ空间魔力日志制作教程</title>
-      <link>/posts/qq%E7%A9%BA%E9%97%B4%E9%AD%94%E5%8A%9B%E6%97%A5%E5%BF%97%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/</link>
+      <link>https://idoubi.cc/posts/qq%E7%A9%BA%E9%97%B4%E9%AD%94%E5%8A%9B%E6%97%A5%E5%BF%97%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/</link>
       <pubDate>Fri, 27 Dec 2013 04:10:19 +0000</pubDate>
       
-      <guid>/posts/qq%E7%A9%BA%E9%97%B4%E9%AD%94%E5%8A%9B%E6%97%A5%E5%BF%97%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://idoubi.cc/posts/qq%E7%A9%BA%E9%97%B4%E9%AD%94%E5%8A%9B%E6%97%A5%E5%BF%97%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/</guid>
       <description>看着日志图片上显示着自己的 QQ 头像、QQ 昵称、QQ 号码 是不是觉得很不可思议呢？是不是很想知道这些神奇的图片是怎么做出来的？ 那么接下来我就结合自己的经验给大家讲一讲这种魔力日志制作的原理和方法。
 制作原理：
 关于魔力日志的制作原理我就不详细说了，相信学过 php 的朋友都懂，上面的截图是网上给的解释，大家可以简单了解一下。看不懂也不要紧，没 php 基础也无所谓，请重点关注接下来的制作步骤。

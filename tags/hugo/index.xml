@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 艾逗笔</title>
-    <link>/tags/hugo/</link>
+    <link>https://idoubi.cc/tags/hugo/</link>
     <description>Recent content in Hugo on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn-zh</language>
-    <lastBuildDate>Sun, 19 Apr 2020 22:11:23 +0800</lastBuildDate><atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
+    <lastBuildDate>Sun, 19 Apr 2020 22:11:23 +0800</lastBuildDate><atom:link href="https://idoubi.cc/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基于「Hugo」搭建个人博客网站</title>
-      <link>/posts/build-site-with-hugo/</link>
+      <link>https://idoubi.cc/posts/build-site-with-hugo/</link>
       <pubDate>Sun, 19 Apr 2020 22:11:23 +0800</pubDate>
       
-      <guid>/posts/build-site-with-hugo/</guid>
+      <guid>https://idoubi.cc/posts/build-site-with-hugo/</guid>
       <description>前言 搭建个人网站，以前我们一般会选择 WordPress，因为其使用范围广（据说全世界 80%的网站都是用它搭建的）、主题丰富、上手简单。
 近年来，markdown 内容格式渐渐流行，我们更愿意使用 markdown 格式来写文章，写完后用静态网站生成工具把文章内容转换成 html 格式，再发布到个人网站。生成静态网站的工具中，比较优秀的有 Jekyll、Hexo、Hugo 几个。
 简单比较一下动态网站框架 WordPress 与静态网站生成框架 Hexo、Hugo 的区别：
@@ -22,10 +22,10 @@
     
     <item>
       <title>在个人博客实现「小课」系统</title>
-      <link>/posts/course-in-blog/</link>
+      <link>https://idoubi.cc/posts/course-in-blog/</link>
       <pubDate>Wed, 15 Apr 2020 22:58:04 +0800</pubDate>
       
-      <guid>/posts/course-in-blog/</guid>
+      <guid>https://idoubi.cc/posts/course-in-blog/</guid>
       <description>程序员这个行业，是一个终身学习的行业，经常会有新技术出现。我是一个很爱学习的人，喜欢尝鲜。每次想去学习一项新技术的时候，总是苦于找不到合适的入门教程。于是有了想自己写个小课系统的想法：希望能通过写一系列的文章，组织成一门小课，帮助想学习某项技术的同学快速入门。
 有了这个想法之后，我开始准备搭建小课平台，一开始想的是做一个前后端分离的网站，后端用 Go 写 API，前端用 vue 写页面。
 使用 vue + ElementUI 搭建出来的第一个版本长这样：

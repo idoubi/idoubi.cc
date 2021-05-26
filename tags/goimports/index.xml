@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>goimports on 艾逗笔</title>
-    <link>/tags/goimports/</link>
+    <link>https://idoubi.cc/tags/goimports/</link>
     <description>Recent content in goimports on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn-zh</language>
-    <lastBuildDate>Mon, 06 Nov 2017 10:40:16 +0000</lastBuildDate><atom:link href="/tags/goimports/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
+    <lastBuildDate>Mon, 06 Nov 2017 10:40:16 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/goimports/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>goimports工具安装与使用</title>
-      <link>/posts/goimports%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</link>
+      <link>https://idoubi.cc/posts/goimports%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Mon, 06 Nov 2017 10:40:16 +0000</pubDate>
       
-      <guid>/posts/goimports%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</guid>
+      <guid>https://idoubi.cc/posts/goimports%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</guid>
       <description>goimports是干嘛的 go是一门强类型的编译型语言，有着很严格的类型约束与语法规范，在golang代码中，如果使用到的包没有被引入或者是引入了的包没有被使用，都会编译不通过。所以我们在写go代码的时候，用到包的时候需要首先import一下，不用的时候，要把import包的语句删除或者是注释，但是总是这样手动去操作并不是很方便，比如我们在开发的时候需要用fmt包打印一些调试信息，为了让打印出来的数组或结构体格式好看一点，我们有时候需要使用encoding/json包来进行格式化。在调试完成后，我们必须要手动把引入的包删除掉，然后再进行编译。
 针对上面提到的日常开发中经常面对的手动管理包的问题，goimports出现了。goimports可以自动对代码中的依赖包进行管理，如果有用到，就会自动import，也会对没有用到的包进行自动删除。
 安装goimports 因为被墙的原因，直接通过go get可能不能正确拉取到goimports包，我们这里使用github源码编译的方式进行安装。

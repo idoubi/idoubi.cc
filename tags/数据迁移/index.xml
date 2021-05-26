@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数据迁移 on 艾逗笔</title>
-    <link>/tags/%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/</link>
+    <link>https://idoubi.cc/tags/%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/</link>
     <description>Recent content in 数据迁移 on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn-zh</language>
-    <lastBuildDate>Sat, 30 Jun 2018 20:34:20 +0000</lastBuildDate><atom:link href="/tags/%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
+    <lastBuildDate>Sat, 30 Jun 2018 20:34:20 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mysql百万级数据迁移实战笔记</title>
-      <link>/posts/mysql-data-migration/</link>
+      <link>https://idoubi.cc/posts/mysql-data-migration/</link>
       <pubDate>Sat, 30 Jun 2018 20:34:20 +0000</pubDate>
       
-      <guid>/posts/mysql-data-migration/</guid>
+      <guid>https://idoubi.cc/posts/mysql-data-migration/</guid>
       <description>背景 上个月跟朋友一起做了个微信小程序，趁着5.20节日的热度，两个礼拜内迅速积累了一百多万用户，我们在小程序页面增加了收集formid的埋点，用于给微信用户发送模板消息通知。
 这个小程序一开始的后端逻辑是用douchat框架写的，使用框架自带的dc_mp_fans表存储微信端授权登录的用户信息，使用dc_mp_tempmsg表存储formid。截止到目前，收集到的数据超过380万，很大一部分formid都已经成功使用给用户发送过模板通知，起到了较好的二次推广的效果。
 随着数据量的增大，之前使用的服务器空间开始有点不够用，最近新写了一个专门用于做小程序后台开发的框架，于是想把原来的数据迁移到新系统的数据库。买了一台4核8G的机器，开始做数据迁移。下面对迁移过程做一个简单的记录。 方案选择  mysqldump迁移  平常开发中，我们比较经常使用的数据备份迁移方式是用mysqldump工具导出一个sql文件，再在新数据库中导入sql来完成数据迁移。试验发现，通过mysqldump导出百万级量的数据库成一个sql文件，大概耗时几分钟，导出的sql文件大小在1G左右，然后再把这个1G的sql文件通过scp命令复制到另一台服务器，大概也需要耗时几分钟。在新服务器的数据库中通过source命令来导入数据，我跑了一晚上都没有把数据导入进来，cpu跑满。
