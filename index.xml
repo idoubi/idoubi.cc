@@ -6,7 +6,17 @@
     <description>Recent content on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
-    <lastBuildDate>Wed, 26 May 2021 10:53:12 +0800</lastBuildDate><atom:link href="https://idoubi.cc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 May 2021 10:29:34 +0000</lastBuildDate><atom:link href="https://idoubi.cc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Linux 系统通过源码安装 Python3</title>
+      <link>https://idoubi.cc/posts/install-python-in-linux/</link>
+      <pubDate>Fri, 28 May 2021 10:29:34 +0000</pubDate>
+      
+      <guid>https://idoubi.cc/posts/install-python-in-linux/</guid>
+      <description> 打开 python 源码下载页  https://www.python.org/ftp/python/
+下载源码  wget https://www.python.org/ftp/python/3.9.5/Python-3.9.5.tgz 解压缩  tar -zxvf Python-3.9.5.tgz 安装  cd Python-3.9.5 ./configure --prefix=/usr/local/python3 make &amp;amp;&amp;amp; make install 设置环境变量  export PATH=$PATH:/usr/local/python3/bin 备份原来版本  python --version pip --version which python which pip mv /usr/bin/python /usr/bin/python2.7.5 mv /usr/bin/pip /usr/bin/pip2.7.5 使用新版本  ln -s /usr/local/python3/bin/python3 /usr/bin/python ln -s /usr/local/python3/bin/pip3 /usr/bin/pip 查看新版本  python --version pip --version </description>
+    </item>
+    
     <item>
       <title>在 C&#43;&#43; 中使用第三方库</title>
       <link>https://idoubi.cc/posts/use-3rd-lib-in-cpp/</link>
@@ -238,12 +248,12 @@ $ air -h Usage of air: -c string config path -d debug mode -v show version 热�
       <pubDate>Wed, 29 May 2019 09:24:19 +0000</pubDate>
       
       <guid>https://idoubi.cc/posts/mac-use-rzsz-in-iterm2/</guid>
-      <description>在Mac系统中，我们常用的终端工具是iterm2，有时候需要通过ssh连接上服务器，并在服务器上面通过rz、sz命令上传文件或下载文件到本地。要实现此场景下的需求，我们需要在服务器和本地分别配置lrzsz命令行工具。
-服务器上安装lrzsz 两种安装方式二选一
- yum安装  yum install lrzsz  源码编译安装  cd wget http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz tar zxvf lrzsz-0.12.20.tar.gz &amp;amp;&amp;amp; cd lrzsz-0.12.20 ./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install 创建软连接
-ln -s /usr/local/bin/lrz rz ln -s /usr/local/bin/lsz sz Mac系统安装lrzsz brew install lrzsz iterm2传输配置 cd /usr/local/bin wget https://raw.githubusercontent.com/mmastrac/iterm2-zmodem/master/iterm2-send-zmodem.sh wget https://raw.githubusercontent.com/mmastrac/iterm2-zmodem/master/iterm2-recv-zmodem.sh chmod +x /usr/local/bin/iterm2-send-zmodem.sh /usr/local/bin/iterm2-recv-zmodem.sh 点击iTerm2/Preferences/Profiles/Advanced/Edit
+      <description>在 Mac 系统中，我们常用的终端工具是 iterm2，有时候需要通过 ssh 连接上服务器，并在服务器上面通过 rz、sz 命令上传文件或下载文件到本地。要实现此场景下的需求，我们需要在服务器和本地分别配置 lrzsz 命令行工具。
+服务器上安装 lrzsz 两种安装方式二选一
+ yum 安装  yum install lrzsz  源码编译安装  cd wget http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz tar zxvf lrzsz-0.12.20.tar.gz &amp;amp;&amp;amp; cd lrzsz-0.12.20 ./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install 创建软连接
+ln -s /usr/local/bin/lrz rz ln -s /usr/local/bin/lsz sz Mac 系统安装 lrzsz brew install lrzsz iterm2 传输配置 cd /usr/local/bin wget https://raw.githubusercontent.com/aikuyun/iterm2-zmodem/master/iterm2-send-zmodem.sh wget https://raw.githubusercontent.com/aikuyun/iterm2-zmodem/master/iterm2-recv-zmodem.sh chmod +x /usr/local/bin/iterm2-send-zmodem.sh /usr/local/bin/iterm2-recv-zmodem.sh 点击iTerm2/Preferences/Profiles/default/Advanced/Edit
 添加配置
-   Regular Expression Action Parameters Instant     rz waiting to receive.\*\*B0100 Run Silent Coprocess /usr/local/bin/iterm2-send-zmodem.</description>
+   Regular Expression Action Parameters Instant     rz waiting to receive.</description>
     </item>
     
     <item>
@@ -435,16 +445,6 @@ SQL2Struct  SQL2Struct 是一款对 golang 开发者友好的 chrome 插件，�
 在sublime配置goimports 在sublime安装GoSublime插件，在插件用户配置文件中写入：
 { &amp;#34;fmt_cmd&amp;#34;: [&amp;#34;goimports&amp;#34;] } 配置完成后在sublime编写go代码时，每次ctrl+s保存文件或者ctrl+b编译文件时，goimports会自动执行并对go代码进行包依赖的检查，对于用到却未引入的包会进行自动引入，对于引入却未使用的包会进行自动删除。
 在gogland中使用goimports gogland原生支持goimports，不需要进行额外的配置，保存或编译go代码时会自动进行包的依赖检查。</description>
-    </item>
-    
-    <item>
-      <title>linux下安装python</title>
-      <link>https://idoubi.cc/posts/linux%E4%B8%8B%E5%AE%89%E8%A3%85python/</link>
-      <pubDate>Sun, 29 Oct 2017 10:29:34 +0000</pubDate>
-      
-      <guid>https://idoubi.cc/posts/linux%E4%B8%8B%E5%AE%89%E8%A3%85python/</guid>
-      <description>python源码下载页 https://www.python.org/downloads/source/
-安装python # 下载源码 wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz # 解压缩 tar -zxvf Python-3.6.3.tgz # 进入源码目录 cd Python-3.6.3 # 配置(指定安装到/usr/local/python3目录) ./configure --prefix=/usr/local/python3 # 编译 make # 安装 make install 使用python3作为默认版本 # 进入bin目录 cd /usr/bin # 查看所有的python命令 ls | grep python # 将python3作为默认python mv python python2.20171027 mv python3 python # 查看当前python版本 python -V 安装pip # 下载pip安装文件 wget -c https://bootstrap.pypa.io/get-pip.py # 安装pip python get-pip.py python2 get-pip.py </description>
     </item>
     
     <item>

@@ -13,10 +13,10 @@
 
 
     
-    <meta property="description" content="在Mac系统中，我们常用的终端工具是iterm2，有时候需要通过ssh连接上服务器，并在服务器上面通过rz、sz命令上传文件或下载文件到本地。要实现此场景下的需求，我们需要在服务器和本地分别配置lrzsz命令行工具。
+    <meta property="description" content="在 Mac 系统中，我们常用的终端工具是 iterm2，有时候需要通过 ssh 连接上服务器，并在服务器上面通过 rz、sz 命令上传文件或下载文件到本地。要实现此场景下的需求，我们需要在服务器和本地分别配置 lrzsz 命令行工具。
 [&amp;hellip;] 两种安装方式二选一
 [&amp;hellip;] yum install lrzsz  源码编译安装  cd wget &amp;hellip;">
-    <meta property="og:description" content="在Mac系统中，我们常用的终端工具是iterm2，有时候需要通过ssh连接上服务器，并在服务器上面通过rz、sz命令上传文件或下载文件到本地。要实现此场景下的需求，我们需要在服务器和本地分别配置lrzsz命令行工具。
+    <meta property="og:description" content="在 Mac 系统中，我们常用的终端工具是 iterm2，有时候需要通过 ssh 连接上服务器，并在服务器上面通过 rz、sz 命令上传文件或下载文件到本地。要实现此场景下的需求，我们需要在服务器和本地分别配置 lrzsz 命令行工具。
 [&amp;hellip;] 两种安装方式二选一
 [&amp;hellip;] yum install lrzsz  源码编译安装  cd wget &amp;hellip;">
     
@@ -127,11 +127,11 @@
                                         
                                     </div>
                                     <div class="post-content">
-                                        <p>在Mac系统中，我们常用的终端工具是iterm2，有时候需要通过ssh连接上服务器，并在服务器上面通过rz、sz命令上传文件或下载文件到本地。要实现此场景下的需求，我们需要在服务器和本地分别配置lrzsz命令行工具。</p>
-<h2 id="服务器上安装lrzsz">服务器上安装lrzsz</h2>
+                                        <p>在 Mac 系统中，我们常用的终端工具是 iterm2，有时候需要通过 ssh 连接上服务器，并在服务器上面通过 rz、sz 命令上传文件或下载文件到本地。要实现此场景下的需求，我们需要在服务器和本地分别配置 lrzsz 命令行工具。</p>
+<h2 id="服务器上安装-lrzsz">服务器上安装 lrzsz</h2>
 <p>两种安装方式二选一</p>
 <ul>
-<li>yum安装</li>
+<li>yum 安装</li>
 </ul>
 <pre><code>yum install lrzsz
 </code></pre><ul>
@@ -144,19 +144,19 @@ tar zxvf lrzsz-0.12.20.tar.gz &amp;&amp; cd lrzsz-0.12.20
 </code></pre><p>创建软连接</p>
 <pre><code>ln -s /usr/local/bin/lrz rz
 ln -s /usr/local/bin/lsz sz
-</code></pre><h2 id="mac系统安装lrzsz">Mac系统安装lrzsz</h2>
+</code></pre><h2 id="mac-系统安装-lrzsz">Mac 系统安装 lrzsz</h2>
 <pre><code>brew install lrzsz
-</code></pre><h2 id="iterm2传输配置">iterm2传输配置</h2>
+</code></pre><h2 id="iterm2-传输配置">iterm2 传输配置</h2>
 <pre><code>cd /usr/local/bin
-wget https://raw.githubusercontent.com/mmastrac/iterm2-zmodem/master/iterm2-send-zmodem.sh
-wget https://raw.githubusercontent.com/mmastrac/iterm2-zmodem/master/iterm2-recv-zmodem.sh
+wget https://raw.githubusercontent.com/aikuyun/iterm2-zmodem/master/iterm2-send-zmodem.sh
+wget https://raw.githubusercontent.com/aikuyun/iterm2-zmodem/master/iterm2-recv-zmodem.sh
 chmod +x /usr/local/bin/iterm2-send-zmodem.sh /usr/local/bin/iterm2-recv-zmodem.sh
-</code></pre><p>点击<code>iTerm2/Preferences/Profiles/Advanced/Edit</code></p>
+</code></pre><p>点击<code>iTerm2/Preferences/Profiles/default/Advanced/Edit</code></p>
 <p>添加配置</p>
 <table>
 <thead>
 <tr>
-<th>Regular  Expression</th>
+<th>Regular Expression</th>
 <th>Action</th>
 <th>Parameters</th>
 <th>Instant</th>
@@ -178,7 +178,7 @@ chmod +x /usr/local/bin/iterm2-send-zmodem.sh /usr/local/bin/iterm2-recv-zmodem.
 </tbody>
 </table>
 <p><img src="http://blogcdn.idoustudio.com/iterm2rzsz.png" alt=""></p>
-<p>配置完成后，在服务器上使用rz、sz命令即可进行文件的上传下载操作。</p>
+<p>配置完成后，在服务器上使用 rz、sz 命令即可进行文件的上传下载操作。</p>
 
 
                                         

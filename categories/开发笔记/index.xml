@@ -6,7 +6,17 @@
     <description>Recent content in 开发笔记 on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
-    <lastBuildDate>Sun, 19 Apr 2020 22:11:23 +0800</lastBuildDate><atom:link href="https://idoubi.cc/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 May 2021 10:29:34 +0000</lastBuildDate><atom:link href="https://idoubi.cc/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Linux 系统通过源码安装 Python3</title>
+      <link>https://idoubi.cc/posts/install-python-in-linux/</link>
+      <pubDate>Fri, 28 May 2021 10:29:34 +0000</pubDate>
+      
+      <guid>https://idoubi.cc/posts/install-python-in-linux/</guid>
+      <description> 打开 python 源码下载页  https://www.python.org/ftp/python/
+下载源码  wget https://www.python.org/ftp/python/3.9.5/Python-3.9.5.tgz 解压缩  tar -zxvf Python-3.9.5.tgz 安装  cd Python-3.9.5 ./configure --prefix=/usr/local/python3 make &amp;amp;&amp;amp; make install 设置环境变量  export PATH=$PATH:/usr/local/python3/bin 备份原来版本  python --version pip --version which python which pip mv /usr/bin/python /usr/bin/python2.7.5 mv /usr/bin/pip /usr/bin/pip2.7.5 使用新版本  ln -s /usr/local/python3/bin/python3 /usr/bin/python ln -s /usr/local/python3/bin/pip3 /usr/bin/pip 查看新版本  python --version pip --version </description>
+    </item>
+    
     <item>
       <title>基于「Hugo」搭建个人博客网站</title>
       <link>https://idoubi.cc/posts/build-site-with-hugo/</link>
@@ -156,16 +166,6 @@ Protocol Buffers 是一种轻便高效的结构化数据存储格式，可以用
 在sublime配置goimports 在sublime安装GoSublime插件，在插件用户配置文件中写入：
 { &amp;#34;fmt_cmd&amp;#34;: [&amp;#34;goimports&amp;#34;] } 配置完成后在sublime编写go代码时，每次ctrl+s保存文件或者ctrl+b编译文件时，goimports会自动执行并对go代码进行包依赖的检查，对于用到却未引入的包会进行自动引入，对于引入却未使用的包会进行自动删除。
 在gogland中使用goimports gogland原生支持goimports，不需要进行额外的配置，保存或编译go代码时会自动进行包的依赖检查。</description>
-    </item>
-    
-    <item>
-      <title>linux下安装python</title>
-      <link>https://idoubi.cc/posts/linux%E4%B8%8B%E5%AE%89%E8%A3%85python/</link>
-      <pubDate>Sun, 29 Oct 2017 10:29:34 +0000</pubDate>
-      
-      <guid>https://idoubi.cc/posts/linux%E4%B8%8B%E5%AE%89%E8%A3%85python/</guid>
-      <description>python源码下载页 https://www.python.org/downloads/source/
-安装python # 下载源码 wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz # 解压缩 tar -zxvf Python-3.6.3.tgz # 进入源码目录 cd Python-3.6.3 # 配置(指定安装到/usr/local/python3目录) ./configure --prefix=/usr/local/python3 # 编译 make # 安装 make install 使用python3作为默认版本 # 进入bin目录 cd /usr/bin # 查看所有的python命令 ls | grep python # 将python3作为默认python mv python python2.20171027 mv python3 python # 查看当前python版本 python -V 安装pip # 下载pip安装文件 wget -c https://bootstrap.pypa.io/get-pip.py # 安装pip python get-pip.py python2 get-pip.py </description>
     </item>
     
     <item>

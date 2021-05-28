@@ -6,7 +6,16 @@
     <description>Recent content in Tags on 艾逗笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 艾逗笔 2020 All rights reserved.</copyright>
-    <lastBuildDate>Sun, 19 Apr 2020 22:11:23 +0800</lastBuildDate><atom:link href="https://idoubi.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 May 2021 10:29:34 +0000</lastBuildDate><atom:link href="https://idoubi.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python</title>
+      <link>https://idoubi.cc/tags/python/</link>
+      <pubDate>Fri, 28 May 2021 10:29:34 +0000</pubDate>
+      
+      <guid>https://idoubi.cc/tags/python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hugo</title>
       <link>https://idoubi.cc/tags/hugo/</link>
@@ -211,15 +220,6 @@
       <pubDate>Mon, 06 Nov 2017 10:40:16 +0000</pubDate>
       
       <guid>https://idoubi.cc/tags/goimports/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://idoubi.cc/tags/python/</link>
-      <pubDate>Sun, 29 Oct 2017 10:29:34 +0000</pubDate>
-      
-      <guid>https://idoubi.cc/tags/python/</guid>
       <description></description>
     </item>
     
